@@ -9,7 +9,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ["Nunito", "sans-serif"],
+    },
   },
   plugins: [],
 };
