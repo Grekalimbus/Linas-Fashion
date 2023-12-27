@@ -1,9 +1,7 @@
-
 import FirstDisplay from "./components/FirstDisplay";
-import MainPage from "./components/MainPage";
 import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
-import Features from "@/components/Features";
+import SecondDisplay from "./components/SecondDisplay";
 
 const page = () => {
   return (
@@ -12,13 +10,10 @@ const page = () => {
       <div className="w-full overflow-auto max-h-screen">
         <Navbar />
         <FirstDisplay />
-    <Features />
+        <SecondDisplay />
       </div>
     </main>
   );
-}
-
-
+};
 
 export default page;
-

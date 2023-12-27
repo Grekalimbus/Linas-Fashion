@@ -1,8 +1,6 @@
-import React from "react";
-
-const Features = () => {
+const SecondDisplay = () => {
   return (
-    <div className="mx-auto flex-grid flex ">
+    <section className="mx-auto flex-grid flex ">
       <div className="mt-20">
         <h1 className="font-sans text-8xl absolute mt-10 ml-10">01</h1>
         <img
@@ -33,8 +31,8 @@ const Features = () => {
           Learn more about the project
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Features;
+export default SecondDisplay;
