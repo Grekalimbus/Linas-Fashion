@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"], // Установка DM Sans как основного шрифта
+        sansi: ["Nunito", "sans-serif"],
       },
     },
   },
