@@ -12,9 +12,18 @@ export const Header = () => {
       </Link>
 
       <div className="flex justify-center space-x-6 m-auto">
-        <FaDesktop className="cursor-pointer" color="#bfbdbf" size={32} />
-        <FaTablet className="cursor-pointer" color="#bfbdbf" size={32} />
-        <FaMobile className="cursor-pointer" color="#bfbdbf" size={32} />
+        <FaDesktop
+          className="cursor-pointer text-gray-300 hover:text-gray-600 transition-all"
+          size={32}
+        />
+        <FaTablet
+          className="cursor-pointer text-gray-300 hover:text-gray-600 transition-all"
+          size={32}
+        />
+        <FaMobile
+          className="cursor-pointer text-gray-300 hover:text-gray-600 transition-all"
+          size={32}
+        />
       </div>
 
       <Link
