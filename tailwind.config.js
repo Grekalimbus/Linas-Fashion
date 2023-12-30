@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xl: "1280px",
+        lg: "1000px",
+        md: "920px",
+        sm: "350px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -14,6 +20,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"], // Установка DM Sans как основного шрифта
+        sansi: ["Nunito", "sans-serif"],
       },
     },
   },
