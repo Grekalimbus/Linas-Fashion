@@ -1,7 +1,7 @@
 import { FaDesktop, FaTablet, FaMobile } from "react-icons/fa";
 import Link from "next/link";
 
-export const Header = () => {
+export const Header = ({ handleChangeScreen }) => {
   return (
     <header className="flex justify-between w-full sticky top-0 z-[10] p-6">
       <Link
@@ -12,18 +12,36 @@ export const Header = () => {
       </Link>
 
       <div className="flex justify-center space-x-6 m-auto">
-        <FaDesktop
-          className="cursor-pointer text-gray-300 hover:text-gray-600 transition-all"
-          size={32}
-        />
-        <FaTablet
-          className="cursor-pointer text-gray-300 hover:text-gray-600 transition-all"
-          size={32}
-        />
-        <FaMobile
-          className="cursor-pointer text-gray-300 hover:text-gray-600 transition-all"
-          size={32}
-        />
+        <button
+          onClick={() => {
+            handleChangeScreen(1200);
+          }}
+        >
+          <FaDesktop
+            className="cursor-pointer text-gray-300 hover:text-gray-600 transition-all"
+            size={32}
+          />
+        </button>
+        <button
+          onClick={() => {
+            handleChangeScreen(920);
+          }}
+        >
+          <FaTablet
+            className="cursor-pointer text-gray-300 hover:text-gray-600 transition-all"
+            size={32}
+          />
+        </button>
+        <button
+          onClick={() => {
+            handleChangeScreen(360);
+          }}
+        >
+          <FaMobile
+            className="cursor-pointer text-gray-300 hover:text-gray-600 transition-all"
+            size={32}
+          />
+        </button>
       </div>
 
       <Link
