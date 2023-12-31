@@ -1,68 +1,65 @@
-"use client";
-import React, {useState, useEffect} from "react";
+"use client"
+import React, { useState, useEffect } from "react";
 import FirstDisplay from "./components/FirstDisplay";
-import {Header} from "./components/Header";
-import {Navbar} from "./components/Navbar";
 import SecondDisplay from "./components/SecondDisplay";
 import ThirdDisplay from "./components/ThirdDisplay";
+import { Header } from "./components/Header";
+import { Navbar } from "./components/Navbar";
+
 
 const page = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [styleScreen, setStyleScreen] = useState("w-full");
+  const [screen, setscreen] = useState(window.innerWidth);
+  const [screenWidth, setscreenWidth] = useState(window.innerWidth);
+  const [wrapperWidth, setWrapperWidth] = useState('w-full'); 
+  
+  
+  const handleChangeScreen = (screenWrapper) =>{      
+    
+        
+    if (screenWrapper === 1200 ) {
+      setWrapperWidth("w-full");
+      setscreenWidth(1200);
+    }
+    if (screenWrapper === 950 ) {
+      setWrapperWidth("w-[950px]");
+      setscreenWidth(950);
+    }
+    if (screenWrapper === 360 ) {
+      setWrapperWidth("w-[360px]");
+      setscreenWidth(360);
+    }    
+    
+  }
 
-  const handleChangeScreen = (screen) => {
-    console.log("screenWidth", screenWidth);
-    if (screenWidth >= 1200 && screen === 1200) {
-      setStyleScreen("w-full");
-    }
-    if (screenWidth >= 1200 && screen === 920) {
-      setStyleScreen("w-[920px]");
-    }
-    if (screenWidth >= 1200 && screen === 360) {
-      setStyleScreen("w-[360px]");
-    }
-    if (screenWidth <= 1200 && screenWidth >= 360 && screen === 1200) {
-      setStyleScreen("w-full");
-    }
-    if (screenWidth <= 1200 && screenWidth >= 360 && screen === 920) {
-      setStyleScreen("w-full");
-    }
-    if (screenWidth <= 1200 && screenWidth >= 360 && screen === 360) {
-      setStyleScreen("w-[360px]");
-    }
-    if (screenWidth <= 920 && screenWidth >= 360 && screen === 1200) {
-      setStyleScreen("w-[360px]");
-    }
-    if (screenWidth <= 920 && screenWidth >= 360 && screen === 920) {
-      setStyleScreen("w-[360px]");
-    }
-    if (screenWidth <= 920 && screenWidth >= 360 && screen === 360) {
-      setStyleScreen("w-[360px]");
-    }
-  };
+   const handleResize = () => {
+    setscreen(window.innerWidth);
+  };   
+  
+   useEffect(() => {
+     window.addEventListener("resize", handleResize);             
 
-  const handleResize = () => {
-    setScreenWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [screenWidth]);
+     return () => {
+       window.removeEventListener("resize", handleResize);
+     };
+   }, [screen]); 
 
   return (
     <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">
-      <Header handleChangeScreen={handleChangeScreen} />
+      {screen >= 950 ? (
+        <Header
+          screenWidth={screenWidth}
+          handleChangeScreen={handleChangeScreen}
+        />
+      ) : (
+        <></>
+      )}
       <div
-        className={`${styleScreen} overflow-auto max-h-screen transition-all duration-500 block`}
+        className={`${wrapperWidth} overflow-auto max-h-screen transition-all duration-500`}
       >
-        <Navbar />
-        <FirstDisplay screenWidth={screenWidth} />
-        <SecondDisplay screenWidth={screenWidth} styleScreen={styleScreen} />
-        <ThirdDisplay screenWidth={screenWidth} />
+        <Navbar screen={screen} screenWidth={screenWidth} />
+        <FirstDisplay screen={screen} screenWidth={screenWidth} />
+        <SecondDisplay screen={screen} screenWidth={screenWidth} />
+        <ThirdDisplay/>
       </div>
     </main>
   );
