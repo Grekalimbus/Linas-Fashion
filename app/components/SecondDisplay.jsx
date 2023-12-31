@@ -1,6 +1,4 @@
 const SecondDisplay = ({screenWidth}) => {
-  const d = document.getElementsByClassName("block");
-  console.log(d);
   return screenWidth <= 950 ? (
     <div className="w-full flex justify-center items-center ">
       <div className="mt-20 ">
