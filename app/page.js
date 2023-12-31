@@ -59,8 +59,8 @@ const page = () => {
         className={`${styleScreen} overflow-auto max-h-screen transition-all duration-500`}
       >
         <Navbar />
-        <FirstDisplay/>
-        <SecondDisplay />
+        <FirstDisplay screenWidth={screenWidth} />
+        <SecondDisplay screenWidth={screenWidth} />
       </div>
     </main>
   );
