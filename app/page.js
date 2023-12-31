@@ -60,7 +60,7 @@ const page = () => {
       >
         <Navbar />
         <FirstDisplay screenWidth={screenWidth} />
-        <SecondDisplay screenWidth={screenWidth} />
+        <SecondDisplay screenWidth={screenWidth} styleScreen={styleScreen} />
       </div>
     </main>
   );
