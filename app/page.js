@@ -8,40 +8,50 @@ import { Navbar } from "./components/Navbar";
 
 
 const page = () => {
-  const [screen, setscreen] = useState(window.innerWidth);
-  const [screenWidth, setscreenWidth] = useState(window.innerWidth);
-  const [wrapperWidth, setWrapperWidth] = useState('w-full'); 
-  
-  
-  const handleChangeScreen = (screenWrapper) =>{      
-    
-        
-    if (screenWrapper === 1200 ) {
+  const [screen, setscreen] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(0);
+  const [wrapperWidth, setWrapperWidth] = useState("w-full");
+
+  const handleChangeScreen = (screenWrapper) => {
+    if (screenWrapper === 1200) {
       setWrapperWidth("w-full");
-      setscreenWidth(1200);
+      setScreenWidth(1200);
     }
-    if (screenWrapper === 950 ) {
+    if (screenWrapper === 950) {
       setWrapperWidth("w-[950px]");
-      setscreenWidth(950);
+      setScreenWidth(950);
     }
-    if (screenWrapper === 360 ) {
+    if (screenWrapper === 360) {
       setWrapperWidth("w-[360px]");
-      setscreenWidth(360);
-    }    
-    
-  }
-
-   const handleResize = () => {
-    setscreen(window.innerWidth);
-  };   
+      setScreenWidth(360);
+    }
+  };
   
-   useEffect(() => {
-     window.addEventListener("resize", handleResize);             
+  useEffect(() => {
+    const handleResize = () => {
+      setscreen(window.innerWidth);
+      setScreenWidth(window.innerWidth);      
+    };
 
-     return () => {
-       window.removeEventListener("resize", handleResize);
-     };
-   }, [screen]); 
+    // Set initial width
+    setscreen(window.innerWidth);
+    setScreenWidth(window.innerWidth);
+    // Add event listener when component mounts
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener when component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array means this effect runs only once after initial render
+
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, [screen]);
 
   return (
     <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">
@@ -59,7 +69,7 @@ const page = () => {
         <Navbar screen={screen} screenWidth={screenWidth} />
         <FirstDisplay screen={screen} screenWidth={screenWidth} />
         <SecondDisplay screen={screen} screenWidth={screenWidth} />
-        <ThirdDisplay/>
+        <ThirdDisplay />
       </div>
     </main>
   );
