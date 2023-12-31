@@ -1,22 +1,7 @@
-"use client";
-import React, {useEffect, useState} from "react";
-
-const SecondDisplay = () => {
-  const [size, setSize] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setSize(window.innerWidth);
-  };
-
-  useEffect(() => {
-    setSize(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  return size <= 950 ? (
+const SecondDisplay = ({screenWidth}) => {
+  const d = document.getElementsByClassName("block");
+  console.log(d);
+  return screenWidth <= 950 ? (
     <div className="w-full flex justify-center items-center ">
       <div className="mt-20 ">
         <h1 className="text-black text-6xl ml-2">01</h1>
