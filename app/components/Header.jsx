@@ -1,7 +1,7 @@
 import { FaDesktop, FaTablet, FaMobile } from "react-icons/fa";
 import Link from "next/link";
 
-export const Header = ({ handleChangeScreen }) => {
+export const Header = ({ handleScreenChange }) => {
   return (
     <header className="flex justify-between w-full sticky top-0 z-[10] p-6">
       <Link
@@ -14,7 +14,7 @@ export const Header = ({ handleChangeScreen }) => {
       <div className="flex justify-center space-x-6 m-auto">
         <button
           onClick={() => {
-            handleChangeScreen(1200);
+            handleScreenChange(1200);
           }}
         >
           <FaDesktop
@@ -24,7 +24,7 @@ export const Header = ({ handleChangeScreen }) => {
         </button>
         <button
           onClick={() => {
-            handleChangeScreen(950);
+            handleScreenChange(950);
           }}
         >
           <FaTablet
@@ -34,7 +34,7 @@ export const Header = ({ handleChangeScreen }) => {
         </button>
         <button
           onClick={() => {
-            handleChangeScreen(360);
+            handleScreenChange(360);
           }}
         >
           <FaMobile
