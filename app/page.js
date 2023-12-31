@@ -2,8 +2,10 @@
 import React, { useState, useEffect } from "react";
 import FirstDisplay from "./components/FirstDisplay";
 import SecondDisplay from "./components/SecondDisplay";
+import ThirdDisplay from "./components/ThirdDisplay";
 import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
+
 
 const page = () => {
   const [screen, setscreen] = useState(window.innerWidth);
@@ -57,6 +59,7 @@ const page = () => {
         <Navbar screen={screen} screenWidth={screenWidth} />
         <FirstDisplay screen={screen} screenWidth={screenWidth} />
         <SecondDisplay screen={screen} screenWidth={screenWidth} />
+        <ThirdDisplay/>
       </div>
     </main>
   );
