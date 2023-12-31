@@ -1,5 +1,6 @@
-const FirstDisplay = ({ screenWidth }) => {
-  return screenWidth <= 950 ? (
+const FirstDisplay = ({ valueDisplay }) => {
+  // create funck to generate number value. depend on that mappin display
+  return valueDisplay <= 950 ? (
     <div className="w-full flex justify-center items-center mx-auto h-svh bg-[#04111b] pt-10">
       <div className="flex flex-col max-w-[360px] justify-center items-center">
         <h3 className="font-bold word-wrap block" style={{ fontSize: "80px" }}>
