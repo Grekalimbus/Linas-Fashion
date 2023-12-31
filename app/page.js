@@ -4,6 +4,7 @@ import FirstDisplay from "./components/FirstDisplay";
 import {Header} from "./components/Header";
 import {Navbar} from "./components/Navbar";
 import SecondDisplay from "./components/SecondDisplay";
+import ThirdDisplay from "./components/ThirdDisplay";
 
 const page = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -61,6 +62,7 @@ const page = () => {
         <Navbar />
         <FirstDisplay screenWidth={screenWidth} />
         <SecondDisplay screenWidth={screenWidth} styleScreen={styleScreen} />
+        <ThirdDisplay screenWidth={screenWidth} />
       </div>
     </main>
   );
