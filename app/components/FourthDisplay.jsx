@@ -1,11 +1,13 @@
 const FourthDisplay = ({screen, screenWidth}) => {
   return screenWidth <= 950 || screen <= 950 ? (
-    <div className="mx-auto mt-20">
+    <div className="mx-auto flex justify-center">
       <div className="w-full container flex justify-center ">
-        <div>
-          <h1 className="text-black text-6xl font-sans">03</h1>
-          <h4 className="text-black font-sans pt-5">SOMETHING IN THE AIR</h4>
-          <a className="text-black font-sans cursor-pointer underline pt-3">
+        <div className="mt-20 mb-20">
+          <h1 className="text-black text-6xl font-bold">03</h1>
+          <h4 className="text-black font-sans pt-5 font-semibold">
+            SOMETHING IN THE AIR
+          </h4>
+          <a className="text-black font-medium cursor-pointer underline pt-3">
             Learn more about the project →
           </a>
           <img
