@@ -54,7 +54,7 @@ const page = () => {
         <Navbar screen={screen} screenWidth={screenWidth} />
         <FirstDisplay screen={screen} screenWidth={screenWidth} />
         <SecondDisplay screen={screen} screenWidth={screenWidth} />
-        <ThirdDisplay />
+        <ThirdDisplay screen={screen} screenWidth={screenWidth} />
       </div>
     </main>
   );

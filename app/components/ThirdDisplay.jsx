@@ -1,5 +1,5 @@
-const ThirdDisplay = ({screenWidth, styleScreen}) => {
-  return screenWidth <= 950 || styleScreen === "w-[360px]" ? (
+const ThirdDisplay = ({screen, screenWidth}) => {
+  return screenWidth <= 950 || screen === "w-[360px]" ? (
     <div className="flex justify-center items-center w-full bg-[#04111b]">
       <div className="mt-20">
         <h1 className="text-white font-bold text-6xl ">02</h1>
