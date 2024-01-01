@@ -5,6 +5,7 @@ import ThirdDisplay from "./components/ThirdDisplay";
 import {Header} from "./components/Header";
 import {Navbar} from "./components/Navbar";
 import useScreenHandling from "./hooks/useScreenHandling";
+import FourthDisplay from "./components/FourthDisplay";
 
 const page = () => {
   const {screenWidth, wrapperStyle, screen, handleScreenChange} =
@@ -26,6 +27,7 @@ const page = () => {
         <FirstDisplay screen={screen} screenWidth={screenWidth} />
         <SecondDisplay screen={screen} screenWidth={screenWidth} />
         <ThirdDisplay screen={screen} screenWidth={screenWidth} />
+        <FourthDisplay />
       </div>
     </main>
   );
