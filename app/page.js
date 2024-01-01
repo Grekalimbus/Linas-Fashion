@@ -1,14 +1,15 @@
-"use client";
+"use client"
 import FirstDisplay from "./components/FirstDisplay";
 import SecondDisplay from "./components/SecondDisplay";
 import ThirdDisplay from "./components/ThirdDisplay";
-import {Header} from "./components/Header";
-import {Navbar} from "./components/Navbar";
+import { Header } from "./components/Header";
+import { Navbar } from "./components/Navbar";
 import useScreenHandling from "./hooks/useScreenHandling";
 
-const page = () => {
-  const {screenWidth, wrapperStyle, screen, handleScreenChange} =
-    useScreenHandling();
+
+const page = () => {  
+  const { screenWidth, wrapperStyle, screen, handleScreenChange } = useScreenHandling();
+  
   return (
     <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">
       {screen >= 950 ? (
@@ -25,7 +26,7 @@ const page = () => {
         <Navbar screen={screen} screenWidth={screenWidth} />
         <FirstDisplay screen={screen} screenWidth={screenWidth} />
         <SecondDisplay screen={screen} screenWidth={screenWidth} />
-        <ThirdDisplay screen={screen} screenWidth={screenWidth} />
+        <ThirdDisplay />
       </div>
     </main>
   );
