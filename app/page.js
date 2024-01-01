@@ -1,56 +1,29 @@
-"use client";
-import React, {useState, useEffect} from "react";
+
+"use client"
 import FirstDisplay from "./components/FirstDisplay";
 import SecondDisplay from "./components/SecondDisplay";
 import ThirdDisplay from "./components/ThirdDisplay";
-import {Header} from "./components/Header";
-import {Navbar} from "./components/Navbar";
+import { Header } from "./components/Header";
+import { Navbar } from "./components/Navbar";
+import useScreenHandling from "./hooks/useScreenHandling";
 
-const page = () => {
-  const [screen, setscreen] = useState(window.innerWidth);
-  const [screenWidth, setscreenWidth] = useState(window.innerWidth);
-  const [wrapperWidth, setWrapperWidth] = useState("w-full");
 
-  const handleChangeScreen = (screenWrapper) => {
-    if (screenWrapper === 1200) {
-      setWrapperWidth("w-full");
-      setscreenWidth(1200);
-    }
-    if (screenWrapper === 950) {
-      setWrapperWidth("w-[950px]");
-      setscreenWidth(950);
-    }
-    if (screenWrapper === 360) {
-      setWrapperWidth("w-[360px]");
-      setscreenWidth(360);
-    }
-  };
-
-  const handleResize = () => {
-    setscreen(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [screen]);
-
+const page = () => {  
+  const result = useScreenHandling()
   return (
     <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">
-      {screen >= 950 ? (
+      {result.screen >= 950 ? (
         <Header
-          screenWidth={screenWidth}
-          handleChangeScreen={handleChangeScreen}
+          screenWidth={result.screenWidth}
+          handleScreenChange={result.handleScreenChange}
         />
       ) : (
         <></>
       )}
       <div
-        className={`${wrapperWidth} overflow-auto max-h-screen transition-all duration-500`}
+        className={`${result.wrapperStyle} overflow-auto max-h-screen transition-all duration-500`}
       >
+
         <Navbar screen={screen} screenWidth={screenWidth} />
         <FirstDisplay screen={screen} screenWidth={screenWidth} />
         <SecondDisplay screen={screen} screenWidth={screenWidth} />
