@@ -27,7 +27,7 @@ const page = () => {
         <FirstDisplay screen={screen} screenWidth={screenWidth} />
         <SecondDisplay screen={screen} screenWidth={screenWidth} />
         <ThirdDisplay screen={screen} screenWidth={screenWidth} />
-        <FourthDisplay />
+        <FourthDisplay screen={screen} screenWidth={screenWidth} />
       </div>
     </main>
   );
