@@ -35,9 +35,9 @@ const FourthDisplay = ({screen, screenWidth}) => {
       </div>
     </div>
   ) : (
-    <div className="mx-auto flex justify-center mt-20">
+    <div className="mx-auto flex justify-center ">
       <div className="w-full container  flex justify-center static">
-        <div className="relative flex">
+        <div className="relative flex mt-20 mb-20">
           <h1 className="text-black text-8xl font-sans font-medium z-[1] absolute pt-10 pl-10">
             03
           </h1>
