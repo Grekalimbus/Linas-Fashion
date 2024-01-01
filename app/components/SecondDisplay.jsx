@@ -1,6 +1,5 @@
-const SecondDisplay = ({screenWidth, styleScreen}) => {
-  console.log(styleScreen);
-  return screenWidth <= 950 || styleScreen === "w-[360px]" ? (
+const SecondDisplay = ({ screen, screenWidth }) => {
+  return screenWidth <= 950 || screen <= 950 ? (
     <div className="w-full flex justify-center items-center ">
       <div className="mt-20 ">
         <h1 className="text-black text-6xl ml-2">01</h1>

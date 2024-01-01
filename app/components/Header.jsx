@@ -24,7 +24,7 @@ export const Header = ({ handleChangeScreen }) => {
         </button>
         <button
           onClick={() => {
-            handleChangeScreen(920);
+            handleChangeScreen(950);
           }}
         >
           <FaTablet
