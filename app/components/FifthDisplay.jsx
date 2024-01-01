@@ -1,19 +1,19 @@
 const FifthDisplay = ({screen, screenWidth}) => {
   return screenWidth <= 950 || screen <= 950 ? (
-    <div className="ma-auto  bg-[#fad003] ">
+    <div className="ma-auto flex justify-center bg-[#fad003] ">
       <div className="w-full container flex justify-center ">
-        <div>
-          <h1 className="text-black font-bold text-6xl pt-5 ml-3">01</h1>
-          <h4 className="text-black font-semibold text-xl p-5 w-[10%]">
+        <div className="mt-20 mb-20">
+          <h1 className="text-black font-bold text-6xl pt-5 ">01</h1>
+          <h4 className="text-black font-semibold text-xl pt-5 w-[10%]">
             YELLOW
           </h4>
-          <a className="font-sansi text-black p-5 underline">
+          <a className="font-sansi text-black pt-5 underline">
             Learn more about the project →
           </a>
           <img
             src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1475,fit=crop/linasyfhpf/Home_14-dWxVaNakylUxl4Br.png"
             alt="Model1"
-            className="w-[328px] h-[448px] pt-2"
+            className="w-[328px] h-[448px] mt-10"
           />
           <div className="flex">
             <img
