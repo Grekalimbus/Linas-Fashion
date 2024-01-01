@@ -44,9 +44,9 @@ const ThirdDisplay = ({screen, screenWidth}) => {
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1034,fit=crop/linasyfhpf/Home_6-YyvLQNQb5bHZrQ2V.png"
               alt="Flower"
-              className="absolute  w-[297px] h-[312px] z-10 flex  mt-[265px] lg:w-[266px] lg:h-[280px] md:w-[227px] md:h-[238px] md:mt-[180px] md:mr-20 "
+              className="absolute  w-[297px] h-[312px] z-[1] flex  mt-[265px] lg:w-[266px] lg:h-[280px] md:w-[227px] md:h-[238px] md:mt-[180px] md:mr-20 "
             />
-            <div className="z-10 absolute bottom-0">
+            <div className="z-[1] absolute bottom-0">
               <h4 className="color-white text-medium">FLOWER GARDEN</h4>
               <a className="underline color-white font-medium">
                 Learn more about the project →
@@ -55,7 +55,7 @@ const ThirdDisplay = ({screen, screenWidth}) => {
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1006,h=1582,fit=crop/linasyfhpf/Home_8-m5KgxNx9kwhwwqNW.png"
               alt="ModelMan2"
-              className="xl:w-[503px] xl:h-[791px] mt-5 lg:w-[452px] lg:h-[710px] ml-[100px] md:w-[385px] md:h-[605px]static z-[0] "
+              className="xl:w-[503px] xl:h-[791px] mt-5 lg:w-[452px] lg:h-[710px] ml-[100px] md:w-[385px] md:h-[605px] static z-[0] "
             />
             <p className="font-sans color-white mr-5  mb-5 flex absolute right-0 bottom-0 shadow-sm">
               MUA: Jessie Gein
