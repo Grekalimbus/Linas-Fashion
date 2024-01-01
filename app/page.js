@@ -8,24 +8,24 @@ import useScreenHandling from "./hooks/useScreenHandling";
 
 
 const page = () => {  
-  const result = useScreenHandling()
+  const { screenWidth, wrapperStyle, screen, handleScreenChange } = useScreenHandling();
   
   return (
     <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">
-      {result.screen >= 950 ? (
+      {screen >= 950 ? (
         <Header
-          screenWidth={result.screenWidth}
-          handleScreenChange={result.handleScreenChange}
+          screenWidth={screenWidth}
+          handleScreenChange={handleScreenChange}
         />
       ) : (
         <></>
       )}
       <div
-        className={`${result.wrapperStyle} overflow-auto max-h-screen transition-all duration-500`}
+        className={`${wrapperStyle} overflow-auto max-h-screen transition-all duration-500`}
       >
-        <Navbar screen={result.screen} screenWidth={result.screenWidth} />
-        <FirstDisplay screen={result.screen} screenWidth={result.screenWidth} />
-        <SecondDisplay screen={result.screen} screenWidth={result.screenWidth} />
+        <Navbar screen={screen} screenWidth={screenWidth} />
+        <FirstDisplay screen={screen} screenWidth={screenWidth} />
+        <SecondDisplay screen={screen} screenWidth={screenWidth} />
         <ThirdDisplay />
       </div>
     </main>
