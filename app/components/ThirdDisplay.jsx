@@ -1,7 +1,13 @@
-const ThirdDisplay = ({screen, screenWidth}) => {
+import { useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+
+const ThirdDisplay = ({ screen, screenWidth }) => {
+  const targetRef = useRef(null);
+  useIntersectionObserver(targetRef);
+
   return screenWidth <= 950 || screen <= 950 ? (
     <div className="flex justify-center items-center w-full bg-[#04111b]">
-      <div className="mt-20 mb-20">
+      <div ref={targetRef} className="mt-20 mb-20 opacity-0">
         <h1 className="text-white font-bold text-6xl ">02</h1>
         <h4 className="text-white font-medium pt-5 ">FLOWER GARDEN</h4>
         <a className="text-white font-medium underline cursor-pointer pt-3">
@@ -32,7 +38,10 @@ const ThirdDisplay = ({screen, screenWidth}) => {
     </div>
   ) : (
     <div className="mx-auto justify-center bg-[#04111b] pt-5 relative flex">
-      <div className="w-full container static mt-10 flex justify-center">
+      <div
+        ref={targetRef}
+        className="w-full container static mt-10 flex justify-center opacity-0"
+      >
         <div className="mt-20 mb-20">
           <h1 className="color-white font-bold text-8xl w-[10%] ml-5">02</h1>
           <div className="flex relative">
