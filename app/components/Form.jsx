@@ -1,6 +1,13 @@
-import React, {useState} from "react";
-
-const Form = ({name, placeholder, label, type, onChange}) => {
+const Form = ({
+  name,
+  palceholder,
+  label,
+  type,
+  onChange,
+  errorMessage,
+  emailValue,
+  messageValue,
+}) => {
   return type === "text-area" ? (
     <div>
       <div className="container flex w-full justify-end">
@@ -12,9 +19,16 @@ const Form = ({name, placeholder, label, type, onChange}) => {
               name={name}
               cols="30"
               rows="10"
-              placeholder={placeholder}
+              placeholder={palceholder}
               className="bg-gray-200 w-[503px] h-[96px] text-black pl-2 pt-2"
             ></textarea>
+            {messageValue.length === 0 ? (
+              <div>
+                <span className="text-black none pt-3">{errorMessage}</span>
+              </div>
+            ) : (
+              <div></div>
+            )}
           </form>
         </div>
       </div>
@@ -28,9 +42,16 @@ const Form = ({name, placeholder, label, type, onChange}) => {
             name={name}
             onChange={onChange}
             type={type}
-            placeholder={placeholder}
-            className=" bg-gray-200 w-[503px] h-[48px] pl-2 text-black"
+            placeholder={palceholder}
+            className=" bg-gray-200 w-[503px] h-[48px] pl-2 text-black border "
           />
+          {emailValue.length === 0 ? (
+            <div>
+              <span className="text-black none pt-3">{errorMessage}</span>
+            </div>
+          ) : (
+            <div></div>
+          )}
         </form>
       </div>
     </div>

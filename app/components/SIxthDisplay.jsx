@@ -9,10 +9,11 @@ const SixthDisplay = () => {
     email: "",
     message: "",
   });
+
   const onChange = (e) => {
     setValue({...values, [e.target.name]: e.target.value});
   };
-  console.log(values);
+
   return (
     <div className="mx-auto flex justify-center  bg-white">
       <div className="container w-full flex justify-center mt-20 mb-20">
@@ -40,11 +41,14 @@ const SixthDisplay = () => {
             <Form
               key={item.id}
               name={item.name}
-              placeholder={item.placeholder}
+              palceholder={item.palceholder}
               label={item.label}
               type={item.type}
               value={values[item.name]}
+              errorMessage={item.errorMessage}
               onChange={onChange}
+              emailValue={values.email}
+              messageValue={values.message}
             />
           ))}
           <Button text={"Submit"} type={"submit"} />

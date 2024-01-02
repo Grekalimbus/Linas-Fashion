@@ -18,14 +18,18 @@ const inputs = [
     name: "email",
     palceholder: "Your email adress",
     label: "Your email",
+    errorMessage: "This field is required",
     type: "email",
+    require: true,
   },
   {
     id: 4,
     name: "message",
     palceholder: "Message",
     label: "Message",
+    errorMessage: "This field is required",
     type: "text-area",
+    require: true,
   },
 ];
 export default inputs;
