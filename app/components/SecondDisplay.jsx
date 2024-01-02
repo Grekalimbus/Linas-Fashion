@@ -1,6 +1,12 @@
-const SecondDisplay = ({screen, screenWidth}) => {
+import { useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+
+const SecondDisplay = ({ screen, screenWidth }) => {
+  const targetRef = useRef(null);
+  useIntersectionObserver(targetRef);
+
   return screenWidth <= 950 || screen <= 950 ? (
-    <div className="mx-auto">
+    <div ref={targetRef} className="mx-auto opacity-0">
       <div className="flex w-full justify-center items-center bg-white">
         <div className="mt-20 mb-20">
           <h1 className="text-black font-bold text-6xl">01</h1>
@@ -27,7 +33,10 @@ const SecondDisplay = ({screen, screenWidth}) => {
       </div>
     </div>
   ) : (
-    <div className="mx-auto flex justify-center items-center bg-white">
+    <div
+      ref={targetRef}
+      className="mx-auto flex justify-center items-center bg-white opacity-0"
+    >
       <div className="container w-full flex justify-center static mt-20 mb-20">
         <div className="relative flex">
           <h1 className="text-bold font-sans text-8xl text-black z-[1] absolute mt-5 ml-5">

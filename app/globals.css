@@ -4,7 +4,6 @@
 
 @keyframes slideUp {
   from {
-    opacity: 0;
     transform: translateY(30px);
   }
   to {
@@ -15,7 +14,7 @@
 
 .animate-slideUp {
   animation-name: slideUp;
-  animation-duration: 2.5s;
+  animation-duration: 0.7s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
