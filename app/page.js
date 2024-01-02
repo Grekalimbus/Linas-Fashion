@@ -7,7 +7,9 @@ import {Navbar} from "./components/Navbar";
 import useScreenHandling from "./hooks/useScreenHandling";
 import FourthDisplay from "./components/FourthDisplay";
 import FifthDisplay from "./components/FifthDisplay";
+import SixthDisplay from "./components/SIxthDisplay";
 import { useRef, useState, useEffect } from "react";
+
 
 const page = () => {
   const {screenWidth, wrapperStyle, screen, handleScreenChange} =
@@ -35,6 +37,7 @@ const page = () => {
         <ThirdDisplay screen={screen} screenWidth={screenWidth} />
         <FourthDisplay screen={screen} screenWidth={screenWidth} />
         <FifthDisplay screen={screen} screenWidth={screenWidth} />
+        <SixthDisplay screen={screen} screenWidth={screenWidth} />
       </div>
     </main>
   );
