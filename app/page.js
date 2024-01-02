@@ -8,13 +8,11 @@ import useScreenHandling from "./hooks/useScreenHandling";
 import FourthDisplay from "./components/FourthDisplay";
 import FifthDisplay from "./components/FifthDisplay";
 import SixthDisplay from "./components/SIxthDisplay";
-import { useRef, useState, useEffect } from "react";
-
 
 const page = () => {
   const {screenWidth, wrapperStyle, screen, handleScreenChange} =
     useScreenHandling();
- 
+
   return (
     <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">
       {screen >= 950 ? (
@@ -30,10 +28,7 @@ const page = () => {
       >
         <Navbar screen={screen} screenWidth={screenWidth} />
         <FirstDisplay screen={screen} screenWidth={screenWidth} />
-        <SecondDisplay         
-          screen={screen}
-          screenWidth={screenWidth}
-        />
+        <SecondDisplay screen={screen} screenWidth={screenWidth} />
         <ThirdDisplay screen={screen} screenWidth={screenWidth} />
         <FourthDisplay screen={screen} screenWidth={screenWidth} />
         <FifthDisplay screen={screen} screenWidth={screenWidth} />
