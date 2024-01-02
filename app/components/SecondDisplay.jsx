@@ -7,7 +7,7 @@ const SecondDisplay = ({ screen, screenWidth }) => {
 
   return screenWidth <= 950 || screen <= 950 ? (
     <div ref={targetRef} className="mx-auto opacity-0">
-      <div className="flex w-full justify-center items-center bg-white">
+      <div className="flex w-full justify-center items-center bg-white items-left p-8">
         <div className="mt-20 mb-20">
           <h1 className="text-black font-bold text-6xl">01</h1>
           <h4 className="font-semibold text-black pt-5">HEAD OVER HEELS</h4>

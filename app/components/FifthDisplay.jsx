@@ -8,7 +8,7 @@ const FifthDisplay = ({ screen, screenWidth }) => {
     <div className="ma-auto flex justify-center bg-[#fad003] ">
       <div
         ref={targetRef}
-        className="w-full container flex justify-center opacity-0"
+        className="w-full container flex justify-center opacity-0 items-left p-8"
       >
         <div className="mt-20 mb-20">
           <h1 className="text-black font-bold text-6xl pt-5 ">01</h1>

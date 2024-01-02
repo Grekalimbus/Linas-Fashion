@@ -2,6 +2,7 @@
 import { Header } from "../components/Header";
 import { Navbar } from "../components/Navbar";
 import useScreenHandling from "../hooks/useScreenHandling";
+import FirstBlockConten from "./FirstBlockContent";
 
 const AboutPage = () => {
   const { screenWidth, wrapperStyle, screen, handleScreenChange } =
@@ -21,6 +22,8 @@ const AboutPage = () => {
         className={`${wrapperStyle} overflow-auto max-h-screen transition-all duration-500`}
       >
         <Navbar screen={screen} screenWidth={screenWidth} />
+
+        <FirstBlockConten screen={screen} screenWidth={screenWidth} />
       </div>
     </div>
   );

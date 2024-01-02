@@ -20,7 +20,7 @@ export const Navbar = ({ screenWidth, screen }) => {
       >
         <li className="cursor-pointer hover:border-b-2 transition-all">Work</li>
         <li className="cursor-pointer hover:border-b-2 transition-all">
-          About
+          <Link href="/aboutPage">About </Link>
         </li>
         <li className="cursor-pointer hover:border-b-2 transition-all">
           Clients

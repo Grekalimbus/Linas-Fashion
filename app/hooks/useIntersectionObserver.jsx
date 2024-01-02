@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useIntersectionObserver = (targetRef, callback) => {
+const useIntersectionObserver = (targetRef) => {
   const options = {
     root: null,
     rootMargin: "0px",
@@ -25,7 +25,7 @@ const useIntersectionObserver = (targetRef, callback) => {
         observer.unobserve(targetRef.current);
       }
     };
-  }, [targetRef, callback, options]);
+  }, [targetRef]);
 };
 
 export default useIntersectionObserver;
