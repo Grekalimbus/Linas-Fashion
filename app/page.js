@@ -9,6 +9,7 @@ import FourthDisplay from "./components/FourthDisplay";
 import FifthDisplay from "./components/FifthDisplay";
 import SixthDisplay from "./components/SIxthDisplay";
 
+
 const page = () => {
   const {screenWidth, wrapperStyle, screen, handleScreenChange} =
     useScreenHandling();

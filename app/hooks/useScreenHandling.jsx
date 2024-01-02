@@ -8,7 +8,7 @@ const useScreenHandling = () => {
     const widthMappings = {
       1200: { wrapperStyle: "w-full", screenWidth: 1200 },
       950: { wrapperStyle: "w-[950px]", screenWidth: 950 },
-      360: { wrapperStyle: "w-[360px]", screenWidth: 360 },
+      420: { wrapperStyle: "w-[420px]", screenWidth: 420 },
       // Add more width mappings as needed
     };
 
