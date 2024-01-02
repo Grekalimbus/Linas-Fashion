@@ -75,7 +75,7 @@ const FourthDisplay = ({ screen, screenWidth }) => {
               alt="Model3"
               className="w-[400px] h-[372px] lg:w-[329px] lg:h-[306px] md:w-[307px] md:h-[285px]"
             />
-            <p className="font-medium text-black font-sans mt-[65px]">
+            <p className="font-semibold text-black font-sans mt-[65px]">
               SOMETHING IN THE AIR
             </p>
             <p className="font-medium text-black font-sans underline">
