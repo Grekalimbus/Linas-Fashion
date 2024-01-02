@@ -1,9 +1,24 @@
+import React, { useEffect, useRef } from "react";
+
 const FirstDisplay = ({ screen, screenWidth }) => {
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const element = elementRef.current;
+
+    if (element) {
+      element.classList.add("animate-slideUp");
+    }
+  }, [screenWidth, screen]);
+
   return screenWidth <= 950 || screen <= 950 ? (
     <div
       className={`w-full flex justify-center items-center mx-auto h-svh bg-[#04111b] pt-10`}
     >
-      <div className="flex flex-col max-w-[360px] justify-center items-center">
+      <div
+        ref={elementRef}
+        className="flex flex-col max-w-[360px] justify-center items-center"
+      >
         <h3 className="font-bold word-wrap block" style={{ fontSize: "80px" }}>
           Linas
         </h3>
@@ -35,7 +50,7 @@ const FirstDisplay = ({ screen, screenWidth }) => {
     </div>
   ) : (
     <div className="w-full mx-auto h-svh bg-[#04111b] pt-10">
-      <div className="max-w-7xl mx-auto">
+      <div ref={elementRef} className="max-w-7xl mx-auto">
         <div className="h-full flex justify-between">
           <div className="flex flex-col justify-between">
             <div className="flex space-x-3">
