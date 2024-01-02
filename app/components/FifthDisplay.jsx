@@ -36,7 +36,7 @@ const FifthDisplay = ({screen, screenWidth}) => {
     </div>
   ) : (
     <div className="mx-auto bg-[#fad003]  flex justify-center items-center pt-20 ">
-      <div className="container w-full flex justify-center  relative mt-20 ">
+      <div className="container w-full flex justify-center  relative mt-20 mb-20">
         <h1 className="text-black font-bold text-8xl  top ml-20 w-[10%] h-[10%]">
           04
         </h1>
@@ -48,7 +48,7 @@ const FifthDisplay = ({screen, screenWidth}) => {
         <img
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1242,fit=crop/linasyfhpf/Home_12-YNqLVxVkEjiR203R.png"
           alt="Model2"
-          className="absolute w-[297px] h-[375px]  z-[1] xl:w-[297px] xl:h-[375px] bottom-20 left-20 lg:w-[264px] lg:h-[334px] sm:w-[232px] sm:h-[294px]"
+          className="absolute w-[297px] h-[375px]  z-[1] xl:w-[297px] xl:h-[375px] bottom-20 left-[180px] lg:w-[264px] lg:h-[334px] sm:w-[232px] sm:h-[294px]"
         />
         <div className="z-[1] absolute bottom-0 left-[140px] ">
           <p className="text-black font-bold text-xl">YELLOW</p>

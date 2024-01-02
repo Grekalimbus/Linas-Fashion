@@ -47,7 +47,7 @@ const ThirdDisplay = ({screen, screenWidth}) => {
               className="absolute  w-[297px] h-[312px] z-[1] flex  mt-[265px] lg:w-[266px] lg:h-[280px] md:w-[227px] md:h-[238px] md:mt-[180px] md:mr-20 "
             />
             <div className="z-[1] absolute bottom-0">
-              <h4 className="color-white text-medium">FLOWER GARDEN</h4>
+              <h4 className="color-white text-semibold">FLOWER GARDEN</h4>
               <a className="underline color-white font-medium">
                 Learn more about the project →
               </a>
