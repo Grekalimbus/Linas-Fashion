@@ -7,7 +7,6 @@ import {Navbar} from "./components/Navbar";
 import useScreenHandling from "./hooks/useScreenHandling";
 import FourthDisplay from "./components/FourthDisplay";
 import FifthDisplay from "./components/FifthDisplay";
-import { useRef, useState, useEffect } from "react";
 
 const page = () => {
   const {screenWidth, wrapperStyle, screen, handleScreenChange} =

@@ -1,5 +1,6 @@
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
+import Link from "next/link";
 
 export const Navbar = ({ screenWidth, screen }) => {
   const [hiden, setHiden] = useState(false);
@@ -37,8 +38,10 @@ export const Navbar = ({ screenWidth, screen }) => {
         </div>
         <div className="w-80">
           <ul className="flex justify-around cursor-pointer">
+            <li>
+              <Link href="/aboutPage">About </Link>
+            </li>
             <li>Work</li>
-            <li>About</li>
             <li>Clients</li>
             <li>Contacts</li>
           </ul>
