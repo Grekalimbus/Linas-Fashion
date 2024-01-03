@@ -53,7 +53,7 @@ const SecondBlockContent = ({ screen, screenWidth }) => {
     <div className="mx-auto w-full flex justify-center items-center text-black pt-10 pb-32">
       <div
         ref={targetRef}
-        className="container max-w-7xl flex justify-between  relative mt-12 opacity-0"
+        className="container max-w-7xl flex justify-between  relative mt-12 opacity-0 "
       >
         <div className="w-[37%]">
           <p className="block mt-4 text-2xl">
