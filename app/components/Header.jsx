@@ -34,7 +34,7 @@ export const Header = ({ handleScreenChange }) => {
         </button>
         <button
           onClick={() => {
-            handleScreenChange(360);
+            handleScreenChange(420);
           }}
         >
           <FaMobile

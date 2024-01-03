@@ -1,25 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const FirstDisplay = ({ screen, screenWidth }) => {
-  const elementRef = useRef(null);
-
-  useEffect(() => {
-    const element = elementRef.current;
-
-    if (element) {
-      element.classList.add("animate-slideUp");
-    }
-  }, [screenWidth, screen]);
+  const targetRef = useRef(null);
+  useIntersectionObserver(targetRef);
 
   return screenWidth <= 950 || screen <= 950 ? (
-    <div
-      className={`w-full flex justify-center items-center mx-auto h-svh bg-[#04111b] pt-10`}
-    >
+    <div className="w-full flex justify-center items-center mx-auto h-svh bg-[#04111b] pt-10">
       <div
-        ref={elementRef}
-        className="flex flex-col max-w-[360px] justify-center items-center"
+        ref={targetRef}
+        className="flex flex-col max-w-[420px] justify-center items-left p-8"
       >
-        <h3 className="font-bold word-wrap block" style={{ fontSize: "80px" }}>
+        <h3
+          className="font-bold word-wrap block"
+          style={{ fontSize: "80px", color: "white" }}
+        >
           Linas
         </h3>
         <p>FASHION PHOTOGRAPHY | AMSTERDAM</p>
@@ -50,16 +45,18 @@ const FirstDisplay = ({ screen, screenWidth }) => {
     </div>
   ) : (
     <div className="w-full mx-auto h-svh bg-[#04111b] pt-10">
-      <div ref={elementRef} className="max-w-7xl mx-auto">
+      <div ref={targetRef} className="max-w-7xl mx-auto">
         <div className="h-full flex justify-between">
           <div className="flex flex-col justify-between">
             <div className="flex space-x-3">
               <img
+                className="object-cover"
                 src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=297,h=201,fit=crop/linasyfhpf/Home_1-mjEDk3krBEINqzOl.png"
                 alt="image1"
               />
 
               <img
+                className="object-cover"
                 src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=201,fit=crop/linasyfhpf/Home_2-m6L1x6xeZetk65zO.png"
                 alt="image2"
               />

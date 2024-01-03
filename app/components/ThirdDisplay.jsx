@@ -7,7 +7,7 @@ const ThirdDisplay = ({ screen, screenWidth }) => {
 
   return screenWidth <= 950 || screen <= 950 ? (
     <div className="flex justify-center items-center w-full bg-[#04111b]">
-      <div ref={targetRef} className="mt-20 mb-20 opacity-0">
+      <div ref={targetRef} className="mt-20 mb-20 opacity-0 items-left p-8">
         <h1 className="text-white font-bold text-6xl ">02</h1>
         <h4 className="text-white font-medium pt-5 ">FLOWER GARDEN</h4>
         <a className="text-white font-medium underline cursor-pointer pt-3">
