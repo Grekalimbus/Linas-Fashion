@@ -40,13 +40,13 @@ const FirstBlockConten = ({ screen, screenWidth }) => {
       </div>
     </div>
   ) : (
-    <div className="mx-auto bg-[#04111b] w-full flex justify-center items-center">
+    <div className="mx-auto bg-[#04111b] w-full flex justify-center items-center pb-16">
       <div
         ref={targetRef}
         className="container max-w-7xl flex justify-around  relative mt-12 opacity-0"
       >
         <img
-          className="w-[48%] h-[82vh] object-cover"
+          className="w-[48%] h-[76vh] object-cover"
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1213,fit=crop/linasyfhpf/about_1-AoP1yOwKMzh26ZLV.png"
           alt="image1"
         />
@@ -69,7 +69,9 @@ const FirstBlockConten = ({ screen, screenWidth }) => {
           <h3 className="text-8xl font-semibold mt-20">Capturing </h3>
 
           <h3 className="text-8xl font-semibold mt-2 ml-10">magic</h3>
-          <p className="text-2xl mt-32">LINAS THOEMKE | FASHION PHOTOGRAPHY</p>
+          <p className="text-1xl mt-44 ml-6">
+            LINAS THOEMKE | FASHION PHOTOGRAPHY
+          </p>
         </div>
       </div>
     </div>
