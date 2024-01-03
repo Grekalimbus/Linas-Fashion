@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar";
 import useScreenHandling from "../hooks/useScreenHandling";
 import FirstBlockConten from "./FirstBlockContent";
 import SecondBlockContent from "./SecondBlockContent";
+import { ThirdBlockContent } from "./ThirdBlockContent";
 
 const AboutPage = () => {
   const { screenWidth, wrapperStyle, screen, handleScreenChange } =
@@ -26,6 +27,7 @@ const AboutPage = () => {
 
         <FirstBlockConten screen={screen} screenWidth={screenWidth} />
         <SecondBlockContent screen={screen} screenWidth={screenWidth} />
+        <ThirdBlockContent screen={screen} screenWidth={screenWidth} />
       </div>
     </div>
   );

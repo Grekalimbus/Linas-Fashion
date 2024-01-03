@@ -6,14 +6,12 @@ const FirstBlockConten = ({ screen, screenWidth }) => {
   useIntersectionObserver(targetRef);
 
   return screenWidth <= 950 || screen <= 950 ? (
-    <div className="w-full flex justify-center mx-auto h-svh bg-[#04111b]">
+    <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b]">
       <div
         ref={targetRef}
         className="flex flex-col max-w-[420px] justify-center p-8"
       >
-        <h3 className="font-bold word-wrap block" style={{ fontSize: "50px" }}>
-          Capturing magic
-        </h3>
+        <h3 className="font-bold word-wrap block text-5xl">Capturing magic</h3>
         <p>LINAS THOEMKE | </p>
         <p>FASHION </p>
         <p>PHOTOGRAPHY </p>
