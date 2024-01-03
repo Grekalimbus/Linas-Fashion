@@ -6,7 +6,7 @@ const FirstBlockConten = ({ screen, screenWidth }) => {
   useIntersectionObserver(targetRef);
 
   return screenWidth <= 950 || screen <= 950 ? (
-    <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b]">
+    <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
         ref={targetRef}
         className="flex flex-col max-w-[420px] justify-center p-8"
@@ -40,13 +40,37 @@ const FirstBlockConten = ({ screen, screenWidth }) => {
       </div>
     </div>
   ) : (
-    <div className="mx-auto bg-[#04111b]  flex justify-center items-center pt-20 ">
-      <div ref={targetRef} className="max-w-7xl mx-auto">
+    <div className="mx-auto bg-[#04111b] w-full flex justify-center items-center">
+      <div
+        ref={targetRef}
+        className="container max-w-7xl flex justify-around  relative mt-12 opacity-0"
+      >
         <img
+          className="w-[48%] h-[82vh] object-cover"
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1213,fit=crop/linasyfhpf/about_1-AoP1yOwKMzh26ZLV.png"
-          alt=""
+          alt="image1"
         />
-        <div>Flex</div>
+
+        <div className="ml-20">
+          <div className="h-[28%] flex justify-center">
+            <img
+              className="max-w-[42%] object-cover"
+              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=945,h=963,fit=crop/linasyfhpf/about_2-YZ9p0JvgNqUp30OP.png"
+              alt="image2"
+            />
+
+            <img
+              className="ml-4 max-w-[100%] min-w-[52%] bg-cover bg-right-bottom	object-cover"
+              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=945,h=963,fit=crop/linasyfhpf/about_3-m7VjgnGXpkhrMQN5.png"
+              alt="image3"
+            />
+          </div>
+
+          <h3 className="text-8xl font-semibold mt-20">Capturing </h3>
+
+          <h3 className="text-8xl font-semibold mt-2 ml-10">magic</h3>
+          <p className="text-2xl mt-32">LINAS THOEMKE | FASHION PHOTOGRAPHY</p>
+        </div>
       </div>
     </div>
   );
