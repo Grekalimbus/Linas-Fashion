@@ -6,7 +6,7 @@ const SecondBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
   return screenWidth <= 950 || screen <= 950 ? (
-    <div className="w-full flex justify-center mx-auto h-svh text-black">
+    <div className="w-full flex justify-center mx-auto text-black min-h-min">
       <div
         ref={targetRef}
         className="flex flex-col items-start justify-start max-w-[420px] p-8"
