@@ -14,6 +14,10 @@ const SixthDisplay = ({screen, screenWidth}) => {
   const onChange = (e) => {
     setValue({...values, [e.target.name]: e.target.value});
     if (e.target.name === "email") {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailRegex.test(e.target.value) === false) {
+        setErrors(false);
+      }
       setErrors(e.target.value.length >= 1 ? true : false);
     }
     if (e.target.name === "message") {
