@@ -3,7 +3,7 @@ const inputs = [
     id: 1,
     name: "name",
     palceholder: "Your name",
-    label: "name",
+    label: "Name",
     type: "text",
   },
   {

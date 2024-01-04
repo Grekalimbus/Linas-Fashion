@@ -6,8 +6,8 @@ export const Navbar = ({ screenWidth, screen }) => {
   const [hiden, setHiden] = useState(false);
 
   return screenWidth <= 950 || screen <= 950 ? (
-    <nav className="shadow bg-[#04111b] w-full sticky top-0 z-[10] ">
-      <div className="mx-auto flex w-full  items-center justify-between p-7">
+    <nav className="shadow mx-auto bg-[#04111b] w-full sticky top-0 z-[10] ">
+      <div className="mx-auto max-w-7xl flex w-full items-center justify-between p-7">
         <div>Linas Thoemke</div>
         <button onClick={() => setHiden((prev) => !prev)}>
           <FaBars />
@@ -34,7 +34,7 @@ export const Navbar = ({ screenWidth, screen }) => {
     </nav>
   ) : (
     <nav className="shadow bg-[#04111b] w-full sticky top-0 z-[10]">
-      <div className="mx-auto flex max-w-7xl  flex-wrap items-center justify-between pt-7 pb-7 bg-[#04111b]">
+      <div className="mx-auto flex max-w-6xl  flex-wrap items-center justify-between pt-7 pb-7 bg-[#04111b]">
         <div className="cursor-pointer text-2xl font-medium">
           <p className="">Linas Thoemke</p>
         </div>
