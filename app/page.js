@@ -8,6 +8,7 @@ import useScreenHandling from "./hooks/useScreenHandling";
 import FourthDisplay from "./components/FourthDisplay";
 import FifthDisplay from "./components/FifthDisplay";
 import SixthDisplay from "./components/SIxthDisplay";
+import Footer from "./components/Footer";
 
 
 const page = () => {
@@ -34,6 +35,7 @@ const page = () => {
         <FourthDisplay screen={screen} screenWidth={screenWidth} />
         <FifthDisplay screen={screen} screenWidth={screenWidth} />
         <SixthDisplay screen={screen} screenWidth={screenWidth} />
+        <Footer screen={screen} screenWidth={screenWidth} />
       </div>
     </main>
   );

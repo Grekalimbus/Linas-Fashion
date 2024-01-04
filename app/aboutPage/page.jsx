@@ -1,4 +1,5 @@
 "use client";
+import Footer from "../components/Footer";
 import { Header } from "../components/Header";
 import { Navbar } from "../components/Navbar";
 import useScreenHandling from "../hooks/useScreenHandling";
@@ -28,6 +29,7 @@ const AboutPage = () => {
         <FirstBlockContent screen={screen} screenWidth={screenWidth} />
         <SecondBlockContent screen={screen} screenWidth={screenWidth} />
         <ThirdBlockContent screen={screen} screenWidth={screenWidth} />
+        <Footer screen={screen} screenWidth={screenWidth} />
       </div>
     </div>
   );
