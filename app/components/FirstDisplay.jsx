@@ -50,11 +50,13 @@ const FirstDisplay = ({ screen, screenWidth }) => {
           <div className="flex flex-col justify-between">
             <div className="flex space-x-3">
               <img
+                className="object-cover"
                 src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=297,h=201,fit=crop/linasyfhpf/Home_1-mjEDk3krBEINqzOl.png"
                 alt="image1"
               />
 
               <img
+                className="object-cover"
                 src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=201,fit=crop/linasyfhpf/Home_2-m6L1x6xeZetk65zO.png"
                 alt="image2"
               />

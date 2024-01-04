@@ -14,20 +14,18 @@ export const ThirdBlockContent = ({ screen, screenWidth }) => {
       }}
     >
       <div className="flex flex-col justify-start items-start mt-12">
-        <p className="text-black text-6xl font-semibold mt-4 text-center">
+        <p className="text-black text-5xl font-semibold mt-4 text-center">
           Linas
         </p>
-        <p className="text-black text-6xl font-semibold">Thoemke </p>
+        <p className="text-black text-5xl font-semibold mt-2">Thoemke </p>
       </div>
-      <div className="w-full flex flex-col justify-start items-start mt-8">
-        <p className="text-black pl-24 mt-2 text-lg">CREATIVE PROFESSIONAL </p>
-        <p className="text-black self-end pr-14  mt-2 text-lg">
-          IMPRESSIVE CLIENTELE
-        </p>
-        <p className="text-black pl-24  mt-2 text-lg">EXPERIENCED & FLEXIBLE</p>
-      </div>
+
+      <p className="text-black  mt-6 text-lg">CREATIVE PROFESSIONAL </p>
+      <p className="text-black mt-2 pl-36 text-lg">IMPRESSIVE CLIENTELE</p>
+      <p className="text-black mt-2 text-lg">EXPERIENCED & FLEXIBLE</p>
+
       <Link
-        className="font-medium mt-4 border-b-2 border-black text-2xl"
+        className="font-medium mt-4 border-b-2 border-black text-2xl mr-8"
         href={"https://linasyfhpf.zyrosite.com/contacts"}
       >
         CONTACT ME →
@@ -35,13 +33,7 @@ export const ThirdBlockContent = ({ screen, screenWidth }) => {
     </div>
   ) : (
     <div className="mx-auto bg-[#04111b]  flex justify-center items-center pt-20 ">
-      <div ref={targetRef} className="max-w-7xl mx-auto">
-        <img
-          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1213,fit=crop/linasyfhpf/about_1-AoP1yOwKMzh26ZLV.png"
-          alt=""
-        />
-        <div>Flex</div>
-      </div>
+      <div ref={targetRef} className="max-w-7xl mx-auto"></div>
     </div>
   );
 };
