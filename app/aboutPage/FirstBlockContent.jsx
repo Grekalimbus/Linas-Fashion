@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FirstBlockConten = ({ screen, screenWidth }) => {
+const FirstBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
 
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
         ref={targetRef}
@@ -43,7 +43,7 @@ const FirstBlockConten = ({ screen, screenWidth }) => {
     <div className="mx-auto bg-[#04111b] w-full flex justify-center items-center pb-16">
       <div
         ref={targetRef}
-        className="container max-w-7xl flex justify-around  relative mt-12 opacity-0"
+        className="container max-w-6xl flex justify-around  relative mt-12 opacity-0"
       >
         <img
           className="w-[48%] h-[76vh] object-cover"
@@ -78,4 +78,4 @@ const FirstBlockConten = ({ screen, screenWidth }) => {
   );
 };
 
-export default FirstBlockConten;
+export default FirstBlockContent;

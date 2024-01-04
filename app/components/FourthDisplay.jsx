@@ -5,7 +5,7 @@ const FourthDisplay = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
 
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="mx-auto flex justify-center">
       <div
         ref={targetRef}

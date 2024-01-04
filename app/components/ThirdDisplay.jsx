@@ -5,7 +5,7 @@ const ThirdDisplay = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
 
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="flex justify-center items-center w-full bg-[#04111b]">
       <div ref={targetRef} className="mt-20 mb-20 opacity-0 items-left p-8">
         <h1 className="text-white font-bold text-6xl ">02</h1>

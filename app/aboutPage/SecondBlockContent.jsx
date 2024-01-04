@@ -5,13 +5,13 @@ import Link from "next/link";
 const SecondBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto text-black min-h-min">
       <div
         ref={targetRef}
         className="flex flex-col items-start justify-start max-w-[420px] p-8"
       >
-        <p className="block mt-4" style={{ fontSize: "24px", color: "black" }}>
+        <p className="block mt-4 text-2xl text-black">
           Linas Thoemke is a fashion photographer based in Amsterdam. He started
           working for small indie publications back in the mid-00s, and gathered
           a following that slowly attracted the attention of bigger brands.
@@ -53,7 +53,7 @@ const SecondBlockContent = ({ screen, screenWidth }) => {
     <div className="mx-auto w-full flex justify-center items-center text-black pt-10 pb-32">
       <div
         ref={targetRef}
-        className="container max-w-7xl flex justify-between  relative mt-12 opacity-0"
+        className="container max-w-6xl flex justify-between  relative mt-12 opacity-0 "
       >
         <div className="w-[37%]">
           <p className="block mt-4 text-2xl">
