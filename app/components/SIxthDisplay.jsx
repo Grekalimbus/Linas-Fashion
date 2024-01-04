@@ -21,7 +21,7 @@ const SixthDisplay = ({screen, screenWidth}) => {
     }
   };
 
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="mx-auto flex justify-center bg-white">
       <div className="container w-full flex justify-center mt-20 mb-20">
         <div>

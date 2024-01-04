@@ -5,7 +5,7 @@ const SecondDisplay = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
 
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div ref={targetRef} className="mx-auto opacity-0">
       <div className="flex w-full justify-center items-center bg-white items-left p-8">
         <div className="mt-20 mb-20">
