@@ -1,8 +1,8 @@
 import Form from "./Form";
 import Button from "./Button";
 import inputs from "../api/Inputs";
-import {useState} from "react";
-const SixthDisplay = ({screen, screenWidth}) => {
+import { useState } from "react";
+const SixthDisplay = ({ screen, screenWidth }) => {
   const [values, setValue] = useState({
     name: "",
     lastname: "",
@@ -11,10 +11,10 @@ const SixthDisplay = ({screen, screenWidth}) => {
   });
 
   const onChange = (e) => {
-    setValue({...values, [e.target.name]: e.target.value});
+    setValue({ ...values, [e.target.name]: e.target.value });
   };
 
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="mx-auto flex justify-center bg-white">
       <div className="container w-full flex justify-center mt-20 mb-20">
         <div>
