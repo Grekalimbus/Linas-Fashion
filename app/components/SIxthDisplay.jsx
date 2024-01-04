@@ -25,8 +25,8 @@ const SixthDisplay = ({screen, screenWidth}) => {
     <div className="mx-auto flex justify-center bg-white">
       <div className="container w-full flex justify-center mt-20 mb-20">
         <div>
-          <h1 className="font-semibold text-black text-4xl">Impressed?</h1>
-          <p className="text-black font-medium text-[17px] mt-10">
+          <h1 className="font-semibold text-black text-4xl ml-2">Impressed?</h1>
+          <p className="text-black font-medium text-[17px] mt-10 ml-2">
             Let us cross paths - reach out <br /> and we’ll work on your next
             <br /> project together.
           </p>

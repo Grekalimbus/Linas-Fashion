@@ -1,5 +1,3 @@
-import {useState} from "react";
-
 const Form = ({
   name,
   placeholder,
@@ -10,9 +8,6 @@ const Form = ({
   errorsEmail,
   errorsMessage,
 }) => {
-  const [isFocused, setIsFocused] = useState(false);
-  const [isEmpty, setIsEmpty] = useState(true);
-
   return type === "text-area" ? (
     <div>
       <div className="container flex w-full justify-end">
