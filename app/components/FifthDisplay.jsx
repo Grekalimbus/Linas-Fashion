@@ -1,7 +1,7 @@
-import { useRef } from "react";
+import {useRef} from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FifthDisplay = ({ screen, screenWidth }) => {
+const FifthDisplay = ({screen, screenWidth}) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
   return screenWidth <= 1152 || screen <= 1152 ? (
@@ -43,10 +43,10 @@ const FifthDisplay = ({ screen, screenWidth }) => {
       </div>
     </div>
   ) : (
-    <div className="mx-auto bg-[#fad003]  flex justify-center items-center pt-20 ">
+    <div className="mx-auto bg-[#fad003]  flex justify-center items-center ">
       <div
         ref={targetRef}
-        className="container w-full flex justify-center relative mt-20 opacity-0"
+        className="container w-full flex justify-center relative mt-20 opacity-0 max-w-6xl  mb-20"
       >
         <h1 className="text-black font-bold text-8xl  top ml-20 w-[10%] h-[10%]">
           04

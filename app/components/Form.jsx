@@ -10,9 +10,9 @@ const Form = ({
 }) => {
   return type === "text-area" ? (
     <div>
-      <div className="container flex w-full justify-end">
-        <div className="flex justify-end">
-          <form className="p-4 mt-pt-4">
+      <div className="container flex w-full ">
+        <div className="flex ">
+          <form className="p-4 ">
             <h2 className="text-black font-light pb-2">{label}</h2>
             <textarea
               onChange={onChange}
@@ -34,8 +34,8 @@ const Form = ({
       </div>
     </div>
   ) : (
-    <div className="container flex w-full justify-end">
-      <div className="flex justify-end">
+    <div className="container flex w-full ">
+      <div className="flex ">
         <form action="#" className="p-4 ">
           <h2 className="text-black font-light pb-2">{label}</h2>
           <input

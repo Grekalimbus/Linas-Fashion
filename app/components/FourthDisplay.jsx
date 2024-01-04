@@ -1,7 +1,7 @@
-import { useRef } from "react";
+import {useRef} from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FourthDisplay = ({ screen, screenWidth }) => {
+const FourthDisplay = ({screen, screenWidth}) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
 
@@ -49,7 +49,7 @@ const FourthDisplay = ({ screen, screenWidth }) => {
         ref={targetRef}
         className="w-full container  flex justify-center static opacity-0"
       >
-        <div className="relative flex mt-20 mb-20">
+        <div className="relative flex mt-20 mb-20 max-w-6xl">
           <h1 className="text-black text-8xl font-sans font-medium z-[1] absolute pt-10 pl-10">
             03
           </h1>
