@@ -77,7 +77,7 @@ const SixthDisplay = ({screen, screenWidth}) => {
             />
           </div>
         </div>
-        <div className="ml-[160px] lg:ml-[100px]">
+        <div className="ml-[160px] md:ml-[80px]">
           {inputs.map((item) => (
             <Form
               key={item.id}
