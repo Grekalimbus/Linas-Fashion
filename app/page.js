@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 const page = () => {
   const {screenWidth, wrapperStyle, screen, handleScreenChange} =
     useScreenHandling();
-
+  console.log("screenWidth", screenWidth);
   return (
     <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">
       {screen >= 950 ? (

@@ -5,7 +5,7 @@ import Link from "next/link";
 export const ThirdBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div
       className="w-full flex flex-col justify-start items-center mx-auto h-[70vh] bg-[#04111b]  bg-cover bg-center text-black"
       style={{
@@ -43,10 +43,10 @@ export const ThirdBlockContent = ({ screen, screenWidth }) => {
         ref={targetRef}
         className="max-w-7xl flex justify-between border-2 bg-border-[#04111b] "
       >
-        <div className="flex justify-between">
-          <p className="text-black text-lg w-[33.3%]">CREATIVE PROFESSIONAL </p>
-          <p className="text-black text-lg w-[33.3%]">IMPRESSIVE CLIENTELE</p>
-          <p className="text-black text-lg w-[33.3%]">EXPERIENCED & FLEXIBLE</p>
+        <div className="flex justify-between w-full text-black text-lg">
+          <p>CREATIVE PROFESSIONAL </p>
+          <p>IMPRESSIVE CLIENTELE</p>
+          <p>EXPERIENCED & FLEXIBLE</p>
         </div>
       </div>
     </div>

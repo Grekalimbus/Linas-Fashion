@@ -5,11 +5,11 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
 
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
         ref={targetRef}
-        className="flex flex-col max-w-[420px] justify-center  p-8"
+        className="flex flex-col max-w-[420px] justify-center p-8"
       >
         <h3 className="font-bold word-wrap block text-5xl">Capturing magic</h3>
         <p>LINAS THOEMKE | </p>
@@ -43,7 +43,7 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
     <div className="mx-auto bg-[#04111b] w-full flex justify-center items-center pb-16">
       <div
         ref={targetRef}
-        className="container max-w-7xl flex justify-around  relative mt-12 opacity-0"
+        className="container max-w-6xl flex justify-around  relative mt-12 opacity-0"
       >
         <img
           className="w-[48%] h-[76vh] object-cover"

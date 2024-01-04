@@ -4,7 +4,7 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 const FifthDisplay = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="ma-auto flex justify-center bg-[#fad003] ">
       <div
         ref={targetRef}
