@@ -3,7 +3,7 @@ const Button = ({text, type}) => {
     <div>
       <button
         type={type}
-        className="w-[134px] h-[51px] text-white bg-black ml-4"
+        className="w-[134px] h-[51px] text-white bg-black ml-1"
       >
         {text}
       </button>

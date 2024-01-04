@@ -27,7 +27,7 @@ const Form = ({
               cols="30"
               rows="10"
               placeholder={palceholder}
-              className="bg-gray-200 w-[503px] h-[96px] text-black pl-2 pt-2"
+              className="bg-gray-200 xl:w-[503px] xl:h-[96px] text-black pl-2 pt-2 sm:w-[328px] sm:h-[96px]"
             ></textarea>
             {focuse === true ? (
               <div>
@@ -51,7 +51,7 @@ const Form = ({
             onChange={onChange}
             type={type}
             placeholder={palceholder}
-            className=" bg-gray-200 w-[503px] h-[48px] pl-2 text-black border "
+            className=" bg-gray-200 xl:w-[503px] xl:h-[48px] pl-2 text-black border sm:w-[328px] sm:h-[48px]"
           />
           {focuse === true ? (
             <div>
