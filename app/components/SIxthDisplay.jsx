@@ -1,29 +1,36 @@
 import Form from "./Form";
 import Button from "./Button";
 import inputs from "../api/Inputs";
-import { useState } from "react";
-const SixthDisplay = ({ screen, screenWidth }) => {
+import {useState} from "react";
+const SixthDisplay = ({screen, screenWidth}) => {
   const [values, setValue] = useState({
     name: "",
     lastname: "",
     email: "",
     message: "",
   });
-
+  const [errors, setErrors] = useState(false);
+  const [errosMessage, setErrorsMessage] = useState(false);
   const onChange = (e) => {
-    setValue({ ...values, [e.target.name]: e.target.value });
+    setValue({...values, [e.target.name]: e.target.value});
+    if (e.target.name === "email") {
+      setErrors(e.target.value.length >= 1 ? true : false);
+    }
+    if (e.target.name === "message") {
+      setErrorsMessage(e.target.value.length >= 1 ? true : false);
+    }
   };
 
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="mx-auto flex justify-center bg-white">
       <div className="container w-full flex justify-center mt-20 mb-20">
         <div>
-          <h1 className="font-semibold text-black text-4xl">Impressed?</h1>
-          <p className="text-black font-medium text-[17px] mt-10">
+          <h1 className="font-semibold text-black text-4xl ml-2">Impressed?</h1>
+          <p className="text-black font-medium text-[17px] mt-10 ml-2">
             Let us cross paths - reach out <br /> and we’ll work on your next
             <br /> project together.
           </p>
-          <div className="">
+          <div>
             {inputs.map((item) => (
               <Form
                 key={item.id}
@@ -34,8 +41,9 @@ const SixthDisplay = ({ screen, screenWidth }) => {
                 value={values[item.name]}
                 errorMessage={item.errorMessage}
                 onChange={onChange}
-                emailValue={values.email}
-                messageValue={values.message}
+                data={values}
+                errorsEmail={errors}
+                errorsMessage={errosMessage}
               />
             ))}
             <Button text={"Submit"} type={"submit"} />
@@ -44,12 +52,12 @@ const SixthDisplay = ({ screen, screenWidth }) => {
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1160,fit=crop/linasyfhpf/project4_4-Y4Lg6q9MlPir3Lnk.png"
               alt="pic1"
-              className="w-[161px] h-[173px] "
+              className="w-[161px] h-[173px] object-cover "
             />
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1160,fit=crop/linasyfhpf/Home_16-A1aNL7L2WpFoqz7K.png"
               alt="pic2"
-              className="w-[161px] h-[173px] ml-2"
+              className="w-[161px] h-[173px] ml-2 object-cover"
             />
           </div>
         </div>
@@ -68,12 +76,12 @@ const SixthDisplay = ({ screen, screenWidth }) => {
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=669,fit=crop/linasyfhpf/project4_4-Y4Lg6q9MlPir3Lnk.png"
               alt="pic1"
-              className="w-[297px] h-[202px]"
+              className="w-[297px] h-[202px] object-cover"
             />
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1025,fit=crop/linasyfhpf/Home_16-A1aNL7L2WpFoqz7K.png"
               alt="pic2"
-              className="w-[194px] h-[202px] pl-3"
+              className="w-[194px] h-[202px] pl-3 object-cover"
             />
           </div>
         </div>
@@ -88,8 +96,9 @@ const SixthDisplay = ({ screen, screenWidth }) => {
               value={values[item.name]}
               errorMessage={item.errorMessage}
               onChange={onChange}
-              emailValue={values.email}
-              messageValue={values.message}
+              data={values}
+              errorsEmail={errors}
+              errorsMessage={errosMessage}
             />
           ))}
           <Button text={"Submit"} type={"submit"} />
