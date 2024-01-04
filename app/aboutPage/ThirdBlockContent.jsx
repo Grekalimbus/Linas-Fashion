@@ -32,8 +32,23 @@ export const ThirdBlockContent = ({ screen, screenWidth }) => {
       </Link>
     </div>
   ) : (
-    <div className="mx-auto bg-[#04111b]  flex justify-center items-center pt-20 ">
-      <div ref={targetRef} className="max-w-7xl mx-auto"></div>
+    <div
+      style={{
+        backgroundImage:
+          "url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/linasyfhpf/about_4-AVLX0qj5O7Ux2V1g.png')",
+      }}
+      className="mx-auto w-full flex justify-center items-start text-black bg-cover bg-center h-[115vh] object-cover pt-12"
+    >
+      <div
+        ref={targetRef}
+        className="max-w-7xl flex justify-between border-2 bg-border-[#04111b] "
+      >
+        <div className="flex justify-between">
+          <p className="text-black text-lg w-[33.3%]">CREATIVE PROFESSIONAL </p>
+          <p className="text-black text-lg w-[33.3%]">IMPRESSIVE CLIENTELE</p>
+          <p className="text-black text-lg w-[33.3%]">EXPERIENCED & FLEXIBLE</p>
+        </div>
+      </div>
     </div>
   );
 };

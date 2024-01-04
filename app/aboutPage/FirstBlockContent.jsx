@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FirstBlockConten = ({ screen, screenWidth }) => {
+const FirstBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef);
 
@@ -9,7 +9,7 @@ const FirstBlockConten = ({ screen, screenWidth }) => {
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
         ref={targetRef}
-        className="flex flex-col max-w-[420px] justify-center p-8"
+        className="flex flex-col max-w-[420px] justify-center  p-8"
       >
         <h3 className="font-bold word-wrap block text-5xl">Capturing magic</h3>
         <p>LINAS THOEMKE | </p>
@@ -78,4 +78,4 @@ const FirstBlockConten = ({ screen, screenWidth }) => {
   );
 };
 
-export default FirstBlockConten;
+export default FirstBlockContent;
