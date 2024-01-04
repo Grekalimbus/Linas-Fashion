@@ -14,6 +14,10 @@ const SixthDisplay = ({screen, screenWidth}) => {
   const onChange = (e) => {
     setValue({...values, [e.target.name]: e.target.value});
     if (e.target.name === "email") {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailRegex.test(e.target.value) === false) {
+        setErrors(false);
+      }
       setErrors(e.target.value.length >= 1 ? true : false);
     }
     if (e.target.name === "message") {
@@ -64,8 +68,8 @@ const SixthDisplay = ({screen, screenWidth}) => {
       </div>
     </div>
   ) : (
-    <div className="mx-auto flex justify-center  bg-white">
-      <div className="container w-full flex justify-center mt-20 mb-20">
+    <div className="mx-auto flex justify-center  bg-white ml-10">
+      <div className="container w-full flex justify-center  max-w-6xl ml-10 mt-20 mb-20">
         <div className="">
           <h1 className="font-semibold text-black text-8xl">Impressed?</h1>
           <p className="text-black font-medium text-[17px] mt-20">
@@ -85,7 +89,7 @@ const SixthDisplay = ({screen, screenWidth}) => {
             />
           </div>
         </div>
-        <div className="ml-[160px] md:ml-[80px]">
+        <div className="md:ml-[80px]">
           {inputs.map((item) => (
             <Form
               key={item.id}
