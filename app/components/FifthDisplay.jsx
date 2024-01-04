@@ -43,10 +43,10 @@ const FifthDisplay = ({screen, screenWidth}) => {
       </div>
     </div>
   ) : (
-    <div className="mx-auto bg-[#fad003]  flex justify-center items-center pt-20 ">
+    <div className="mx-auto bg-[#fad003]  flex justify-center items-center ">
       <div
         ref={targetRef}
-        className="container w-full flex justify-center relative mt-20 opacity-0"
+        className="container w-full flex justify-center relative mt-20 opacity-0 mb-20 "
       >
         <h1 className="text-black font-bold text-8xl  top ml-20 w-[10%] h-[10%]">
           04
@@ -59,9 +59,9 @@ const FifthDisplay = ({screen, screenWidth}) => {
         <img
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1242,fit=crop/linasyfhpf/Home_12-YNqLVxVkEjiR203R.png"
           alt="Model2"
-          className="absolute w-[297px] h-[375px]  z-[1] xl:w-[297px] xl:h-[375px] bottom-20 left-20 lg:w-[264px] lg:h-[334px] sm:w-[232px] sm:h-[294px] object-cover"
+          className="absolute w-[297px] h-[375px]  z-[1] xl:w-[297px] xl:h-[375px] bottom-20 left-[230px] lg:w-[264px] lg:h-[334px] sm:w-[232px] sm:h-[294px] object-cover"
         />
-        <div className="z-[1] absolute bottom-0 left-[140px] ">
+        <div className="z-[1] absolute bottom-0 left-[228px] ">
           <p className="text-black font-bold text-xl">YELLOW</p>
           <a className="text-black underline font-sansi cursor-pointer">
             Learn more about the project →
