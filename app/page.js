@@ -2,7 +2,6 @@
 import FirstDisplay from "./components/FirstDisplay";
 import SecondDisplay from "./components/SecondDisplay";
 import ThirdDisplay from "./components/ThirdDisplay";
-import {Header} from "./components/Header";
 import {Navbar} from "./components/Navbar";
 import useScreenHandling from "./hooks/useScreenHandling";
 import FourthDisplay from "./components/FourthDisplay";
@@ -12,22 +11,13 @@ import Footer from "./components/Footer";
 
 
 const page = () => {
-  const {screenWidth, wrapperStyle, screen, handleScreenChange} =
-    useScreenHandling();
+  const {screenWidth, wrapperStyle, screen} =  useScreenHandling();
   if (screenWidth == 0 || screen === 0){
     return <div></div>
   }
   else{
     return (
-      <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">
-        {screen >= 950 ? (
-          <Header
-            screenWidth={screenWidth}
-            handleScreenChange={handleScreenChange}
-          />
-        ) : (
-          <></>
-        )}
+      <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">       
         <div
           className={`${wrapperStyle} overflow-auto max-h-screen transition-all duration-500`}
         >

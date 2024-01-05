@@ -1,17 +1,18 @@
 import { useEffect } from "react";
 
-const useIntersectionObserver = (targetRef) => {
+const useIntersectionObserver = (targetRef, nameAnimationPossition) => {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.25,
+    threshold: 0.35,
   };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          targetRef.current.classList.add("animate-slideUp");
+          targetRef.current.classList.add("opacity-0");
+          targetRef.current.classList.add(nameAnimationPossition);
         }
       });
     }, options);

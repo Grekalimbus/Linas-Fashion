@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SecondBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+  useIntersectionObserver(targetRef, "animate-slideUp");
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto text-black min-h-min">
       <div
@@ -23,9 +23,10 @@ const SecondBlockContent = ({ screen, screenWidth }) => {
         </p>
         <Link
           href="https://linasyfhpf.zyrosite.com/clients"
-          className="font-medium mt-4 border-b-2 border-black text-2xl"
+          className="font-medium mt-4 text-2xl relative"
         >
           CLIENT LIST →
+          <span className="absolute left-0 right-0 bottom-1 h-[2px] bg-black transform"></span>
         </Link>
         <p className="font-medium text-2xl mt-12">EXHIBITIONS</p>
         <div className="mt-10 ">

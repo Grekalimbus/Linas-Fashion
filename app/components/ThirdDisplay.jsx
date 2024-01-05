@@ -3,11 +3,11 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const ThirdDisplay = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+  useIntersectionObserver(targetRef, "animate-slideUp");
 
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="flex justify-center items-center w-full bg-[#04111b]">
-      <div ref={targetRef} className="mt-20 mb-20 opacity-0 items-left p-8">
+      <div ref={targetRef} className="mt-20 mb-20 items-left p-8 ">
         <h1 className="text-white font-bold text-6xl ">02</h1>
         <h4 className="text-white font-medium pt-5 ">FLOWER GARDEN</h4>
         <a className="text-white font-medium underline cursor-pointer pt-3">
@@ -40,11 +40,11 @@ const ThirdDisplay = ({ screen, screenWidth }) => {
     <div className="mx-auto justify-center bg-[#04111b] pt-5 relative flex">
       <div
         ref={targetRef}
-        className="w-full container static mt-10 flex justify-center opacity-0"
+        className="w-full container static mt-10 flex justify-center"
       >
         <div className="mt-20 mb-20">
           <h1 className="color-white font-bold text-8xl w-[10%] ml-5">02</h1>
-          <div className="flex relative">
+          <div className="flex relative max-w-6xl">
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1410,fit=crop/linasyfhpf/Home_7-AE0xXDXkxGuLqpgk.png"
               alt="ManModel"
