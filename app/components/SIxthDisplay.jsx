@@ -53,7 +53,12 @@ const SixthDisplay = ({screen, screenWidth}) => {
                 labelColor={"text-black"}
               />
             ))}
-            <Button text={"Submit"} type={"submit"} />
+            <Button
+              text={"Submit"}
+              type={"submit"}
+              colorButton={" bg-black "}
+              colorText={" text-white "}
+            />
           </div>
           <div className="flex mt-10">
             <img
