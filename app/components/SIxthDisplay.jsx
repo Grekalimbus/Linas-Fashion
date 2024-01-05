@@ -48,6 +48,9 @@ const SixthDisplay = ({screen, screenWidth}) => {
                 data={values}
                 errorsEmail={errors}
                 errorsMessage={errosMessage}
+                color={"bg-gray-200"}
+                textColor={"text-black"}
+                labelColor={"text-black"}
               />
             ))}
             <Button text={"Submit"} type={"submit"} />
@@ -103,6 +106,9 @@ const SixthDisplay = ({screen, screenWidth}) => {
               data={values}
               errorsEmail={errors}
               errorsMessage={errosMessage}
+              color={" bg-gray-200 "}
+              textColor={" text-black "}
+              labelColor={" text-black "}
             />
           ))}
           <Button text={"Submit"} type={"submit"} />
