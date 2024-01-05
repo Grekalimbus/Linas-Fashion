@@ -44,7 +44,7 @@ const FirstDisplay = ({ screen, screenWidth }) => {
       </div>
     </div>
   ) : (
-    <div className="w-full mx-auto bg-[#04111b] py-14">
+    <div className="w-full mx-auto bg-[#04111b] pb-32 pt-16">
       <div
         ref={targetRef}
         className="conteiner max-w-6xl mx-auto flex justify-between"
