@@ -9,7 +9,7 @@ const FourthDisplay = ({ screen, screenWidth }) => {
     <div className="mx-auto flex justify-center">
       <div
         ref={targetRef}
-        className="w-full container flex justify-center opacity-0 items-left p-8"
+        className="w-full container flex justify-center  items-left p-8"
       >
         <div className="mt-20 mb-20">
           <h1 className="text-black text-6xl font-bold">03</h1>
@@ -47,7 +47,7 @@ const FourthDisplay = ({ screen, screenWidth }) => {
     <div className="mx-auto flex justify-center ">
       <div
         ref={targetRef}
-        className="w-full container  flex justify-center static opacity-0"
+        className="w-full container  flex justify-center static"
       >
         <div className="relative flex mt-20 mb-20 max-w-6xl">
           <h1 className="text-black text-8xl font-sans font-medium z-[1] absolute pt-10 pl-10">

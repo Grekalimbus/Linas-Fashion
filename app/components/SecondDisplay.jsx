@@ -6,7 +6,7 @@ const SecondDisplay = ({ screen, screenWidth }) => {
   useIntersectionObserver(targetRef, "animate-slideUp");
 
   return screenWidth <= 1152 || screen <= 1152 ? (
-    <div ref={targetRef} className="mx-auto opacity-0">
+    <div ref={targetRef} className="mx-auto ">
       <div className="flex w-full justify-center items-center bg-white items-left p-8 ">
         <div className="mt-20 mb-20 ">
           <h1 className="text-black font-bold text-6xl">01</h1>
@@ -35,7 +35,7 @@ const SecondDisplay = ({ screen, screenWidth }) => {
   ) : (
     <div
       ref={targetRef}
-      className="mx-auto flex justify-center items-center bg-white opacity-0"
+      className="mx-auto flex justify-center items-center bg-white "
     >
       <div className="container w-full flex justify-center static mt-20 mb-20 ">
         <div className="relative flex max-w-6xl">
