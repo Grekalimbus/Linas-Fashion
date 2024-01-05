@@ -4,7 +4,8 @@ import Link from "next/link";
 
 export const ThirdBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+
+  useIntersectionObserver(targetRef, "animate-slideUp");
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div
       className="w-full flex flex-col justify-start items-center mx-auto h-[70vh] bg-[#04111b]  bg-cover bg-center text-black"
@@ -25,10 +26,11 @@ export const ThirdBlockContent = ({ screen, screenWidth }) => {
       <p className="text-black mt-2 text-lg">EXPERIENCED & FLEXIBLE</p>
 
       <Link
-        className="font-medium mt-4 border-b-2 border-black text-2xl mr-8"
+        className="font-medium mt-4 text-2xl mr-8 relative"
         href={"https://linasyfhpf.zyrosite.com/contacts"}
       >
         CONTACT ME →
+        <span className="absolute left-0 right-0 bottom-1 h-[2px] bg-black transform "></span>
       </Link>
     </div>
   ) : (
@@ -41,13 +43,21 @@ export const ThirdBlockContent = ({ screen, screenWidth }) => {
     >
       <div
         ref={targetRef}
-        className="max-w-7xl flex justify-between border-2 bg-border-[#04111b] "
+        className="w-full relative text-black mx-auto max-w-6xl flex flex-col justify-center items-cente"
       >
-        <div className="flex justify-between w-full text-black text-lg">
+        <div className=" w-full flex justify-between text-black text-lg ">
           <p>CREATIVE PROFESSIONAL </p>
-          <p>IMPRESSIVE CLIENTELE</p>
           <p>EXPERIENCED & FLEXIBLE</p>
+          <p>IMPRESSIVE CLIENTELE</p>
         </div>
+        <div className="self-center ml-[220px]  mt-[120px] flex flex-col items-start text-8xl font-semibold">
+          <p>Linas</p>
+          <p className="mt-[15px]">Thoemke</p>
+        </div>
+        <button className="mt-20 text-2xl self-center relative">
+          CONTACT ME →
+          <span className="absolute left-0 right-0 bottom-1 h-[2px] bg-black transform "></span>
+        </button>
       </div>
     </div>
   );

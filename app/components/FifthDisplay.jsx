@@ -3,12 +3,12 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const FifthDisplay = ({screen, screenWidth}) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+  useIntersectionObserver(targetRef, "animate-slideUp");
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="ma-auto flex justify-center bg-[#fad003] ">
       <div
         ref={targetRef}
-        className="w-full container flex justify-center opacity-0 items-left p-8"
+        className="w-full container flex justify-center items-left p-8"
       >
         <div className="mt-20 mb-20">
           <h1 className="text-black font-bold text-6xl pt-5 ">01</h1>
@@ -46,7 +46,7 @@ const FifthDisplay = ({screen, screenWidth}) => {
     <div className="mx-auto bg-[#fad003]  flex justify-center items-center ">
       <div
         ref={targetRef}
-        className="container w-full flex justify-center relative mt-20 opacity-0 mb-20 "
+        className="container w-full flex justify-center relative mt-20 max-w-6xl  mb-20"
       >
         <h1 className="text-black font-bold text-8xl  top ml-20 w-[10%] h-[10%]">
           04

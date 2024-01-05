@@ -1,10 +1,18 @@
 import {FaBars} from "react-icons/fa";
 import {useState} from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Navbar = ({screenWidth, screen}) => {
   const [hiden, setHiden] = useState(false);
-
+  const pathname = usePathname();
+  const getBorderForLonk = (link) => {
+    if (link === pathname) {
+      return "border-b-2 border-white";
+    }
+    return "";
+  };
+  console.log(pathname);
   return screenWidth <= 950 || screen <= 950 ? (
     <nav className="shadow mx-auto bg-[#04111b] w-full sticky top-0 z-[10] ">
       <div className="mx-auto max-w-7xl flex w-full items-center justify-between p-7">
@@ -18,16 +26,16 @@ export const Navbar = ({screenWidth, screen}) => {
           !hiden ? "hidden" : ""
         } flex flex-col justify-end items-end p-4 space-y-2`}
       >
-        <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
+        <li className={`cursor-pointer  ${getBorderForLonk("/")}`}>
           <Link href="/">Work </Link>
         </li>
-        <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
+        <li className={`cursor-pointer  ${getBorderForLonk("/about")}`}>
           <Link href="/aboutPage">About </Link>
         </li>
-        <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
-          <Link href="/clients">Clients </Link>
+        <li className={`cursor-pointer  ${getBorderForLonk("/clients")}`}>
+          <Link href="/">clients </Link>
         </li>
-        <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
+        <li className={`cursor-pointer  ${getBorderForLonk("/contacts")}`}>
           <Link href="/">Contacts </Link>
         </li>
       </ul>
@@ -40,16 +48,16 @@ export const Navbar = ({screenWidth, screen}) => {
         </div>
         <div className="w-80">
           <ul className="flex justify-around cursor-pointer">
-            <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
+            <li className={`cursor-pointer  ${getBorderForLonk("/")}`}>
               <Link href="/">Work </Link>
             </li>
-            <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
-              <Link href="/aboutPage">About </Link>
+            <li className={`cursor-pointer  ${getBorderForLonk("/about")}`}>
+              <Link href="/about">About </Link>
             </li>
-            <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
+            <li className={`cursor-pointer  ${getBorderForLonk("/clients")}`}>
               <Link href="/">Clients </Link>
             </li>
-            <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
+            <li className={`cursor-pointer  ${getBorderForLonk("/contacts")}`}>
               <Link href="/">Contacts </Link>
             </li>
           </ul>
