@@ -1,9 +1,9 @@
-import {useRef} from "react";
+import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const ThirdDisplay = ({screen, screenWidth}) => {
+const ThirdDisplay = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+  useIntersectionObserver(targetRef, "animate-slideUp");
 
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="flex justify-center items-center w-full bg-[#04111b]">

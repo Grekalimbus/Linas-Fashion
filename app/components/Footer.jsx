@@ -4,7 +4,7 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const Footer = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+  useIntersectionObserver(targetRef, "animate-slideUp");
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center items-center mx-auto bg-[#04111b]">
       <div

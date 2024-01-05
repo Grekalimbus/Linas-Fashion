@@ -3,7 +3,7 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const FirstDisplay = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+  useIntersectionObserver(targetRef, "animate-slideUp");
 
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center items-center mx-auto h-svh bg-[#04111b] pt-10">

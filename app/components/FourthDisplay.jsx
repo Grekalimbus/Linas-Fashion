@@ -1,9 +1,9 @@
-import {useRef} from "react";
+import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FourthDisplay = ({screen, screenWidth}) => {
+const FourthDisplay = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+  useIntersectionObserver(targetRef, "animate-slideUp");
 
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="mx-auto flex justify-center">
