@@ -1,13 +1,23 @@
 import { useRef } from "react";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Link from "next/link";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import getAnimationsAndRefs from "../api/getAnimationsAndRefs";
 
-export const ThirdBlockContent = ({ screen, screenWidth }) => {
-  const targetRef = useRef(null);
+export const ThirdBlockContent = ({ screen }) => {
+  const targetLarg = useRef(null);
+  const targetMedium = useRef(null);
 
-  useIntersectionObserver(targetRef, "animate-slideUp");
-  return screenWidth <= 1152 || screen <= 1152 ? (
+  const animationsAndRefs = getAnimationsAndRefs(
+    screen,
+    targetLarg,
+    targetMedium
+  );
+
+  useIntersectionObserver(animationsAndRefs);
+
+  return screen <= 1152 ? (
     <div
+      ref={targetMedium}
       className="w-full flex flex-col justify-start items-center mx-auto h-[70vh] bg-[#04111b]  bg-cover bg-center text-black"
       style={{
         backgroundImage:
@@ -42,7 +52,7 @@ export const ThirdBlockContent = ({ screen, screenWidth }) => {
       className="mx-auto w-full flex justify-center items-start text-black bg-cover bg-center h-[115vh] object-cover pt-12"
     >
       <div
-        ref={targetRef}
+        ref={targetLarg}
         className="w-full relative text-black mx-auto max-w-6xl flex flex-col justify-center items-cente"
       >
         <div className=" w-full flex justify-between text-black text-lg ">

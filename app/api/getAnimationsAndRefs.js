@@ -1,12 +1,20 @@
-const getAnimationsAndRefs = (screen, targetLarg, targetMedium) => {
-  if (screen !== 0 || screen <= 1152) {
+const getAnimationsAndRefs = (
+  screen,
+  targetLarg,
+  targetMedium,
+  ) => {  
+  if (screen <= 1152 && screen !== 0) {
     return {
       animationNamesArray: ["animate-slideUp-medium"],
       refsArray: [targetMedium],
     };
   }
   return {
-    animationNamesArray: ["animate-slideUp-large", "animate-slideUp-medium"],
+    animationNamesArray: [
+      "animate-slideUp-large",
+      "animate-slideUp-medium",
+      
+    ],
     refsArray: [targetLarg, targetMedium],
   };
 };

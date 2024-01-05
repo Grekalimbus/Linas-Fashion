@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Link from "next/link";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import getAnimationsAndRefs from "../api/getAnimationsAndRefs";
 
 const SecondBlockContent = ({ screen }) => {
@@ -14,6 +14,7 @@ const SecondBlockContent = ({ screen }) => {
   );
 
   useIntersectionObserver(animationsAndRefs);
+
   return screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto text-black min-h-min">
       <div

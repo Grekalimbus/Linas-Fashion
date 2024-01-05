@@ -1,21 +1,23 @@
 import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import getAnimationsAndRefs from "../api/getAnimationsAndRefs";
 
 const FirstBlockContent = ({ screen }) => {
-  const targetRef = useRef(null);
-  const targetMiddleRef = useRef(null);
+  const targetLarg = useRef(null);
+  const targetMedium = useRef(null);
 
-  const animationsAndRefs = {
-    refsArray: [targetRef, targetMiddleRef],
-    animationNamesArray: ["animate-slideUp-large", "animate-slideUp-medium"],
-  };
+  const animationsAndRefs = getAnimationsAndRefs(
+    screen,
+    targetLarg,
+    targetMedium
+  );
 
   useIntersectionObserver(animationsAndRefs);
 
-  return screen <= 1152 ? (
+  return screen <= 1152 && screen !== 0 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
-        ref={targetRef}
+        ref={targetMedium}
         className="container flex flex-col max-w-[420px] justify-center p-8"
       >
         <h3 className="font-bold word-wrap block text-5xl">Capturing magic</h3>
@@ -27,7 +29,7 @@ const FirstBlockContent = ({ screen }) => {
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1213,fit=crop/linasyfhpf/about_1-AoP1yOwKMzh26ZLV.png"
           alt="image"
         />
-        <div ref={targetMiddleRef} className="w-full flex justify-between mt-4">
+        <div className="w-full flex justify-between mt-4">
           <div className="w-[48%]">
             <img
               className="w-full h-auto"
@@ -50,13 +52,13 @@ const FirstBlockContent = ({ screen }) => {
     <div className="mx-auto bg-[#04111b] w-full flex justify-center items-center pb-16">
       <div className="container max-w-6xl flex justify-around relative mt-12">
         <img
-          ref={targetRef}
+          ref={targetLarg}
           className="w-[48%] h-[76vh] object-cover"
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1213,fit=crop/linasyfhpf/about_1-AoP1yOwKMzh26ZLV.png"
           alt="image1"
         />
 
-        <div ref={targetMiddleRef} className="ml-20">
+        <div ref={targetMedium} className="ml-20">
           <div className="h-[28%] flex justify-center">
             <img
               className="max-w-[42%] object-cover"
