@@ -1,7 +1,16 @@
-const ContentBlock = ({screen, screenWidth}) => {
+import { useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+
+const ContentBlock = ({ screen, screenWidth }) => {
+  const targetRef = useRef(null);
+  useIntersectionObserver(targetRef, "animate-slideUp");
+
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b]">
-      <div className="container max-w-[420px] mt-20 mb-20 flex justify-center">
+      <div
+        ref={targetRef}
+        className="container max-w-[420px] mt-20 mb-20 flex justify-center"
+      >
         <div className="ml-20">
           <h2 className="font-light text-[17px]">I'VE WORKED WITH:</h2>
           <h1 className="font-semibold text-7xl mt-4">
@@ -25,7 +34,7 @@ const ContentBlock = ({screen, screenWidth}) => {
     </div>
   ) : (
     <div className="mx-auto w-full flex justify-center items-centre bg-[#04111b]">
-      <div className="container max-w-6xl mt-20 mb-20">
+      <div ref={targetRef} className="container max-w-6xl mt-20 mb-20">
         <img
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=388,h=372,fit=crop/linasyfhpf/clients_1-A0xbgEz0nys4Zrxb.png"
           alt="pic1"
