@@ -7,11 +7,11 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
 
   const animationsAndRefs = {
     refsArray: [targetRef, targetMiddleRef],
-    animationNamesArray: ["animate-slideUp-quickly", "animate-slideUp-normal"],
+    animationNamesArray: ["animate-slideUp-large", "animate-slideUp-medium"],
   };
 
   useIntersectionObserver(animationsAndRefs);
-  console.log("targetRef", targetRef.current);
+
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
