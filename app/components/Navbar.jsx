@@ -36,7 +36,7 @@ export const Navbar = ({screenWidth, screen}) => {
           <Link href="/clients">clients </Link>
         </li>
         <li className={`cursor-pointer  ${getBorderForLonk("/contacts")}`}>
-          <Link href="/">Contacts </Link>
+          <Link href="/contacts">Contacts </Link>
         </li>
       </ul>
     </nav>
@@ -58,7 +58,7 @@ export const Navbar = ({screenWidth, screen}) => {
               <Link href="/clients">Clients </Link>
             </li>
             <li className={`cursor-pointer  ${getBorderForLonk("/contacts")}`}>
-              <Link href="/">Contacts </Link>
+              <Link href="/contacts">Contacts </Link>
             </li>
           </ul>
         </div>
