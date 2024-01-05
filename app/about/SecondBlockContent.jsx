@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const SecondBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+  useIntersectionObserver(targetRef, "animate-slideUp");
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto text-black min-h-min">
       <div
