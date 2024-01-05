@@ -7,11 +7,11 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
 
   const animationsAndRefs = {
     refsArray: [targetRef, targetMiddleRef],
-    animationNamesArray: ["animate-slideUp-top", "animate-slideUp-low"],
+    animationNamesArray: ["animate-slideUp-quickly", "animate-slideUp-normal"],
   };
 
   useIntersectionObserver(animationsAndRefs);
-
+  console.log("targetRef", targetRef.current);
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
@@ -48,11 +48,9 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
     </div>
   ) : (
     <div className="mx-auto bg-[#04111b] w-full flex justify-center items-center pb-16">
-      <div
-        ref={targetRef}
-        className="container max-w-6xl flex justify-around relative mt-12"
-      >
+      <div className="container max-w-6xl flex justify-around relative mt-12">
         <img
+          ref={targetRef}
           className="w-[48%] h-[76vh] object-cover"
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1213,fit=crop/linasyfhpf/about_1-AoP1yOwKMzh26ZLV.png"
           alt="image1"

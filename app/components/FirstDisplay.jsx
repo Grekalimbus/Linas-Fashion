@@ -2,13 +2,19 @@ import React, { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const FirstDisplay = ({ screen, screenWidth }) => {
-  const targetRef = useRef(null);
-  useIntersectionObserver(targetRef, "animate-slideUp");
+  const targetRefTop = useRef(null);
+  const targetMiddleRef = useRef(null);
+  const animationsAndRefs = {
+    refsArray: [targetRefTop, targetMiddleRef],
+    animationNamesArray: ["animate-slideUp-quickly", "animate-slideUp-normal"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
 
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center items-center mx-auto h-svh bg-[#04111b] pt-10">
       <div
-        ref={targetRef}
+        ref={targetRefTop}
         className="flex flex-col max-w-[420px] justify-center items-left p-8 pb-40"
       >
         <h3
@@ -46,7 +52,7 @@ const FirstDisplay = ({ screen, screenWidth }) => {
   ) : (
     <div className="w-full mx-auto bg-[#04111b] pb-32 pt-16">
       <div
-        ref={targetRef}
+        ref={targetRefTop}
         className="conteiner max-w-6xl mx-auto flex justify-between"
       >
         <div className="flex flex-col justify-between">
