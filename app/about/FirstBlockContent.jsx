@@ -3,7 +3,7 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const FirstBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+  useIntersectionObserver(targetRef, "animate-slideUp");
 
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
@@ -43,7 +43,7 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
     <div className="mx-auto bg-[#04111b] w-full flex justify-center items-center pb-16">
       <div
         ref={targetRef}
-        className="container max-w-6xl flex justify-around  relative mt-12 opacity-0"
+        className="container max-w-6xl flex justify-around relative mt-12"
       >
         <img
           className="w-[48%] h-[76vh] object-cover"
@@ -65,13 +65,14 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
               alt="image3"
             />
           </div>
+          <div>
+            <h3 className="text-8xl font-semibold mt-20">Capturing </h3>
 
-          <h3 className="text-8xl font-semibold mt-20">Capturing </h3>
-
-          <h3 className="text-8xl font-semibold mt-2 ml-10">magic</h3>
-          <p className="text-1xl mt-44 ml-6">
-            LINAS THOEMKE | FASHION PHOTOGRAPHY
-          </p>
+            <h3 className="text-8xl font-semibold mt-2 ml-10">magic</h3>
+            <p className="text-1xl mt-44 ml-6">
+              LINAS THOEMKE | FASHION PHOTOGRAPHY
+            </p>
+          </div>
         </div>
       </div>
     </div>

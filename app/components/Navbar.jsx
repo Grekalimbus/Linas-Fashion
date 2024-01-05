@@ -44,7 +44,7 @@ export const Navbar = ({ screenWidth, screen }) => {
               <Link href="/">Work </Link>
             </li>
             <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
-              <Link href="/aboutPage">About </Link>
+              <Link href="/about">About </Link>
             </li>
             <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
               <Link href="/">Clients </Link>
