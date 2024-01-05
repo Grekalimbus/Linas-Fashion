@@ -13,7 +13,7 @@ export const Navbar = ({ screenWidth, screen }) => {
     return "";
   };
 
-  return screenWidth <= 950 || screen <= 950 ? (
+  return screenWidth <= 1152 || screen <= 1152 ? (
     <nav className="shadow mx-auto bg-[#04111b] w-full sticky top-0 z-[10] ">
       <div className="mx-auto max-w-7xl flex w-full items-center justify-between p-7">
         <div>Linas Thoemke</div>
