@@ -23,8 +23,13 @@ const useIntersectionObserver = (animationsAndRefs) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
           const targetRef = refsArray[index]; // Access the correct ref from the array
+
           if (targetRef && animationNamesArray[index]) {
-            targetRef.current.classList.add("opacity-0");
+            console.log("targetRef", targetRef.current);
+            console.log(
+              "animationNamesArray[index]",
+              animationNamesArray[index]
+            );
             targetRef.current.classList.add(animationNamesArray[index]);
           }
         }

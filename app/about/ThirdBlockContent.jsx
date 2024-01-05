@@ -1,17 +1,14 @@
 import { useRef } from "react";
 import Link from "next/link";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import getAnimationsAndRefs from "../api/getAnimationsAndRefs";
 
 export const ThirdBlockContent = ({ screen }) => {
-  const targetLarg = useRef(null);
   const targetMedium = useRef(null);
 
-  const animationsAndRefs = getAnimationsAndRefs(
-    screen,
-    targetLarg,
-    targetMedium
-  );
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
 
   useIntersectionObserver(animationsAndRefs);
 
@@ -52,7 +49,7 @@ export const ThirdBlockContent = ({ screen }) => {
       className="mx-auto w-full flex justify-center items-start text-black bg-cover bg-center h-[115vh] object-cover pt-12"
     >
       <div
-        ref={targetLarg}
+        ref={targetMedium}
         className="w-full relative text-black mx-auto max-w-6xl flex flex-col justify-center items-cente"
       >
         <div className=" w-full flex justify-between text-black text-lg ">

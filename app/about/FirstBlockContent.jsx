@@ -1,16 +1,14 @@
 import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import getAnimationsAndRefs from "../api/getAnimationsAndRefs";
 
 const FirstBlockContent = ({ screen }) => {
   const targetLarg = useRef(null);
   const targetMedium = useRef(null);
 
-  const animationsAndRefs = getAnimationsAndRefs(
-    screen,
-    targetLarg,
-    targetMedium
-  );
+  const animationsAndRefs = {
+    refsArray: [targetLarg, targetMedium],
+    animationNamesArray: ["animate-slideUp-large", "animate-slideUp-medium"],
+  };
 
   useIntersectionObserver(animationsAndRefs);
 

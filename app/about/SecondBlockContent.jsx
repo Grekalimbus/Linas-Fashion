@@ -1,24 +1,21 @@
 import { useRef } from "react";
 import Link from "next/link";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import getAnimationsAndRefs from "../api/getAnimationsAndRefs";
 
 const SecondBlockContent = ({ screen }) => {
-  const targetLarg = useRef(null);
-  const targetMiddleRef = useRef(null);
+  const targetMedium = useRef(null);
 
-  const animationsAndRefs = getAnimationsAndRefs(
-    screen,
-    targetLarg,
-    targetMiddleRef
-  );
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
 
   useIntersectionObserver(animationsAndRefs);
 
   return screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto text-black min-h-min">
       <div
-        ref={targetLarg}
+        ref={targetMedium}
         className="flex flex-col items-start justify-start max-w-[420px] p-8"
       >
         <p className="block mt-4 text-2xl text-black">
@@ -63,7 +60,7 @@ const SecondBlockContent = ({ screen }) => {
   ) : (
     <div className="mx-auto w-full flex justify-center items-center text-black pt-10 pb-32">
       <div
-        ref={targetLarg}
+        ref={targetMedium}
         className="container max-w-6xl flex justify-between  relative mt-12 opacity-0 "
       >
         <div className="w-[37%]">
