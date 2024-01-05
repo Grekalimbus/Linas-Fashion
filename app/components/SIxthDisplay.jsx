@@ -109,9 +109,15 @@ const SixthDisplay = ({screen, screenWidth}) => {
               color={" bg-gray-200 "}
               textColor={" text-black "}
               labelColor={" text-black "}
+              colortErrorText={" text-black "}
             />
           ))}
-          <Button text={"Submit"} type={"submit"} />
+          <Button
+            text={"Submit"}
+            type={"submit"}
+            colorButton={"bg-black"}
+            colorText={"text-white"}
+          />
         </div>
       </div>
     </div>

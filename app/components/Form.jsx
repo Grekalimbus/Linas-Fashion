@@ -10,6 +10,7 @@ const Form = ({
   color,
   textColor,
   labelColor,
+  colortErrorText,
 }) => {
   return type === "text-area" ? (
     <div>
@@ -27,7 +28,9 @@ const Form = ({
             ></textarea>
             {errorsMessage === false ? (
               <div>
-                <span className="text-black pt-3">{errorMessage}</span>
+                <span className={`${colortErrorText} pt-3`}>
+                  {errorMessage}
+                </span>
               </div>
             ) : (
               <div></div>
@@ -50,7 +53,7 @@ const Form = ({
           />
           {errorsEmail === false ? (
             <div>
-              <span className="text-black pt-3">{errorMessage}</span>
+              <span className={`${colortErrorText} pt-3`}>{errorMessage}</span>
             </div>
           ) : (
             <div></div>

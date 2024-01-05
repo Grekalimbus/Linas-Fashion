@@ -1,10 +1,23 @@
 import React, {useState} from "react";
 import Form from "../components/Form";
+import Button from "../components/Button";
 
 const ContextBlock = ({screen, screenWidth}) => {
   const [state, setState] = useState({name: "", email: "", message: ""});
+  const [errors, setErrors] = useState(false);
+  const [errorMessage, setErrorsMessage] = useState(false);
   const onChange = (e) => {
     setState({...state, [e.target.name]: e.target.value});
+    if (e.target.name === "email") {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailRegex.test(e.target.value) === false) {
+        setErrors(false);
+      }
+      setErrors(e.target.value.length >= 1 ? true : false);
+    }
+    if (e.target.name === "message") {
+      setErrorsMessage(e.target.value.length >= 1 ? true : false);
+    }
   };
 
   return (
@@ -17,17 +30,16 @@ const ContextBlock = ({screen, screenWidth}) => {
               alt="pic1"
               className="w-[20%]"
             />
-
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=388,h=368,fit=crop/linasyfhpf/project2_2-AQE9v5D67auLDGv6.png"
               alt="pic2"
               className="w-[20%] ml-4"
             />
           </div>
-          <h2 className="font-semibold text-8xl underline mt-20">
+          <h2 className="font-semibold text-7xl underline mt-20">
             +3145683245
           </h2>
-          <h2 className="font-semibold text-8xl underline mt-4">
+          <h2 className="font-semibold text-7xl underline mt-5">
             thoemke@linas.com
           </h2>
           <Form
@@ -40,6 +52,7 @@ const ContextBlock = ({screen, screenWidth}) => {
             color={"bg-gray-500 "}
             textColor={"text-black"}
             labelColor={"text-white"}
+            colortErrorText={" text-white "}
           />
           <Form
             name={"email"}
@@ -51,6 +64,9 @@ const ContextBlock = ({screen, screenWidth}) => {
             color={"bg-gray-500"}
             textColor={"text-black"}
             labelColor={"text-white"}
+            errorMessage={"Email is required field , and it must contain @"}
+            errorsEmail={errors}
+            colortErrorText={" text-white "}
           />
           <Form
             name={"message"}
@@ -62,8 +78,22 @@ const ContextBlock = ({screen, screenWidth}) => {
             color={"bg-gray-500"}
             textColor={"text-black"}
             labelColor={"text-white"}
+            errorsMessage={errorMessage}
+            errorMessage={"Message is reqired field "}
+            colortErrorText={" text-white "}
+          />
+          <Button
+            type={"submit"}
+            text={"Submit"}
+            colorButton={"bg-yellow-500"}
+            colorText={"text-black"}
           />
         </div>
+        <img
+          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=976,fit=crop/linasyfhpf/contact_3-YX49w6eMMkSbk1Gr.png"
+          alt="pic3"
+          className="w-[30%] object-contain mt-[120px] ml-10"
+        />
       </div>
     </div>
   );
