@@ -1,9 +1,9 @@
-import {FaBars} from "react-icons/fa";
-import {useState} from "react";
+import { FaBars } from "react-icons/fa";
+import { useState } from "react";
 import Link from "next/link";
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 
-export const Navbar = ({screenWidth, screen}) => {
+export const Navbar = ({ screenWidth, screen }) => {
   const [hiden, setHiden] = useState(false);
   const pathname = usePathname();
   const getBorderForLonk = (link) => {
@@ -12,7 +12,7 @@ export const Navbar = ({screenWidth, screen}) => {
     }
     return "";
   };
-  console.log(pathname);
+
   return screenWidth <= 950 || screen <= 950 ? (
     <nav className="shadow mx-auto bg-[#04111b] w-full sticky top-0 z-[10] ">
       <div className="mx-auto max-w-7xl flex w-full items-center justify-between p-7">

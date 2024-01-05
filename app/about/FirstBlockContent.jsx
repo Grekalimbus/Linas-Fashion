@@ -3,7 +3,14 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const FirstBlockContent = ({ screen, screenWidth }) => {
   const targetRef = useRef(null);
-  useIntersectionObserver(targetRef, "animate-slideUp");
+  const targetMiddleRef = useRef(null);
+
+  const animationsAndRefs = {
+    refsArray: [targetRef, targetMiddleRef],
+    animationNamesArray: ["animate-slideUp-top", "animate-slideUp-low"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
 
   return screenWidth <= 1152 || screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
@@ -20,7 +27,7 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1213,fit=crop/linasyfhpf/about_1-AoP1yOwKMzh26ZLV.png"
           alt="image"
         />
-        <div className="w-full flex justify-between mt-4">
+        <div ref={targetMiddleRef} className="w-full flex justify-between mt-4">
           <div className="w-[48%]">
             <img
               className="w-full h-auto"
@@ -51,7 +58,7 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
           alt="image1"
         />
 
-        <div className="ml-20">
+        <div ref={targetMiddleRef} className="ml-20">
           <div className="h-[28%] flex justify-center">
             <img
               className="max-w-[42%] object-cover"

@@ -1,6 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-const useIntersectionObserver = (targetRef, nameAnimationPossition) => {
+const useIntersectionObserver = (animationsAndRefs) => {
+  const { refsArray = [], animationNamesArray = [] } = animationsAndRefs || {};
+
+  const observerRef = useRef(null); // Ref to store the observer
+
   const options = {
     root: null,
     rootMargin: "0px",
@@ -8,25 +12,35 @@ const useIntersectionObserver = (targetRef, nameAnimationPossition) => {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          targetRef.current.classList.add("opacity-0");
-          targetRef.current.classList.add(nameAnimationPossition);
+          const targetRef = entry.target;
+
+          if (index !== -1 && animationNamesArray[index]) {
+            targetRef.classList.add("opacity-0");
+            targetRef.classList.add(animationNamesArray[index]);
+          }
         }
       });
     }, options);
 
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
-    }
+    refsArray.forEach((ref) => {
+      if (ref && ref.current && observerRef.current) {
+        observerRef.current.observe(ref.current);
+      }
+    });
 
     return () => {
-      if (targetRef.current) {
-        observer.unobserve(targetRef.current);
-      }
+      refsArray.forEach((ref) => {
+        if (ref && ref.current && observerRef.current) {
+          observerRef.current.unobserve(ref.current);
+        }
+      });
     };
-  }, [targetRef]);
+  }, [refsArray, animationNamesArray]);
+
+  return observerRef.current; // Return the observer stored in the ref
 };
 
 export default useIntersectionObserver;
