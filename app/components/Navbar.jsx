@@ -1,8 +1,8 @@
-import { FaBars } from "react-icons/fa";
-import { useState } from "react";
+import {FaBars} from "react-icons/fa";
+import {useState} from "react";
 import Link from "next/link";
 
-export const Navbar = ({ screenWidth, screen }) => {
+export const Navbar = ({screenWidth, screen}) => {
   const [hiden, setHiden] = useState(false);
 
   return screenWidth <= 950 || screen <= 950 ? (
@@ -25,7 +25,7 @@ export const Navbar = ({ screenWidth, screen }) => {
           <Link href="/aboutPage">About </Link>
         </li>
         <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
-          <Link href="/">Clients </Link>
+          <Link href="/clients">Clients </Link>
         </li>
         <li className="cursor-pointer hover:border-b-2 hover:mb-1 transition-all">
           <Link href="/">Contacts </Link>
