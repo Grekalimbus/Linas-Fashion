@@ -54,14 +54,14 @@ const FifthDisplay = ({screen, screenWidth}) => {
         <img
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1282,fit=crop/linasyfhpf/Home_13-Yg2PkDkr39F5vkyM.png"
           alt="Model1"
-          className="xl:w-[400px] xl:h-[521px] lg:w-[326px] lg:h-[425px] static z-[0] mt-[60px] ml-20 sm:w-[313px] sm:h-[408px] object-cover"
+          className="w-[35%] h-[20%] static z-[0] mt-[60px] ml-20  object-cover"
         />
         <img
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1242,fit=crop/linasyfhpf/Home_12-YNqLVxVkEjiR203R.png"
           alt="Model2"
-          className="absolute w-[297px] h-[375px]  z-[1] xl:w-[297px] xl:h-[375px] bottom-20 left-[230px] lg:w-[264px] lg:h-[334px] sm:w-[232px] sm:h-[294px] object-cover"
+          className="absolute w-[25%] z-[1] bottom-20 left-[80px]  object-cover"
         />
-        <div className="z-[1] absolute bottom-0 left-[228px] ">
+        <div className="z-[1] absolute bottom-0 left-[80px]">
           <p className="text-black font-bold text-xl">YELLOW</p>
           <a className="text-black underline font-sansi cursor-pointer">
             Learn more about the project →
@@ -70,7 +70,7 @@ const FifthDisplay = ({screen, screenWidth}) => {
         <img
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1006,h=1554,fit=crop/linasyfhpf/Home_14-dWxVaNakylUxl4Br.png"
           alt="Model3"
-          className="w-[503px] h-[777px] xl:ml-[150px]  mb-[80px] lg:w-[410px] lg:h-[634px] lg:ml-[100px] sm:w-[394px] sm:h-[509px] sm:ml-10 object-cover"
+          className="w-[40%]  mb-[80px]  sm:ml-10 object-cover"
         />
         <p className="text-black font-sansi absolute z-[1] bottom-0">
           Model: Anna Fena

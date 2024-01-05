@@ -1,7 +1,7 @@
-import { useRef } from "react";
+import {useRef} from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const ThirdDisplay = ({ screen, screenWidth }) => {
+const ThirdDisplay = ({screen, screenWidth}) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef, "animate-slideUp");
 
@@ -40,7 +40,7 @@ const ThirdDisplay = ({ screen, screenWidth }) => {
     <div className="mx-auto justify-center bg-[#04111b] pt-5 relative flex">
       <div
         ref={targetRef}
-        className="w-full container static mt-10 flex justify-center"
+        className="w-full container static mt-10 flex justify-center max-w-6xl"
       >
         <div className="mt-20 mb-20">
           <h1 className="color-white font-bold text-8xl w-[10%] ml-5">02</h1>
@@ -48,12 +48,12 @@ const ThirdDisplay = ({ screen, screenWidth }) => {
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1410,fit=crop/linasyfhpf/Home_7-AE0xXDXkxGuLqpgk.png"
               alt="ManModel"
-              className="xl:w-[402px] xl:h-[576px] mt-20 ml-[190px] z-[0] static lg:w-[361px] lg:h-[517px] md:w-[307px] md:h-[440px] md:mt-5"
+              className="w-[35%] h-[10%] mt-20 ml-[190px] z-[0] static "
             />
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1034,fit=crop/linasyfhpf/Home_6-YyvLQNQb5bHZrQ2V.png"
               alt="Flower"
-              className="absolute  w-[297px] h-[312px] z-[1] flex  mt-[265px] lg:w-[266px] lg:h-[280px] md:w-[227px] md:h-[238px] md:mt-[180px] md:mr-20 "
+              className="absolute  w-[25%]  z-[1] flex  mt-[265px]  "
             />
             <div className="z-[1] absolute bottom-0">
               <h4 className="color-white text-semibold">FLOWER GARDEN</h4>
@@ -64,7 +64,7 @@ const ThirdDisplay = ({ screen, screenWidth }) => {
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1006,h=1582,fit=crop/linasyfhpf/Home_8-m5KgxNx9kwhwwqNW.png"
               alt="ModelMan2"
-              className="xl:w-[503px] xl:h-[791px] mt-5 lg:w-[452px] lg:h-[710px] ml-[100px] md:w-[385px] md:h-[605px] static z-[0] "
+              className="w-[45%] mt-5  ml-[50px] static z-[0] object-contain"
             />
             <p className="font-sans color-white mr-5  mb-5 flex absolute right-0 bottom-0 shadow-sm">
               MUA: Jessie Gein

@@ -1,7 +1,7 @@
-import { useRef } from "react";
+import {useRef} from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FourthDisplay = ({ screen, screenWidth }) => {
+const FourthDisplay = ({screen, screenWidth}) => {
   const targetRef = useRef(null);
   useIntersectionObserver(targetRef, "animate-slideUp");
 
@@ -47,18 +47,18 @@ const FourthDisplay = ({ screen, screenWidth }) => {
     <div className="mx-auto flex justify-center ">
       <div
         ref={targetRef}
-        className="w-full container  flex justify-center static"
+        className="w-full container flex justify-center static"
       >
-        <div className="relative flex mt-20 mb-20 max-w-6xl">
+        <div className="relative flex mt-20 max-w-6xl">
           <h1 className="text-black text-8xl font-sans font-medium z-[1] absolute pt-10 pl-10">
             03
           </h1>
           <img
             src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1418,h=1740,fit=crop/linasyfhpf/Home_9-Y4Lg6q6QPvt7bRnp.png"
             alt="Model1"
-            className="w-[709px] h-[870px] z-0 static lg:w-[583px] lg:h-[716px] md:w-[544px] md:h-[668px]"
+            className="w-[100%] h-[65%] z-0 static"
           />
-          <div className="ml-20">
+          <div className="ml-20 ">
             <p className="text-black font-sans font-medium flex justify-end">
               Model: Yoko Yamada
             </p>
@@ -68,12 +68,12 @@ const FourthDisplay = ({ screen, screenWidth }) => {
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=548,fit=crop/linasyfhpf/project3_2-YZ9p0JjL47HE1gJj.png"
               alt="Model2"
-              className="w-[400px] h-[274px] mb-10 pt-10 lg:w-[329px] lg:h-[225px] md:w-[307px] md:h-[210px]"
+              className="w-[98%] mb-10 pt-10 object-contatin"
             />
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=744,fit=crop/linasyfhpf/project3_3-m2Wk5vEOzjUO3MX5.png"
               alt="Model3"
-              className="w-[400px] h-[372px] lg:w-[329px] lg:h-[306px] md:w-[307px] md:h-[285px]"
+              className="w-[98%] h-[38%] object-contatin"
             />
             <p className="font-semibold text-black font-sans mt-[65px]">
               SOMETHING IN THE AIR
