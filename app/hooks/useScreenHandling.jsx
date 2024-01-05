@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 const useScreenHandling = () => {
   const [screen, setscreen] = useState(0);
-  // const [screenWidth, setScreenWidth] = useState(0);
   const [wrapperStyle, setWrapperStyle] = useState("w-full");
 
   const handleScreenChange = (screenWrapper) => {
     const widthMappings = {
       1200: { wrapperStyle: "w-full", screen: 1200 },
       950: { wrapperStyle: "w-[950px]", screen: 950 },
-      // Add more width mappings as needed
     };
 
     const { wrapperStyle, screenWidth } = widthMappings[screenWrapper] || {};
