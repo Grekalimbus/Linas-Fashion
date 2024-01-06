@@ -15,7 +15,7 @@ const FirstBlockContent = ({ screen }) => {
   return screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
-        ref={targetMedium}
+        ref={targetLarg}
         className="container flex flex-col max-w-[420px] justify-center p-8"
       >
         <h3 className="font-bold word-wrap block text-5xl">Capturing magic</h3>
