@@ -18,7 +18,7 @@ const inputs = [
     name: "email",
     palceholder: "Your email adress",
     label: "Your email",
-    errorMessage: "This field is required",
+    errorMessage: "This field is required , and it include at @",
     type: "email",
     require: true,
   },

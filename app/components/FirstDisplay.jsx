@@ -1,14 +1,21 @@
 import React, { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FirstDisplay = ({ screen, screenWidth }) => {
-  const targetRef = useRef(null);
-  useIntersectionObserver(targetRef);
+const FirstDisplay = ({ screen }) => {
+  const targetLarg = useRef(null);
+  const targetMedium = useRef(null);
 
-  return screenWidth <= 1152 || screen <= 1152 ? (
+  const animationsAndRefs = {
+    refsArray: [targetLarg, targetMedium],
+    animationNamesArray: ["animate-slideUp-large", "animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
+  return screen <= 1152 ? (
     <div className="w-full flex justify-center items-center mx-auto h-svh bg-[#04111b] pt-10">
       <div
-        ref={targetRef}
+        ref={targetLarg}
         className="flex flex-col max-w-[420px] justify-center items-left p-8 pb-40"
       >
         <h3
@@ -44,12 +51,9 @@ const FirstDisplay = ({ screen, screenWidth }) => {
       </div>
     </div>
   ) : (
-    <div className="w-full mx-auto bg-[#04111b] py-14">
-      <div
-        ref={targetRef}
-        className="conteiner max-w-6xl mx-auto flex justify-between"
-      >
-        <div className="flex flex-col justify-between">
+    <div className="w-full mx-auto bg-[#04111b] pb-32 pt-16">
+      <div className="conteiner max-w-6xl mx-auto flex justify-between">
+        <div ref={targetMedium} className="flex flex-col justify-between">
           <div className="flex space-x-3">
             <img
               className="object-cover"
@@ -78,6 +82,7 @@ const FirstDisplay = ({ screen, screenWidth }) => {
         </div>
 
         <img
+          ref={targetLarg}
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=503,h=673,fit=crop/linasyfhpf/Home_3-YBgxMPMkXLHyZX5g.png"
           alt="image3"
         />
