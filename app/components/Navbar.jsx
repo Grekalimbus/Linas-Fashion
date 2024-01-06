@@ -1,9 +1,9 @@
-import { FaBars } from "react-icons/fa";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
+import {FaBars} from "react-icons/fa";
+import {useState} from "react";
+import {usePathname} from "next/navigation";
 import Link from "next/link";
 
-export const Navbar = ({ screen }) => {
+export const Navbar = ({screen}) => {
   const [hiden, setHiden] = useState(false);
   const pathname = usePathname();
   const getBorderForLonk = (link) => {
