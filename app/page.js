@@ -1,11 +1,11 @@
 "use client";
 import FirstDisplay from "./components/firstDisplay/page";
-import SecondDisplay from "./components/SecondDisplay";
-import ThirdDisplay from "./components/ThirdDisplay";
-import {Navbar} from "./components/Navbar";
+import SecondDisplay from "./components/secondDisplay/page";
+import ThirdDisplay from "./components/thirdDisplay/page";
+import Navbar from "./components/navbar/page";
 import useScreenHandling from "./hooks/useScreenHandling";
-import FourthDisplay from "./components/FourthDisplay";
-import FifthDisplay from "./components/FifthDisplay";
+import FourthDisplay from "./components/fourthDisplay/page";
+import FifthDisplay from "./components/firthDisplay/page";
 import SixthDisplay from "./components/SIxthDisplay";
 import Footer from "./components/Footer";
 

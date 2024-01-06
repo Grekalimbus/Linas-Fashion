@@ -1,6 +1,6 @@
 "use client";
 import ContextBlock from "./ContextBlock";
-import { Navbar } from "../components/Navbar";
+import Navbar from "../components/navbar/page";
 import Footer from "../components/Footer";
 import useScreenHandling from "../hooks/useScreenHandling";
 

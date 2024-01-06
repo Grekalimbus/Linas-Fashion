@@ -1,8 +1,9 @@
+import React from "react";
 import SmallDisplay from "./SmallDisplay";
 import LargeDisplay from "./LargeDisplay";
 
-const FirstDisplay = ({ screen }) => {
+const ThirdBlock = ({ screen }) => {
   return screen <= 1152 ? <SmallDisplay /> : <LargeDisplay />;
 };
 
-export default FirstDisplay;
+export default ThirdBlock;
