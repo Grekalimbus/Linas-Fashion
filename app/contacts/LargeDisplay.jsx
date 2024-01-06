@@ -1,14 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Form from "../components/common/Form";
 import Button from "../components/common/Button";
+import { motion } from "framer-motion";
 
 const LargeDisplay = () => {
-  const [state, setState] = useState({name: "", email: "", message: ""});
+  const [state, setState] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState(false);
   const [errorMessage, setErrorsMessage] = useState(false);
 
   const onChange = (e) => {
-    setState({...state, [e.target.name]: e.target.value});
+    setState({ ...state, [e.target.name]: e.target.value });
     if (e.target.name === "email") {
       setErrors(e.target.value.length >= 7 ? true : false);
     }
@@ -22,7 +23,12 @@ const LargeDisplay = () => {
   };
   return (
     <div className="mx-auto w-full flex justify-center bg-[#04111b]">
-      <div className="container max-w-6xl flex justify-center mt-20 mb-20 ">
+      <motion.div
+        className="container max-w-6xl flex justify-center mt-20 mb-20 "
+        initial={{ opacity: 0, translateY: 50 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div>
           <div className="flex left-0 items-start">
             <img
@@ -94,7 +100,7 @@ const LargeDisplay = () => {
           alt="pic3"
           className="w-[30%] object-contain mt-[120px] ml-10"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
