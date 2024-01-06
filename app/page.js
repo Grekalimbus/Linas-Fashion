@@ -9,11 +9,12 @@ import FifthDisplay from "./components/firthDisplay/page";
 import SixthDisplay from "./components/SIxthDisplay";
 import Footer from "./components/Footer";
 
+import Footer from "./components/Footer";
 
 const page = () => {
-  const { wrapperStyle, screen} =  useScreenHandling();
-  if ( screen === 0){
-    return <div></div>
+  const {wrapperStyle, screen} = useScreenHandling();
+  if (screen === 0) {
+    return <div></div>;
   }
 
   return (
@@ -31,7 +32,7 @@ const page = () => {
         <Footer screen={screen} />
       </div>
     </main>
-  );  
+  );
 };
 
 export default page;
