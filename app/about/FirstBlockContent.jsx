@@ -12,7 +12,7 @@ const FirstBlockContent = ({ screen }) => {
 
   useIntersectionObserver(animationsAndRefs);
 
-  return screen <= 1152 && screen !== 0 ? (
+  return screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
         ref={targetMedium}
