@@ -16,7 +16,7 @@ const useIntersectionObserver = (animationsAndRefs) => {
     const options = {
       root: null, // specifies the element used as the viewport for checking intersection.
       rootMargin: "0px", // adds extra space around the observed elements' bounding boxes.
-      threshold: 0.35, //  sets the percentage of an observed element's visibility required to trigger the callback.
+      threshold: 0.45, //  sets the percentage of an observed element's visibility required to trigger the callback.
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -24,12 +24,7 @@ const useIntersectionObserver = (animationsAndRefs) => {
         if (entry.isIntersecting) {
           const targetRef = refsArray[index]; // Access the correct ref from the array
 
-          if (targetRef && animationNamesArray[index]) {
-            console.log("targetRef", targetRef.current);
-            console.log(
-              "animationNamesArray[index]",
-              animationNamesArray[index]
-            );
+          if (targetRef.current && animationNamesArray[index]) {
             targetRef.current.classList.add(animationNamesArray[index]);
           }
         }

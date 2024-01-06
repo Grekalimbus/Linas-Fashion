@@ -15,7 +15,7 @@ const Footer = ({ screen }) => {
     <div className="w-full flex justify-center items-center mx-auto bg-[#04111b]">
       <div
         ref={targetMedium}
-        className="flex flex-col max-w-[420px] justify-center items-center py-10 font-semibold"
+        className="flex flex-col max-w-[420px] justify-center items-center py-10 font-semibold opacity-0"
       >
         <p>LINAS THOEMKE </p>
         <p className="relative mt-4">
@@ -34,7 +34,7 @@ const Footer = ({ screen }) => {
     <div className="w-full mx-auto bg-[#04111b] p-16">
       <div
         ref={targetMedium}
-        className="max-w-6xl mx-auto flex justify-between "
+        className="max-w-6xl mx-auto flex justify-between opacity-0"
       >
         <div className="flex justify-between w-[50%] font-semibold relative">
           <p>LINAS THOEMKE </p>

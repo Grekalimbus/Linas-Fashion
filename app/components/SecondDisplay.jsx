@@ -1,14 +1,20 @@
-import {useRef} from "react";
+import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const SecondDisplay = ({screen, screenWidth}) => {
-  const targetRef = useRef(null);
-  useIntersectionObserver(targetRef, "animate-slideUp");
+const SecondDisplay = ({ screen }) => {
+  const targetMedium = useRef(null);
 
-  return screenWidth <= 1152 || screen <= 1152 ? (
-    <div ref={targetRef} className="mx-auto ">
-      <div className="flex w-full justify-center items-center bg-white items-left p-8 ">
-        <div className="mt-20 mb-20 ">
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
+  return screen <= 1152 ? (
+    <div className="mx-auto ">
+      <div className="flex w-full justify-center items-center bg-white items-left p-8">
+        <div ref={targetMedium} className="mt-20 mb-20 opacity-0">
           <h1 className="text-black font-bold text-6xl">01</h1>
           <h4 className="font-semibold text-black pt-5">HEAD OVER HEELS</h4>
           <a className="cursor-pointer underline text-black pt-5">
@@ -33,12 +39,9 @@ const SecondDisplay = ({screen, screenWidth}) => {
       </div>
     </div>
   ) : (
-    <div
-      ref={targetRef}
-      className="mx-auto flex justify-center items-center bg-white "
-    >
-      <div className="container w-full flex justify-center static mt-20 mb-20 max-w-6xl ">
-        <div className="relative flex ">
+    <div className="mx-auto flex justify-center items-center bg-white ">
+      <div className="container w-full flex justify-center static mt-20 mb-20 max-w-6xl">
+        <div ref={targetMedium} className="relative flex opacity-0">
           <h1 className="text-bold font-sans text-8xl text-black z-[1] absolute mt-5 ml-5">
             01
           </h1>

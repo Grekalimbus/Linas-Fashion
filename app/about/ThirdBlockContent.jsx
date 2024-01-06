@@ -15,7 +15,7 @@ export const ThirdBlockContent = ({ screen }) => {
   return screen <= 1152 ? (
     <div
       ref={targetMedium}
-      className="w-full flex flex-col justify-start items-center mx-auto h-[70vh] bg-[#04111b]  bg-cover bg-center text-black"
+      className="w-full flex flex-col justify-start items-center mx-auto h-[70vh] bg-[#04111b]  bg-cover bg-center text-black opacity-0"
       style={{
         backgroundImage:
           "url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/linasyfhpf/about_4-AVLX0qj5O7Ux2V1g.png')",
@@ -50,7 +50,7 @@ export const ThirdBlockContent = ({ screen }) => {
     >
       <div
         ref={targetMedium}
-        className="w-full relative text-black mx-auto max-w-6xl flex flex-col justify-center items-cente"
+        className="w-full relative text-black mx-auto max-w-6xl flex flex-col justify-center items-cente opacity-0"
       >
         <div className=" w-full flex justify-between text-black text-lg ">
           <p>CREATIVE PROFESSIONAL </p>

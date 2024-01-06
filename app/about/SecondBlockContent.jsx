@@ -16,7 +16,7 @@ const SecondBlockContent = ({ screen }) => {
     <div className="w-full flex justify-center mx-auto text-black min-h-min">
       <div
         ref={targetMedium}
-        className="flex flex-col items-start justify-start max-w-[420px] p-8"
+        className="flex flex-col items-start justify-start max-w-[420px] p-8 opacity-0"
       >
         <p className="block mt-4 text-2xl text-black">
           Linas Thoemke is a fashion photographer based in Amsterdam. He started

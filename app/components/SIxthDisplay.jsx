@@ -1,8 +1,19 @@
 import Form from "./Form";
 import Button from "./Button";
 import inputs from "../api/Inputs";
-import {useState} from "react";
-const SixthDisplay = ({screen, screenWidth}) => {
+import { useState, useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+
+const SixthDisplay = ({ screen }) => {
+  const targetMedium = useRef(null);
+
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
   const [values, setValue] = useState({
     name: "",
     lastname: "",
@@ -12,7 +23,7 @@ const SixthDisplay = ({screen, screenWidth}) => {
   const [errors, setErrors] = useState(false);
   const [errosMessage, setErrorsMessage] = useState(false);
   const onChange = (e) => {
-    setValue({...values, [e.target.name]: e.target.value});
+    setValue({ ...values, [e.target.name]: e.target.value });
     if (e.target.name === "email") {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (emailRegex.test(e.target.value) === false) {
@@ -25,9 +36,12 @@ const SixthDisplay = ({screen, screenWidth}) => {
     }
   };
 
-  return screenWidth <= 1152 || screen <= 1152 ? (
+  return screen <= 1152 ? (
     <div className="mx-auto flex justify-center bg-white">
-      <div className="container w-full flex justify-center mt-20 mb-20">
+      <div
+        ref={targetMedium}
+        className="container w-full flex justify-center mt-20 mb-20 opacity-0"
+      >
         <div>
           <h1 className="font-semibold text-black text-4xl ml-2">Impressed?</h1>
           <p className="text-black font-medium text-[17px] mt-10 ml-2">
@@ -69,7 +83,10 @@ const SixthDisplay = ({screen, screenWidth}) => {
     </div>
   ) : (
     <div className="mx-auto flex justify-center  bg-white ml-10">
-      <div className="container w-full flex justify-center  max-w-6xl ml-10 mt-20 mb-20">
+      <div
+        ref={targetMedium}
+        className="container w-full flex justify-center  max-w-6xl ml-10 mt-20 mb-20 opacity-0"
+      >
         <div className="">
           <h1 className="font-semibold text-black text-8xl">Impressed?</h1>
           <p className="text-black font-medium text-[17px] mt-20">
