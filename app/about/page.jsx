@@ -7,19 +7,22 @@ import SecondBlockContent from "./SecondBlockContent";
 import { ThirdBlockContent } from "./ThirdBlockContent";
 
 const AboutPage = () => {
-  const { screenWidth, wrapperStyle, screen } = useScreenHandling();
+  const { wrapperStyle, screen } = useScreenHandling();
+  if (screen === 0) {
+    return <div></div>;
+  }
 
   return (
     <div className="flex overflow-hidden max-h-screen flex-col w-full items-center">
       <div
         className={`${wrapperStyle} overflow-auto max-h-screen transition-all duration-500`}
       >
-        <Navbar screen={screen} screenWidth={screenWidth} />
+        <Navbar screen={screen} />
 
-        <FirstBlockContent screen={screen} screenWidth={screenWidth} />
-        <SecondBlockContent screen={screen} screenWidth={screenWidth} />
-        <ThirdBlockContent screen={screen} screenWidth={screenWidth} />
-        <Footer screen={screen} screenWidth={screenWidth} />
+        <FirstBlockContent screen={screen} />
+        <SecondBlockContent screen={screen} />
+        <ThirdBlockContent screen={screen} />
+        <Footer screen={screen} />
       </div>
     </div>
   );

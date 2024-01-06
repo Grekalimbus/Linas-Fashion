@@ -1,7 +1,7 @@
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export const Navbar = ({ screen }) => {
   const [hiden, setHiden] = useState(false);
@@ -30,7 +30,7 @@ export const Navbar = ({ screen }) => {
           <Link href="/">Work </Link>
         </li>
         <li className={`cursor-pointer  ${getBorderForLonk("/about")}`}>
-          <Link href="/aboutPage">About </Link>
+          <Link href="/about">About </Link>
         </li>
         <li className={`cursor-pointer  ${getBorderForLonk("/clients")}`}>
           <Link href="/clients">clients </Link>

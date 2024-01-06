@@ -15,7 +15,7 @@ const FirstDisplay = ({ screen }) => {
   return screen <= 1152 ? (
     <div className="w-full flex justify-center items-center mx-auto h-svh bg-[#04111b] pt-10">
       <div
-        ref={targetMedium}
+        ref={targetLarg}
         className="flex flex-col max-w-[420px] justify-center items-left p-8 pb-40"
       >
         <h3
