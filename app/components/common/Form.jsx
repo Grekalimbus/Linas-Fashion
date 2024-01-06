@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 const Form = ({
   name,
   placeholder,
@@ -14,7 +15,12 @@ const Form = ({
 }) => {
   return type === "text-area" ? (
     <div>
-      <div className="container flex w-full ">
+      <motion.div
+        className="container flex w-full "
+        initial={{ opacity: 0, translateY: 75 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="flex ">
           <form className="p-4 ">
             <h2 className={`${labelColor} font-light pb-2`}>{label}</h2>
@@ -37,11 +43,16 @@ const Form = ({
             )}
           </form>
         </div>
-      </div>
+      </motion.div>
     </div>
   ) : (
     <div className="container flex w-full ">
-      <div className="flex ">
+      <motion.div
+        className="flex "
+        initial={{ opacity: 0, translateY: 75 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <form action="#" className="p-4 ">
           <h2 className={`${labelColor} font-light pb-2`}>{label}</h2>
           <input
@@ -51,7 +62,7 @@ const Form = ({
             placeholder={placeholder}
             className={`${color} ${textColor} xl:w-[503px] xl:h-[48px] lg:w-[503px] lg:h-[48px] pl-2 border sm:w-[328px] sm:h-[48px]`}
           />
-          {errorsEmail === false ? (
+          {!errorsEmail ? (
             <div>
               <span className={`${colortErrorText} pt-3`}>{errorMessage}</span>
             </div>
@@ -59,7 +70,7 @@ const Form = ({
             <div></div>
           )}
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };
