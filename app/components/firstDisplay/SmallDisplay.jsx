@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export const SmallDisplay = () => {
+const SmallDisplay = () => {
   return (
     <div className="w-full flex justify-center items-center mx-auto bg-[#04111b] px-8 py-14">
       <div className="flex flex-col max-w-[420px] justify-center items-left">
@@ -46,3 +46,5 @@ export const SmallDisplay = () => {
     </div>
   );
 };
+
+export default SmallDisplay;

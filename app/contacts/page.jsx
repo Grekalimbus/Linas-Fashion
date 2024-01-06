@@ -1,9 +1,10 @@
 "use client";
-import {Navbar} from "../components/Navbar";
+import Navbar from "../components/navbar/page";
 import Footer from "../components/Footer";
 import useScreenHandling from "../hooks/useScreenHandling";
 import SmallDisplay from "./SmallDisplay";
 import LargeDisplay from "./LargeDisplay";
+
 const page = () => {
   const {wrapperStyle, screen} = useScreenHandling();
 

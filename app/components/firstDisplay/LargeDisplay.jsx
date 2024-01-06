@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export const LargeDisplay = () => {
+const LargeDisplay = () => {
   return (
     <div className="w-full mx-auto bg-[#04111b] pb-32 pt-16">
       <div className="conteiner max-w-6xl mx-auto flex justify-between">
@@ -52,3 +52,5 @@ export const LargeDisplay = () => {
     </div>
   );
 };
+
+export default LargeDisplay;
