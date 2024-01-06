@@ -1,10 +1,10 @@
 import Form from "./Form";
 import Button from "./Button";
 import inputs from "../api/Inputs";
-import { useState, useRef } from "react";
+import {useState, useRef} from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const SixthDisplay = ({ screen }) => {
+const SixthDisplay = ({screen}) => {
   const targetMedium = useRef(null);
 
   const animationsAndRefs = {
@@ -20,19 +20,22 @@ const SixthDisplay = ({ screen }) => {
     email: "",
     message: "",
   });
+
   const [errors, setErrors] = useState(false);
   const [errosMessage, setErrorsMessage] = useState(false);
   const onChange = (e) => {
-    setValue({ ...values, [e.target.name]: e.target.value });
+    setValue({...values, [e.target.name]: e.target.value});
+
     if (e.target.name === "email") {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (emailRegex.test(e.target.value) === false) {
-        setErrors(false);
-      }
-      setErrors(e.target.value.length >= 1 ? true : false);
+      setErrors(e.target.value.length >= 7 ? true : false);
     }
     if (e.target.name === "message") {
-      setErrorsMessage(e.target.value.length >= 1 ? true : false);
+      setErrorsMessage(e.target.value.length >= 7 ? true : false);
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailRegex.test(e.target.value) === false) {
+      setErrors(false);
     }
   };
 

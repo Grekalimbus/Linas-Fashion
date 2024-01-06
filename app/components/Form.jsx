@@ -51,7 +51,7 @@ const Form = ({
             placeholder={placeholder}
             className={`${color} ${textColor} xl:w-[503px] xl:h-[48px] lg:w-[503px] lg:h-[48px] pl-2 border sm:w-[328px] sm:h-[48px]`}
           />
-          {errorsEmail === false ? (
+          {!errorsEmail ? (
             <div>
               <span className={`${colortErrorText} pt-3`}>{errorMessage}</span>
             </div>
