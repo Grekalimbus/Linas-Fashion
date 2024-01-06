@@ -6,14 +6,13 @@ import {Navbar} from "./components/Navbar";
 import useScreenHandling from "./hooks/useScreenHandling";
 import FourthDisplay from "./components/FourthDisplay";
 import FifthDisplay from "./components/FifthDisplay";
-import SixthDisplay from "./components/SIxthDisplay";
+import SixthDisplay from "./components/sixthDisplay/page";
 import Footer from "./components/Footer";
 
-
 const page = () => {
-  const { wrapperStyle, screen} =  useScreenHandling();
-  if ( screen === 0){
-    return <div></div>
+  const {wrapperStyle, screen} = useScreenHandling();
+  if (screen === 0) {
+    return <div></div>;
   }
 
   return (
@@ -31,7 +30,7 @@ const page = () => {
         <Footer screen={screen} />
       </div>
     </main>
-  );  
+  );
 };
 
 export default page;
