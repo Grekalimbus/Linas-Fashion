@@ -1,12 +1,16 @@
 "use client";
 
-import {Navbar} from "../components/Navbar";
+import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContentBlock from "./ContentBlock";
 import useScreenHandling from "../hooks/useScreenHandling";
 
 const page = () => {
-  const {screenWidth, wrapperStyle, screen} = useScreenHandling();
+  const { screenWidth, wrapperStyle, screen } = useScreenHandling();
+
+  if (screenWidth == 0 || screen === 0) {
+    return <div></div>;
+  }
 
   return (
     <div className="flex overflow-hidden max-h-screen flex-col w-full items-center">

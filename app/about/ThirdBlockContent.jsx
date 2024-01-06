@@ -1,14 +1,21 @@
 import { useRef } from "react";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Link from "next/link";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-export const ThirdBlockContent = ({ screen, screenWidth }) => {
-  const targetRef = useRef(null);
+export const ThirdBlockContent = ({ screen }) => {
+  const targetMedium = useRef(null);
 
-  useIntersectionObserver(targetRef, "animate-slideUp");
-  return screenWidth <= 1152 || screen <= 1152 ? (
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
+  return screen <= 1152 ? (
     <div
-      className="w-full flex flex-col justify-start items-center mx-auto h-[70vh] bg-[#04111b]  bg-cover bg-center text-black"
+      ref={targetMedium}
+      className="w-full flex flex-col justify-start items-center mx-auto h-[70vh] bg-[#04111b]  bg-cover bg-center text-black opacity-0"
       style={{
         backgroundImage:
           "url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/linasyfhpf/about_4-AVLX0qj5O7Ux2V1g.png')",
@@ -42,8 +49,8 @@ export const ThirdBlockContent = ({ screen, screenWidth }) => {
       className="mx-auto w-full flex justify-center items-start text-black bg-cover bg-center h-[115vh] object-cover pt-12"
     >
       <div
-        ref={targetRef}
-        className="w-full relative text-black mx-auto max-w-6xl flex flex-col justify-center items-cente"
+        ref={targetMedium}
+        className="w-full relative text-black mx-auto max-w-6xl flex flex-col justify-center items-cente opacity-0"
       >
         <div className=" w-full flex justify-between text-black text-lg ">
           <p>CREATIVE PROFESSIONAL </p>

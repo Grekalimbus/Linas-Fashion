@@ -1,8 +1,20 @@
-const ContentBlock = ({screen, screenWidth}) => {
-  return screenWidth <= 1152 || screen <= 1152 ? (
+import { useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+
+const ContentBlock = ({ screen }) => {
+  const targetMedium = useRef(null);
+
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
+  return screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b]">
       <div className="container max-w-[420px] mt-20 mb-20 flex justify-center">
-        <div className="ml-20">
+        <div ref={targetMedium} className="ml-20 opacity-0">
           <h2 className="font-light text-[17px]">I'VE WORKED WITH:</h2>
           <h1 className="font-semibold text-7xl mt-4">
             Frontera, Gucci, Versace, innocent smoothies, Presson, Kris.T,
@@ -25,7 +37,10 @@ const ContentBlock = ({screen, screenWidth}) => {
     </div>
   ) : (
     <div className="mx-auto w-full flex justify-center items-centre bg-[#04111b]">
-      <div className="container max-w-6xl mt-20 mb-20">
+      <div
+        ref={targetMedium}
+        className="container max-w-6xl mt-20 mb-20 opacity-0"
+      >
         <img
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=388,h=372,fit=crop/linasyfhpf/clients_1-A0xbgEz0nys4Zrxb.png"
           alt="pic1"

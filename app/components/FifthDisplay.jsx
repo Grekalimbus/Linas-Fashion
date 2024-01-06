@@ -1,14 +1,21 @@
-import {useRef} from "react";
+import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FifthDisplay = ({screen, screenWidth}) => {
-  const targetRef = useRef(null);
-  useIntersectionObserver(targetRef, "animate-slideUp");
-  return screenWidth <= 1152 || screen <= 1152 ? (
+const FifthDisplay = ({ screen }) => {
+  const targetMedium = useRef(null);
+
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
+  return screen <= 1152 ? (
     <div className="ma-auto flex justify-center bg-[#fad003] ">
       <div
-        ref={targetRef}
-        className="w-full container flex justify-center items-left p-8"
+        ref={targetMedium}
+        className="w-full container flex justify-center items-left p-8 opacity-0"
       >
         <div className="mt-20 mb-20">
           <h1 className="text-black font-bold text-6xl pt-5 ">01</h1>
@@ -45,8 +52,8 @@ const FifthDisplay = ({screen, screenWidth}) => {
   ) : (
     <div className="mx-auto bg-[#fad003]  flex justify-center items-center ">
       <div
-        ref={targetRef}
-        className="container w-full flex justify-center relative mt-20 max-w-6xl  mb-20"
+        ref={targetMedium}
+        className="container w-full flex justify-center relative mt-20 max-w-6xl  mb-20 opacity-0"
       >
         <h1 className="text-black font-bold text-8xl  top ml-20 w-[10%] h-[10%]">
           04

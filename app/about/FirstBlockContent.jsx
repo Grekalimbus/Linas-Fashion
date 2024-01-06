@@ -1,15 +1,22 @@
 import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FirstBlockContent = ({ screen, screenWidth }) => {
-  const targetRef = useRef(null);
-  useIntersectionObserver(targetRef, "animate-slideUp");
+const FirstBlockContent = ({ screen }) => {
+  const targetLarg = useRef(null);
+  const targetMedium = useRef(null);
 
-  return screenWidth <= 1152 || screen <= 1152 ? (
+  const animationsAndRefs = {
+    refsArray: [targetLarg, targetMedium],
+    animationNamesArray: ["animate-slideUp-large", "animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
+  return screen <= 1152 && screen !== 0 ? (
     <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b] text-white">
       <div
-        ref={targetRef}
-        className="flex flex-col max-w-[420px] justify-center p-8"
+        ref={targetMedium}
+        className="container flex flex-col max-w-[420px] justify-center p-8"
       >
         <h3 className="font-bold word-wrap block text-5xl">Capturing magic</h3>
         <p>LINAS THOEMKE | </p>
@@ -41,17 +48,15 @@ const FirstBlockContent = ({ screen, screenWidth }) => {
     </div>
   ) : (
     <div className="mx-auto bg-[#04111b] w-full flex justify-center items-center pb-16">
-      <div
-        ref={targetRef}
-        className="container max-w-6xl flex justify-around relative mt-12"
-      >
+      <div className="container max-w-6xl flex justify-around relative mt-12">
         <img
+          ref={targetLarg}
           className="w-[48%] h-[76vh] object-cover"
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1213,fit=crop/linasyfhpf/about_1-AoP1yOwKMzh26ZLV.png"
           alt="image1"
         />
 
-        <div className="ml-20">
+        <div ref={targetMedium} className="ml-20">
           <div className="h-[28%] flex justify-center">
             <img
               className="max-w-[42%] object-cover"

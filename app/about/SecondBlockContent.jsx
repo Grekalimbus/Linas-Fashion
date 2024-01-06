@@ -1,15 +1,22 @@
 import { useRef } from "react";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Link from "next/link";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const SecondBlockContent = ({ screen, screenWidth }) => {
-  const targetRef = useRef(null);
-  useIntersectionObserver(targetRef, "animate-slideUp");
-  return screenWidth <= 1152 || screen <= 1152 ? (
+const SecondBlockContent = ({ screen }) => {
+  const targetMedium = useRef(null);
+
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
+  return screen <= 1152 ? (
     <div className="w-full flex justify-center mx-auto text-black min-h-min">
       <div
-        ref={targetRef}
-        className="flex flex-col items-start justify-start max-w-[420px] p-8"
+        ref={targetMedium}
+        className="flex flex-col items-start justify-start max-w-[420px] p-8 opacity-0"
       >
         <p className="block mt-4 text-2xl text-black">
           Linas Thoemke is a fashion photographer based in Amsterdam. He started
@@ -53,7 +60,7 @@ const SecondBlockContent = ({ screen, screenWidth }) => {
   ) : (
     <div className="mx-auto w-full flex justify-center items-center text-black pt-10 pb-32">
       <div
-        ref={targetRef}
+        ref={targetMedium}
         className="container max-w-6xl flex justify-between  relative mt-12 opacity-0 "
       >
         <div className="w-[37%]">

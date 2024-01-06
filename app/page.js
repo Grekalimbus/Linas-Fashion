@@ -15,8 +15,8 @@ const page = () => {
   if (screenWidth == 0 || screen === 0){
     return <div></div>
   }
-  else{
-    return (
+
+  return (
       <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">       
         <div
           className={`${wrapperStyle} overflow-auto max-h-screen transition-all duration-500`}
@@ -31,8 +31,7 @@ const page = () => {
           <Footer screen={screen} screenWidth={screenWidth} />
         </div>
       </main>
-    );
-  }
+    );  
 };
 
 export default page;

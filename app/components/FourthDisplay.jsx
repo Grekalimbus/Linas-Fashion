@@ -1,17 +1,20 @@
-import {useRef} from "react";
+import { useRef } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const FourthDisplay = ({screen, screenWidth}) => {
-  const targetRef = useRef(null);
-  useIntersectionObserver(targetRef, "animate-slideUp");
+const FourthDisplay = ({ screen }) => {
+  const targetMedium = useRef(null);
 
-  return screenWidth <= 1152 || screen <= 1152 ? (
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
+  return screen <= 1152 ? (
     <div className="mx-auto flex justify-center">
-      <div
-        ref={targetRef}
-        className="w-full container flex justify-center  items-left p-8"
-      >
-        <div className="mt-20 mb-20">
+      <div className="w-full container flex justify-center  items-left p-8">
+        <div ref={targetMedium} className="mt-20 mb-20 opacity-0 ">
           <h1 className="text-black text-6xl font-bold">03</h1>
           <h4 className="text-black font-sans pt-5 font-semibold">
             SOMETHING IN THE AIR
@@ -46,7 +49,7 @@ const FourthDisplay = ({screen, screenWidth}) => {
   ) : (
     <div className="mx-auto w-full bg-white flex justify-center">
       <div className="container w-full max-w-6xl flex justify-center">
-        <div className="mt-20 mb-20 relative flex">
+        <div ref={targetMedium}  className="mt-20 mb-20 relative flex opacity-0">
           <h1 className="text-black text-8xl font-semibold absolute z-[1] ml-10 mt-20">
             03
           </h1>
