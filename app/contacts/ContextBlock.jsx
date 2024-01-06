@@ -1,13 +1,24 @@
-import React, {useState} from "react";
+import React, { useState, useRef } from "react";
 import Form from "../components/Form";
 import Button from "../components/Button";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const ContextBlock = ({screen, screenWidth}) => {
-  const [state, setState] = useState({name: "", email: "", message: ""});
+const ContextBlock = ({ screen }) => {
+  const [state, setState] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState(false);
   const [errorMessage, setErrorsMessage] = useState(false);
+
+  const targetMedium = useRef(null);
+
+  const animationsAndRefs = {
+    refsArray: [targetMedium],
+    animationNamesArray: ["animate-slideUp-medium"],
+  };
+
+  useIntersectionObserver(animationsAndRefs);
+
   const onChange = (e) => {
-    setState({...state, [e.target.name]: e.target.value});
+    setState({ ...state, [e.target.name]: e.target.value });
     if (e.target.name === "email") {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (emailRegex.test(e.target.value) === false) {
@@ -20,9 +31,12 @@ const ContextBlock = ({screen, screenWidth}) => {
     }
   };
 
-  return screenWidth <= 1152 || screen <= 1152 ? (
+  return screen <= 1152 ? (
     <div className="mx-auto flex justify-center items-centre  bg-[#04111b]">
-      <div className="flex justify-center w-full max-w-[420px] mt-20 mb-20 ml-20">
+      <div
+        ref={targetMedium}
+        className="flex justify-center w-full max-w-[420px] mt-20 mb-20 ml-20 opacity-0"
+      >
         <div>
           <h1 className="text-white font-semibold text-3xl ml-3 underline">
             +3145683245
@@ -98,7 +112,10 @@ const ContextBlock = ({screen, screenWidth}) => {
     </div>
   ) : (
     <div className="mx-auto w-full flex justify-center bg-[#04111b]">
-      <div className="container max-w-6xl flex justify-center mt-20 mb-20">
+      <div
+        ref={targetMedium}
+        className="container max-w-6xl flex justify-center mt-20 mb-20 opacity-0"
+      >
         <div>
           <div className="flex left-0 items-start">
             <img
