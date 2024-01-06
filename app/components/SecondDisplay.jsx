@@ -51,7 +51,7 @@ const SecondDisplay = ({ screen }) => {
           <img
             src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1418,h=1610,fit=crop/linasyfhpf/Home_4-YKbxwZe9P2uRE8Va.png"
             alt="Nodel1"
-            className="w-[50%] static object-contain"
+            className="w-[65%] static object-contain"
           />
           <div className="ml-10">
             <h4 className="text-black font-medium">
@@ -61,9 +61,9 @@ const SecondDisplay = ({ screen }) => {
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=1138,fit=crop/linasyfhpf/Home_5-ALpGwawkbqulDkvq.png"
               alt="Model2"
-              className="w-[40%] mt-20 object-conatain"
+              className="w-[100%] mt-20 object-conatain"
             />
-            <div className="mt-[24px]">
+            <div className="mt-[120px]">
               <h4 className="text-black font-semibold ">HEAD OVER HEELS</h4>
               <a className="text-black underline font-medium mt-5">
                 Learn more about the project →
