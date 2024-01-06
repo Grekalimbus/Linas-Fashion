@@ -1,7 +1,9 @@
 import Form from "../common/Form";
 import Button from "../common/Button";
 import inputs from "@/app/api/Inputs";
-import {useState} from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
+
 const SmallDIsplay = () => {
   const [values, setValue] = useState({
     name: "",
@@ -13,7 +15,7 @@ const SmallDIsplay = () => {
   const [errors, setErrors] = useState(false);
   const [errosMessage, setErrorsMessage] = useState(false);
   const onChange = (e) => {
-    setValue({...values, [e.target.name]: e.target.value});
+    setValue({ ...values, [e.target.name]: e.target.value });
 
     if (e.target.name === "email") {
       setErrors(e.target.value.length >= 7 ? true : false);
@@ -32,11 +34,19 @@ const SmallDIsplay = () => {
     <div className="mx-auto flex justify-center bg-white">
       <div className="container w-full flex justify-center mt-20 mb-20 ">
         <div>
-          <h1 className="font-semibold text-black text-4xl ml-2">Impressed?</h1>
-          <p className="text-black font-medium text-[17px] mt-10 ml-2">
-            Let us cross paths - reach out <br /> and we’ll work on your next
-            <br /> project together.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, translateY: 75 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="font-semibold text-black text-4xl ml-2">
+              Impressed?
+            </h1>
+            <p className="text-black font-medium text-[17px] mt-10 ml-2">
+              Let us cross paths - reach out <br /> and we’ll work on your next
+              <br /> project together.
+            </p>
+          </motion.div>
           <div>
             {inputs.map((item) => (
               <Form
@@ -63,7 +73,12 @@ const SmallDIsplay = () => {
               colorText={" text-white "}
             />
           </div>
-          <div className="flex mt-10">
+          <motion.div
+            className="flex mt-10"
+            initial={{ opacity: 0, translateY: 75 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <img
               src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1160,fit=crop/linasyfhpf/project4_4-Y4Lg6q9MlPir3Lnk.png"
               alt="pic1"
@@ -74,7 +89,7 @@ const SmallDIsplay = () => {
               alt="pic2"
               className="w-[161px] h-[173px] ml-2 object-cover"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

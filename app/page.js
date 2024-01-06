@@ -6,10 +6,8 @@ import Navbar from "./components/navbar/page";
 import useScreenHandling from "./hooks/useScreenHandling";
 import FourthDisplay from "./components/fourthDisplay/page";
 import FifthDisplay from "./components/firthDisplay/page";
-import SixthDisplay from "./components/SIxthDisplay";
-import Footer from "./components/Footer";
-
-import Footer from "./components/Footer";
+import SixthDisplay from "./components/sixthDisplay/page";
+import Footer from "./components/common/Footer";
 
 const page = () => {
   const {wrapperStyle, screen} = useScreenHandling();

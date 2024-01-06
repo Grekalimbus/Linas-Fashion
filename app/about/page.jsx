@@ -1,5 +1,5 @@
 "use client";
-import Footer from "../components/Footer";
+import Footer from "../components/common/Footer";
 import Navbar from "../components/navbar/page";
 import useScreenHandling from "../hooks/useScreenHandling";
 import FirstBlock from "./firstBlock/page";
