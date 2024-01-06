@@ -12,10 +12,10 @@ const Footer = ({ screen }) => {
 
   useIntersectionObserver(animationsAndRefs);
   return screen <= 1152 ? (
-    <div className="w-full flex justify-center items-center mx-auto bg-[#04111b]">
+    <div className="w-full flex justify-center items-center mx-auto bg-[#04111b] p-16">
       <div
         ref={targetMedium}
-        className="flex flex-col max-w-[420px] justify-center items-center py-10 font-semibold opacity-0"
+        className="flex flex-col max-w-[420px] justify-center items-center font-semibold opacity-0"
       >
         <p>LINAS THOEMKE </p>
         <p className="relative mt-4">
