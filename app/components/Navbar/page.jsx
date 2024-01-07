@@ -3,7 +3,7 @@ import React from "react";
 import SmallDisplay from "./SmallDisplay";
 import LargeDisplay from "./LargeDisplay";
 
-const Navbar = ({ screen }) => {
+export const Navbar = ({ screen }) => {
   const pathname = usePathname();
   const getBorderForLonk = (link) => {
     if (link === pathname) {
@@ -21,5 +21,3 @@ const Navbar = ({ screen }) => {
     <LargeDisplay getBorderForLonk={getBorderForLonk} />
   );
 };
-
-export default Navbar;
