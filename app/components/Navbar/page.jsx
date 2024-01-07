@@ -12,6 +12,9 @@ const Navbar = ({ screen }) => {
     return "";
   };
 
+  if (screen === 0) {
+    return <div></div>;
+  }
   return screen <= 1152 ? (
     <SmallDisplay getBorderForLonk={getBorderForLonk} />
   ) : (
