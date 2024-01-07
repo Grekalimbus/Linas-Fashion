@@ -5,7 +5,7 @@ const useScreenHandling = () => {
 
   const handleScreenChange = (screenWrapper) => {
     const widthMappings = {
-      1200: { wrapperStyle: "w-full", screen: 1200 },
+      1152: { wrapperStyle: "w-full", screen: 1152 },
       950: { wrapperStyle: "w-[950px]", screen: 950 },
     };
 
