@@ -1,3 +1,4 @@
+"use client";
 import Form from "../common/Form";
 import Button from "../common/Button";
 import inputs from "@/app/api/Inputs";
