@@ -2,9 +2,9 @@
 import Footer from "../components/common/Footer";
 import { Navbar } from "../components/Navbar/page";
 import useScreenHandling from "../hooks/useScreenHandling";
-import FirstBlock from "./firstBlock/page";
-import SecondBlock from "./secondBlock/page";
-import ThirdBlock from "./thirdBlock/page";
+import FirstBlock from "./firstBlock/FristBlock";
+import SecondBlock from "./secondBlock/SecondBlock";
+import ThirdBlock from "./thirdBlock/ThirdBlock";
 
 const AboutPage = () => {
   const { wrapperStyle, screen } = useScreenHandling();
