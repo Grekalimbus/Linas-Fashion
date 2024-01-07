@@ -6,7 +6,7 @@ import LargeDisplay from "./LargeDisplay";
 import useScreenHandling from "../hooks/useScreenHandling";
 
 const page = () => {
-  const { screenWidth, wrapperStyle, screen } = useScreenHandling();
+  const { wrapperStyle, screen } = useScreenHandling();
 
   if (screen === 0) {
     return <div></div>;
@@ -16,9 +16,9 @@ const page = () => {
       <div
         className={`${wrapperStyle} overflow-auto max-h-screen transition-all duration-500`}
       >
-        <Navbar screen={screen} screenWidth={screenWidth} />
+        <Navbar screen={screen} />
         {screen <= 1152 ? <SmallDisplay /> : <LargeDisplay />}
-        <Footer screen={screen} screenWidth={screenWidth} />
+        <Footer screen={screen} />
       </div>
     </div>
   );
