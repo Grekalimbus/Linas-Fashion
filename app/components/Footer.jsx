@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
-import useIntersectionObserver from "../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const Footer = ({ screen }) => {
   const targetMedium = useRef(null);

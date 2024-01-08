@@ -1,10 +1,10 @@
 "use client";
-import Footer from "../components/common/Footer";
-import Navbar from "../components/navbar/page";
+import Footer from "../components/Footer";
+import { Navbar } from "../components/Navbar";
 import useScreenHandling from "../hooks/useScreenHandling";
-import FirstBlock from "./firstBlock/page";
-import SecondBlock from "./secondBlock/page";
-import ThirdBlock from "./thirdBlock/page";
+import FirstBlockContent from "./FirstBlockContent";
+import SecondBlockContent from "./SecondBlockContent";
+import { ThirdBlockContent } from "./ThirdBlockContent";
 
 const AboutPage = () => {
   const { wrapperStyle, screen } = useScreenHandling();
@@ -19,9 +19,9 @@ const AboutPage = () => {
       >
         <Navbar screen={screen} />
 
-        <FirstBlock screen={screen} />
-        <SecondBlock screen={screen} />
-        <ThirdBlock screen={screen} />
+        <FirstBlockContent screen={screen} />
+        <SecondBlockContent screen={screen} />
+        <ThirdBlockContent screen={screen} />
         <Footer screen={screen} />
       </div>
     </div>
