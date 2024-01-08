@@ -22,7 +22,7 @@ const AboutPage = () => {
         <FirstBlockContent />
         <SecondBlockContent />
         <ThirdBlockContent />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
