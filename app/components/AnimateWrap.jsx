@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { animate } from "../api/animate";
 
-const AnimatedComponent = ({ children, className, tag, src, alt }) => {
+const AnimateWrap = ({ children, className, tag, src, alt }) => {
   const MotionComponent = motion[tag];
 
   return (
@@ -18,4 +18,4 @@ const AnimatedComponent = ({ children, className, tag, src, alt }) => {
   );
 };
 
-export default AnimatedComponent;
+export default AnimateWrap;
