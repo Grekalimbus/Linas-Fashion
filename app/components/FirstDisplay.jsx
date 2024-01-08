@@ -10,7 +10,9 @@ const FirstDisplay = () => {
   ];
 
   return (
-    <div className="bg-[#04111b] w-full mx-auto h-[100vh] ${mx}h-full pb-16 flex flex-col justify-center items-center">
+    <div
+      className={`bg-[#04111b] w-full mx-auto h-[100vh] ${mx}h-full pb-16 flex flex-col justify-center items-center`}
+    >
       <div
         className={`conteiner mx-auto flex justify-between w-full max-w-6xl  ${mx}w-[340px] ${mx}flex-col`}
       >
