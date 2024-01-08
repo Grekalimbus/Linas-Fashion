@@ -33,6 +33,7 @@ const page = () => {
         </div>
       </main>
     );  
+
 };
 
 export default page;
