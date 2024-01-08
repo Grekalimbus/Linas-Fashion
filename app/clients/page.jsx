@@ -16,9 +16,9 @@ const page = () => {
       <div
         className={`w-full overflow-auto max-h-screen transition-all duration-500`}
       >
-        <Navbar screen={screen} screenWidth={screenWidth} />
-        <ContentBlock screen={screen} screenWidth={screenWidth} />
-        <Footer screen={screen} screenWidth={screenWidth} />
+        <Navbar screen={screen} />
+        <ContentBlock screen={screen} />
+        <Footer screen={screen} />
       </div>
     </div>
   );
