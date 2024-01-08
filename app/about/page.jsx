@@ -19,10 +19,10 @@ const AboutPage = () => {
       >
         <Navbar screen={screen} />
 
-        <FirstBlockContent screen={screen} />
-        <SecondBlockContent screen={screen} />
-        <ThirdBlockContent screen={screen} />
-        <Footer screen={screen} />
+        <FirstBlockContent />
+        <SecondBlockContent />
+        <ThirdBlockContent />
+        {/* <Footer /> */}
       </div>
     </div>
   );
