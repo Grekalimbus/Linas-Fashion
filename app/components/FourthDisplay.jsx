@@ -1,85 +1,47 @@
-import { useRef } from "react";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
-
-const FourthDisplay = ({ screen }) => {
-  const targetMedium = useRef(null);
-
-  const animationsAndRefs = {
-    refsArray: [targetMedium],
-    animationNamesArray: ["animate-slideUp-medium"],
-  };
-
-  useIntersectionObserver(animationsAndRefs);
-
-  return screen <= 1152 ? (
-    <div className="mx-auto flex justify-center">
-      <div className="w-full container flex justify-center  items-left p-8">
-        <div ref={targetMedium} className="mt-20 mb-20 opacity-0 ">
-          <h1 className="text-black text-6xl font-bold">03</h1>
-          <h4 className="text-black font-sans pt-5 font-semibold">
-            SOMETHING IN THE AIR
-          </h4>
-          <a className="text-black font-medium cursor-pointer underline pt-3">
-            Learn more about the project →
-          </a>
-          <img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1445,fit=crop/linasyfhpf/Home_9-Y4Lg6q6QPvt7bRnp.png"
-            alt="Model1"
-            className="w-[328px] h-[439px] mt-20 object-contain"
-          />
-          <p className="font-sansi text-black flex justify-end mt-10">
-            Model: Yoko Yamada
-          </p>
-          <p className="font-sansi text-black flex justify-end mb-20">
+const FourthDisplay = () => {
+  const images = [
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1418,h=1740,fit=crop/linasyfhpf/Home_9-Y4Lg6q6QPvt7bRnp.png",
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=548,fit=crop/linasyfhpf/project3_2-YZ9p0JjL47HE1gJj.png",
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=744,fit=crop/linasyfhpf/project3_3-m2Wk5vEOzjUO3MX5.png",
+  ];
+  return (
+    <div className="w-full mx-auto h-[100vh] max-[1124px]:h-full p-16 flex flex-col justify-center items-center bg-white">
+      <div className="conteiner mx-auto flex  justify-between w-full max-w-6xl max-[1124px]:flex-col  max-[1124px]:w-[340px] relative">
+        <h1 className="text-8xl text-black absolute z-[1] mt-10 ml-10 font-semibold max-[1124px]:relative max-[1124px]:ml-0 max-[1124px]:mt-10">
+          03
+        </h1>
+        <h1 className="hidden font-semibold text-black max-[1124px]:block">
+          SOMETHING IN THE AIR
+        </h1>
+        <p className="text-black font-light underline hidden max-[1124px]:block">
+          Learn more about the project →
+        </p>
+        <img
+          src={images[0]}
+          alt="Mode1"
+          className="w-[70%] static z-0 max-[1124px]:w-[100%] max-[1124px]:mt-10"
+        />
+        <div className="ml-20">
+          <p className="text-black font-light max-[1124px]:ml-[105px] max-[1124px]:mt-10">
+            Model: Yoko Yamada <br />
             MUA: Jessie Gein
           </p>
           <img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=915,fit=crop/linasyfhpf/project3_2-YZ9p0JjL47HE1gJj.png"
-            alt="Model2"
-            className="w-[328px] h-[278px] pb-5 object-contai"
+            src={images[1]}
+            alt="model2"
+            className="w-[100%] mt-20 max-[1124px]:w-[100%]"
           />
           <img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=915,fit=crop/linasyfhpf/project3_3-m2Wk5vEOzjUO3MX5.png"
-            alt="Model3"
-            className="w-[100%] h-[278px] object-contain"
+            src={images[2]}
+            alt="model3"
+            className="w-[100%] mt-20 max-[1124px]:w-[100%] max-[1124px]:mt-10"
           />
-        </div>
-      </div>
-    </div>
-  ) : (
-    <div className="mx-auto w-full bg-white flex justify-center">
-      <div className="container w-full max-w-6xl flex justify-center">
-        <div ref={targetMedium}  className="mt-20 mb-20 relative flex opacity-0">
-          <h1 className="text-black text-8xl font-semibold absolute z-[1] ml-10 mt-20">
-            03
-          </h1>
-          <img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1418,h=1740,fit=crop/linasyfhpf/Home_9-Y4Lg6q6QPvt7bRnp.png"
-            alt="pic1"
-            className="w-[710px] h-[870px] static object-contain"
-          />
-          <div className="ml-[120px] mt-10">
-            <h2 className="text-black font-light">
-              Model: Yoko Yamada
-              <br /> MUA: Jessie Gein
-            </h2>
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=548,fit=crop/linasyfhpf/project3_2-YZ9p0JjL47HE1gJj.png"
-              alt="img1"
-              className="w-[400px] h-[234px] mt-3"
-            />
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=744,fit=crop/linasyfhpf/project3_3-m2Wk5vEOzjUO3MX5.png"
-              alt="img2"
-              className="w-[400px] h-[410px] object-contain mt-2"
-            />
-            <h2 className="font-semibold text-black text-[17px] mt-2">
-              SOMETHING IN THE AIR
-            </h2>
-            <p className="text-black font-light text-[17px] underline mt-5">
-              Learn more about the project →
-            </p>
-          </div>
+          <p className="text-black font-semibold mt-[122px] max-[1124px]:hidden max-[1124px]:mt-10">
+            SOMETHING IN THE AIR
+          </p>
+          <p className="text-black fomt-light max-[1124px]:hidden max-[1124px]:mt-10">
+            Learn more about the project →
+          </p>
         </div>
       </div>
     </div>
