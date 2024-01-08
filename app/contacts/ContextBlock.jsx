@@ -1,10 +1,10 @@
-import React, {useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import Form from "../components/Form";
 import Button from "../components/Button";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-const ContextBlock = ({screen}) => {
-  const [state, setState] = useState({name: "", email: "", message: ""});
+const ContextBlock = ({ screen }) => {
+  const [state, setState] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState(false);
   const [errorMessage, setErrorsMessage] = useState(false);
 
@@ -18,7 +18,7 @@ const ContextBlock = ({screen}) => {
   useIntersectionObserver(animationsAndRefs);
 
   const onChange = (e) => {
-    setState({...state, [e.target.name]: e.target.value});
+    setState({ ...state, [e.target.name]: e.target.value });
     if (e.target.name === "email") {
       setErrors(e.target.value.length >= 7 ? true : false);
     }

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 const useScreenHandling = () => {
   const [screen, setscreen] = useState(0);

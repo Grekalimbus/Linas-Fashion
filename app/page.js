@@ -11,11 +11,9 @@ import Footer from "./components/Footer";
 
 
 const page = () => {
-  const { screen} =  useScreenHandling(); 
+  const { screen} =  useScreenHandling();   
   
-  console.log("screen", screen);
-
-  if ( screen === 0){
+  if ( screen === 0 ){
     return <div></div>
   }
 
