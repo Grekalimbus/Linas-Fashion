@@ -22,8 +22,8 @@ const page = () => {
         <div
           className={`w-full overflow-auto max-h-screen transition-all duration-500`}
         >
-          <Navbar screen={screen} />
-          <FirstDisplay screen={screen}  />
+          <Navbar  />
+          <FirstDisplay   />
           <SecondDisplay screen={screen} />
           <ThirdDisplay screen={screen}  />
           <FourthDisplay screen={screen}  />
