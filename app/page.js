@@ -24,7 +24,7 @@ const page = () => {
         <Navbar screen={screen} />
         <FirstDisplay screen={screen} />
         <SecondDisplay />
-        <ThirdDisplay screen={screen} />
+        <ThirdDisplay />
         <FourthDisplay screen={screen} />
         <FifthDisplay screen={screen} />
         <SixthDisplay screen={screen} />

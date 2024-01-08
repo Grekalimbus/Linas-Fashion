@@ -5,7 +5,7 @@ const SecondDisplay = () => {
   ];
 
   return (
-    <div className="mx-auto bg-white w-full h-[100vh] flex flex-col justify-center items-center max-[1124px]:h-full">
+    <div className="mx-auto bg-white w-full h-[100vh] flex flex-col justify-center items-center max-[1124px]:h-full p-20">
       <div className="container mx-auto w-full flex max-w-6xl max-[1124px]:w-[350px] max-[1124px]:flex-col relative">
         <h1 className="text-8xl text-black absolute z-[1] mt-10 ml-10 max-[1124px]:order-0 max-[1124px]:relative max-[1124px]:ml-0 mb-5 max-[1124px]:text-7xl font-semibold">
           01
@@ -15,7 +15,7 @@ const SecondDisplay = () => {
           alt="model1"
           className="object-cover w-[65%] static z-[0] max-[1124px]:w-[110%] max-[1124px]:order-3 max-[1124px]:ml-2 max-[1124px]:mt-[20px]"
         />
-        <h2 className="text-black font-light absolute z-[1] bottom-10 left-10 max-[1124px]:relative max-[1124px]:left-2 mt-10 max-[1124px]:order-4 ">
+        <h2 className="text-black font-light absolute z-[1] bottom-10 left-10 max-[1124px]:relative max-[1124px]:left-3 mt-10 max-[1124px]:order-4 ">
           CLIENT: "DARE" shoes
         </h2>
         <div className="ml-10 max-[1124px]:flex flex-col justify-center items-center max-[1124px]:ml-2 max-[1124px]:order-2">
