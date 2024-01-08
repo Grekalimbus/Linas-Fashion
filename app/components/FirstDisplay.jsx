@@ -9,7 +9,7 @@ const FirstDisplay = () => {
 
   return (
     <div className="bg-[#04111b] w-full mx-auto h-[100vh] max-[1124px]:h-full pb-16 flex flex-col justify-center items-center">
-      <div className="conteiner mx-auto flex  justify-between w-full max-w-6xl  max-[1124px]:w-[340px] max-[1124px]:flex-col">
+      <div className="conteiner mx-auto flex justify-between w-full max-w-6xl  max-[1124px]:w-[340px] max-[1124px]:flex-col">
         <div className="flex flex-col justify-between ">
           <AnimateWrap
             tag="div"

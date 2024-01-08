@@ -29,7 +29,7 @@ const page = () => {
           <FourthDisplay screen={screen}  />
           <FifthDisplay screen={screen}  />
           <SixthDisplay screen={screen}  />
-          <Footer screen={screen}  />
+          <Footer  />
         </div>
       </main>
     );  
