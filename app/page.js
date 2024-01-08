@@ -26,12 +26,12 @@ const page = () => {
         >
           <Navbar screen={screen} />
           <FirstDisplay screen={screen}  />
-          {/* <SecondDisplay screen={screen} />
+          <SecondDisplay screen={screen} />
           <ThirdDisplay screen={screen}  />
           <FourthDisplay screen={screen}  />
           <FifthDisplay screen={screen}  />
           <SixthDisplay screen={screen}  />
-          <Footer screen={screen}  /> */}
+          <Footer screen={screen}  />
         </div>
       </main>
     );  
