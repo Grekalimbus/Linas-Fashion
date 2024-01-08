@@ -9,31 +9,29 @@ import FifthDisplay from "./components/FifthDisplay";
 import SixthDisplay from "./components/SIxthDisplay";
 import Footer from "./components/Footer";
 
-
 const page = () => {
-  const { screen} =  useScreenHandling();  
-  
-  if ( screen === 0){
-    return <div></div>
+  const {screen} = useScreenHandling();
+
+  if (screen === 0) {
+    return <div></div>;
   }
 
   return (
-      <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">       
-        <div
-          className={`w-full overflow-auto max-h-screen transition-all duration-500`}
-        >
-          <Navbar  />
-          <FirstDisplay   />
-          <SecondDisplay />
-          <ThirdDisplay screen={screen}  />
-          <FourthDisplay screen={screen}  />
-          <FifthDisplay screen={screen}  />
-          <SixthDisplay screen={screen}  />
-          <Footer  />
-        </div>
-      </main>
-    );  
-
+    <main className="flex overflow-hidden max-h-screen flex-col w-full items-center">
+      <div
+        className={`w-full overflow-auto max-h-screen transition-all duration-500`}
+      >
+        <Navbar />
+        <FirstDisplay />
+        <SecondDisplay />
+        <ThirdDisplay />
+        <FourthDisplay />
+        <FifthDisplay screen={screen} />
+        <SixthDisplay screen={screen} />
+        <Footer />
+      </div>
+    </main>
+  );
 };
 
 export default page;

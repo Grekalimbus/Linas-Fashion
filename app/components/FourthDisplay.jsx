@@ -22,14 +22,14 @@ const FourthDisplay = () => {
           className="w-[70%] static z-0 max-[1124px]:w-[100%] max-[1124px]:mt-10"
         />
         <div className="ml-20">
-          <p className="text-black font-light max-[1124px]:ml-[105px] max-[1124px]:mt-10">
+          <p className="text-black font-light max-[1124px]:ml-[105px] max-[1124px]:mt-10 ">
             Model: Yoko Yamada <br />
             MUA: Jessie Gein
           </p>
           <img
             src={images[1]}
             alt="model2"
-            className="w-[100%] mt-20 max-[1124px]:w-[100%]"
+            className="w-[100%] mt-20 max-[1124px]:w-[100%] max-[1124px]:mt-20"
           />
           <img
             src={images[2]}
@@ -39,7 +39,7 @@ const FourthDisplay = () => {
           <p className="text-black font-semibold mt-[122px] max-[1124px]:hidden max-[1124px]:mt-10">
             SOMETHING IN THE AIR
           </p>
-          <p className="text-black fomt-light max-[1124px]:hidden max-[1124px]:mt-10">
+          <p className="text-black fomt-light underline max-[1124px]:hidden max-[1124px]:mt-10">
             Learn more about the project →
           </p>
         </div>
