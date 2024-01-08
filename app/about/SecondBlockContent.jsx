@@ -1,13 +1,6 @@
 import Link from "next/link";
 import AnimateWrap from "../components/AnimateWrap";
 
-const arr = [
-  ["THIS IS LINAS: ORIGIN STORY", "2008, Amsterdam"],
-  ["TAKES ON COLOR AND SEA", "2010, London and Amsterdam"],
-  ["EXPRESSIONS OF MORTALITY", "2011, Amsterdam"],
-  ["THOEMKE & GEET: EXPLORING", "2015-2016, Amsterdam and Paris"],
-];
-
 const SecondBlockContent = () => {
   return (
     <div className="mx-auto w-full flex justify-center items-center text-black pt-10 pb-32">
