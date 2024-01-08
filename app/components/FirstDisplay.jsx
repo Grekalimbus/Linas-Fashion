@@ -1,34 +1,47 @@
-import React, { useRef } from "react";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import { motion } from "framer-motion";
 
 const FirstDisplay = () => {
   return (
-    <div className="w-full mx-auto bg-[#04111b]  p-12">
-      <div className="conteiner p-16 h-full mx-auto lg:grid grid-rows-3  grid-cols-2 gap-x-40 gap-y-2 grid-flow-col-dense max-w-7xl">
-        <div className=" flex row-span-1 w-max h-[90%]">
-          <img
-            className="object-cover w-[65%]"
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=297,h=201,fit=crop/linasyfhpf/Home_1-mjEDk3krBEINqzOl.png"
-            alt="image1"
-          />
-          <img
-            className="object-cover ml-4"
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=201,fit=crop/linasyfhpf/Home_2-m6L1x6xeZetk65zO.png"
-            alt="image2"
-          />
-        </div>
-        <div className=" row-span-2 flex flex-col justify-between">
-          <h3 className=" min-h-[50px]  text-[200px] font-bold mt-[90px]">
-            Linas
-          </h3>
-          <div className=" min-h-[50px] flex items-end">
-            <p>FASHION PHOTOGRAPHY | AMSTERDAM</p>
-            <p className="ml-8">THOEMKE@LINAS.COM</p>
-          </div>
+    <div className="w-full mx-auto h-[100vh] bg-[#04111b] flex flex-col justify-center items-center">
+      <div className="conteiner  flex max-[1024px]:flex-col justify-between w-full max-w-6xl mx-auto">
+        <div className="flex flex-col justify-between ">
+          <motion.div
+            className="flex"
+            initial={{ opacity: 0, translateY: 50 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <img
+              className="object-cover shrink"
+              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=297,h=201,fit=crop/linasyfhpf/Home_1-mjEDk3krBEINqzOl.png"
+              alt="image1"
+            />
+
+            <img
+              className="object-cover ml-6 shrink"
+              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=201,fit=crop/linasyfhpf/Home_2-m6L1x6xeZetk65zO.png"
+              alt="image2"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, translateY: 100 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <h3 className="font-bold word-wrap block text-[200px] max-[1120px]:text-[150px]">
+              Linas
+            </h3>
+            <div className="flex justify-between max-[1120px]:text-[14px]">
+              <p>FASHION PHOTOGRAPHY | AMSTERDAM</p>
+              <p>THOEMKE@LINAS.COM</p>
+            </div>
+          </motion.div>
         </div>
 
-        <img
-          className="flex justify-end row-span-3"
+        <motion.img
+          initial={{ opacity: 0, translateY: 150 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.7 }}
           src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=503,h=673,fit=crop/linasyfhpf/Home_3-YBgxMPMkXLHyZX5g.png"
           alt="image3"
         />
