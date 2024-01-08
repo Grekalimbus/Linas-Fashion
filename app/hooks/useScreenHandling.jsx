@@ -1,20 +1,6 @@
 import React, { useState, useEffect } from "react";
 const useScreenHandling = () => {
   const [screen, setscreen] = useState(0);
-  const [wrapperStyle, setWrapperStyle] = useState("w-full");
-
-  const handleScreenChange = (screenWrapper) => {
-    const widthMappings = {
-      1200: { wrapperStyle: "w-full", screen: 1200 },
-      950: { wrapperStyle: "w-[950px]", screen: 950 },
-    };
-
-    const { wrapperStyle, screenWidth } = widthMappings[screenWrapper] || {};
-
-    if (wrapperStyle && screenWidth) {
-      setWrapperStyle(wrapperStyle);
-    }
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,7 +19,7 @@ const useScreenHandling = () => {
     };
   }, []); // Empty dependency array means this effect runs only once after initial render
 
-  return { screen, wrapperStyle, handleScreenChange };
+  return { screen };
 };
 
 export default useScreenHandling;
