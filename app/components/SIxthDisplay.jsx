@@ -9,7 +9,10 @@ const SixthDisplay = () => {
     email: "",
     message: "",
   });
-
+  const image = [
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=669,fit=crop/linasyfhpf/project4_4-Y4Lg6q9MlPir3Lnk.png",
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1025,fit=crop/linasyfhpf/Home_16-A1aNL7L2WpFoqz7K.png",
+  ];
   const [errors, setErrors] = useState(false);
   const [errosMessage, setErrorsMessage] = useState(false);
   const onChange = (e) => {
@@ -27,25 +30,28 @@ const SixthDisplay = () => {
       setErrors(false);
     }
   };
+
   return (
     <div className="mx-auto h-[100vh] w-full flex justify-center  items-centre max-[1124px]:h-full bg-white p-10">
       <div className="container w-full flex justify-center items-center max-w-6xl max-[1124px]:flex-col">
-        <div className="">
-          <h1 className="font-semibold text-black text-8xl">Impressed?</h1>
+        <div className="max-[1152px]:ml-20 max-[919px]:ml-3">
+          <h1 className="font-semibold text-black text-8xl max-[1124px]:font-semibold max-[1124px]:text-6xl">
+            Impressed?
+          </h1>
           <p className="text-black font-medium text-[17px] mt-20">
             Let us cross paths - reach out and we'll work <br />
             on your next project together.
           </p>
           <div className="mt-20 flex ">
             <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=669,fit=crop/linasyfhpf/project4_4-Y4Lg6q9MlPir3Lnk.png"
+              src={image[0]}
               alt="pic1"
-              className="w-[297px] h-[202px] object-cover"
+              className="w-[297px] h-[202px] object-cover max-[1124px]:hidden"
             />
             <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1025,fit=crop/linasyfhpf/Home_16-A1aNL7L2WpFoqz7K.png"
+              src={image[1]}
               alt="pic2"
-              className="w-[194px] h-[202px] pl-3 object-cover"
+              className="w-[194px] h-[202px] pl-3 object-cover max-[1124px]:hidden"
             />
           </div>
         </div>
@@ -60,7 +66,6 @@ const SixthDisplay = () => {
               value={values[item.name]}
               errorMessage={item.errorMessage}
               onChange={onChange}
-              data={values}
               errorsEmail={errors}
               errorsMessage={errosMessage}
               color={" bg-gray-200 "}
@@ -74,6 +79,18 @@ const SixthDisplay = () => {
             type={"submit"}
             colorButton={"bg-black"}
             colorText={"text-white"}
+          />
+        </div>
+        <div className="flex mt-10 ml-20 max-[1124px]:ml-0">
+          <img
+            src={image[0]}
+            alt="pic1"
+            className="w-[161px] h-[173px] object-cover hidden max-[1124px]:block mr-3"
+          />
+          <img
+            src={image[1]}
+            alt="pic2"
+            className="w-[161px] h-[173px] object-cover hidden max-[1124px]:block "
           />
         </div>
       </div>

@@ -24,7 +24,7 @@ const Form = ({
               cols="30"
               rows="10"
               placeholder={placeholder}
-              className={`${color} ${textColor} xl:w-[503px] xl:h-[96px] lg:w-[503px] lg:h-[96px]  pl-2 pt-2 sm:w-[328px] sm:h-[96px] textarea`}
+              className={`${color} ${textColor} xl:w-[503px] xl:h-[96px]  pl-2 pt-2 sm:w-[328px] sm:h-[96px] textarea`}
             ></textarea>
             {errorsMessage === false ? (
               <div>
@@ -49,7 +49,7 @@ const Form = ({
             name={name}
             type={type}
             placeholder={placeholder}
-            className={`${color} ${textColor} xl:w-[503px] xl:h-[48px] lg:w-[503px] lg:h-[48px] pl-2 border sm:w-[328px] sm:h-[48px]`}
+            className={`${color} ${textColor} xl:w-[503px] xl:h-[48px]  pl-2 border sm:w-[328px] sm:h-[48px]`}
           />
           {!errorsEmail ? (
             <div>
