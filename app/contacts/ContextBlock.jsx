@@ -1,6 +1,6 @@
 import React, {useState, useRef} from "react";
-import Form from "../components/Form";
-import Button from "../components/Button";
+import Form from "../common/Form";
+import Button from "../common/Button";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const ContextBlock = ({screen}) => {

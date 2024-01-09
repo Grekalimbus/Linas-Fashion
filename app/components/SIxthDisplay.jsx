@@ -1,5 +1,5 @@
-import Form from "./Form";
-import Button from "./Button";
+import Form from "../common/Form";
+import Button from "../common/Button";
 import inputs from "../api/Inputs";
 import {useState, useRef} from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";

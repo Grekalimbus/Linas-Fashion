@@ -2,12 +2,12 @@
 import FirstDisplay from "./components/FirstDisplay";
 import SecondDisplay from "./components/SecondDisplay";
 import ThirdDisplay from "./components/ThirdDisplay";
-import {Navbar} from "./components/Navbar";
+import {Navbar} from "./common/Navbar";
 import useScreenHandling from "./hooks/useScreenHandling";
 import FourthDisplay from "./components/FourthDisplay";
 import FifthDisplay from "./components/FifthDisplay";
 import SixthDisplay from "./components/SIxthDisplay";
-import Footer from "./components/Footer";
+import Footer from "./common/Footer";
 
 const page = () => {
   const {screen} = useScreenHandling();
