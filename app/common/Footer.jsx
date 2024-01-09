@@ -1,5 +1,5 @@
-import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
-import AnimateWrap from "./AnimateWrap";
+import {FaTwitter, FaFacebook, FaInstagram} from "react-icons/fa";
+import AnimateWrap from "../components/AnimateWrap";
 
 const Footer = () => {
   return (
