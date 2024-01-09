@@ -7,14 +7,14 @@ const FifthDisplay = () => {
   return (
     <div className="mx-auto bg-[#fad003] flex flex-col justify-center items-center p-16 h-[100vh] max-[1124px]:w-full ">
       <div className="conteiner mx-auto flex  w-full max-w-6xl max-[1124px]:flex-col  max-[1124px]:w-[340px] relative ">
-        <div className="flex flex-col ">
-          <h1 className="text-black font-semibold text-8xl max-[1124px]:text-7xl">
+        <div className="flex flex-col mt-10 ">
+          <h1 className="text-black font-semibold text-8xl max-[1124px]:text-7xl max-[1124px]:mt-2">
             04
           </h1>
-          <h2 className="text-black font-semibold ml-4 mt-5 hidden max-[1124px]:block">
+          <h2 className="text-black font-semibold ml-4 mt-5 hidden max-[1124px]:block max-[1124px]:ml-1 max-[1124px]:mt-2 ">
             YELLOW
           </h2>
-          <p className="text-black font-light underline ml-4 hidden max-[1124px]:block">
+          <p className="text-black font-light underline ml-4 hidden max-[1124px]:block max-[1124px]:ml-1">
             Learn more about the project →
           </p>
           <img
@@ -51,16 +51,16 @@ const FifthDisplay = () => {
             MUA: Jessie Gein
           </p>
         </div>
-        <div className="flex">
+        <div className="flex  justify-between mt-0">
           <img
             src={image[1]}
             alt="pic2"
-            className="hidden w-[50%] max-[1124px]:block"
+            className="hidden w-[48%] max-[1124px]:block"
           />
           <img
             src={image[0]}
             alt="pic3"
-            className="w-[50%] hidden max-[1124px]:block max-[1124px]:mt-1 pl-2"
+            className="w-[50%] hidden max-[1124px]:block "
           />
         </div>
       </div>
