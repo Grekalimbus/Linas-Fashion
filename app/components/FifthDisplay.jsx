@@ -5,10 +5,10 @@ const FifthDisplay = () => {
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1006,h=1554,fit=crop/linasyfhpf/Home_14-dWxVaNakylUxl4Br.png",
   ];
   return (
-    <div className="mx-auto bg-[#fad003] flex flex-col justify-center items-center p-16 h-[100vh] max-[1124px]:w-full ">
+    <div className="mx-auto bg-[#fad003] flex flex-col justify-center items-center py-20 h-[110vh] max-[1124px]:w-full ">
       <div className="conteiner mx-auto flex  w-full max-w-6xl max-[1124px]:flex-col  max-[1124px]:w-[340px] relative ">
-        <div className="flex flex-col mt-10 ">
-          <h1 className="text-black font-semibold text-8xl max-[1124px]:text-7xl max-[1124px]:mt-2">
+        <div className="flex flex-col ">
+          <h1 className="text-black font-semibold text-8xl max-[1124px]:text-7xl max-[1124px]:top-0">
             04
           </h1>
           <h2 className="text-black font-semibold ml-4 mt-5 hidden max-[1124px]:block max-[1124px]:ml-1 max-[1124px]:mt-2 ">

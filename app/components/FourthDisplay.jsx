@@ -7,7 +7,7 @@ const FourthDisplay = () => {
   return (
     <div className="w-full mx-auto h-[100vh] max-[1124px]:h-full p-16 flex flex-col justify-center items-center bg-white">
       <div className="conteiner mx-auto flex  justify-between w-full max-w-6xl max-[1124px]:flex-col  max-[1124px]:w-[340px] relative">
-        <h1 className="text-8xl text-black absolute z-[1] mt-10 ml-10 font-semibold max-[1124px]:relative max-[1124px]:ml-0 max-[1124px]:mt-10">
+        <h1 className="text-8xl text-black absolute z-[1] mt-10 ml-10 font-semibold max-[1124px]:relative max-[1124px]:ml-0 max-[1124px]:mt-10 max-[1124px]:text-7xl">
           03
         </h1>
         <h1 className="hidden font-semibold text-black max-[1124px]:block">
