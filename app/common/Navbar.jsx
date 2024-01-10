@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const mx = "max-[1124px]:";
-const min = "min-[1124px]:";
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -29,32 +28,34 @@ export const Navbar = () => {
           Linas Thoemke
         </p>
         <button
-          className={`cursor-pointer hidden ${mx}block ${mx}fixed top-5 right-4 `}
+          className={`cursor-pointer hidden max-[1124px]:block max-[1124px]:fixed top-5 right-4 `}
           onClick={() => sethidden((prev) => !prev)}
         >
-          <FaBars className={`${mx}w-[35px] ${mx}h-[35px] mr-4`} />
+          <FaBars
+            className={`max-[1124px]:w-[35px] max-[1124px]:h-[35px] mr-4`}
+          />
         </button>
 
         <ul
           className={`${
             !hidden ? "hidden" : ""
-          } flex  ${mx}flex-col ${mx}mt-16  ${mx}items-center ${min}w-1/3  ${min}fixed  top-4 right-8 -4 space-y-2 ${min}mt-0 mx-auto ${min}flex ${min}justify-between ${min}items-end`}
+          } flex  max-[1124px]:flex-col max-[1124px]:mt-16  max-[1124px]:items-center min-[1124px]:w-1/3  min-[1124px]:fixed  top-4 right-8 -4 space-y-2 min-[1124px]:mt-0 mx-auto min-[1124px]:flex min-[1124px]:justify-between min-[1124px]:items-end`}
         >
-          <li className={` ${main} ${mx}p-4`}>
+          <li className={` ${main} max-[1124px]:p-4`}>
             <Link href="/">Work </Link>
             <span className="${main}"></span>
           </li>
-          <li className={` cursor-pointer  ${about} ${mx}p-4`}>
+          <li className={` cursor-pointer  ${about} max-[1124px]:p-4`}>
             <Link href="/about">About </Link>
             <span className="${about}"></span>
           </li>
-          <li className={`cursor-pointer  ${clients}  ${mx}p-4  `}>
+          <li className={`cursor-pointer  ${clients}  max-[1124px]:p-4  `}>
             <Link className="" href="/clients">
               Clients{" "}
             </Link>
             <span className="${clients}"></span>
           </li>
-          <li className={`cursor-pointer ${contacts}  ${mx}p-4  `}>
+          <li className={`cursor-pointer ${contacts}  max-[1124px]:p-4  `}>
             <Link className="flex justify-end" href="/contacts">
               Contacts
             </Link>
