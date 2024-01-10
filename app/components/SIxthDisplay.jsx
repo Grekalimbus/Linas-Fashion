@@ -32,9 +32,9 @@ const SixthDisplay = () => {
   };
 
   return (
-    <div className="mx-auto h-[100vh] w-full flex justify-center  items-centre max-[1124px]:h-full bg-white p-10">
-      <div className="container w-full flex justify-center items-center max-w-6xl max-[1124px]:flex-col">
-        <div className="max-[1152px]:ml-20 max-[919px]:ml-3">
+    <div className="mx-auto h-[100vh] w-full flex justify-center  items-centre max-[1124px]:h-full bg-white my-20">
+      <div className="container w-full flex justify-center items-center max-w-6xl max-[1124px]:flex-col max-[1124px]:mr-20 ml-20 max-[1124px]:ml-0">
+        <div className="max-[1152px]:ml-20 ">
           <h1 className="font-semibold text-black text-8xl max-[1124px]:font-semibold max-[1124px]:text-6xl">
             Impressed?
           </h1>
@@ -55,7 +55,7 @@ const SixthDisplay = () => {
             />
           </div>
         </div>
-        <div className="md:ml-[80px]">
+        <div className="ml-20">
           {inputs.map((item) => (
             <Form
               key={item.id}
@@ -81,7 +81,7 @@ const SixthDisplay = () => {
             colorText={"text-white"}
           />
         </div>
-        <div className="flex mt-10 ml-20 max-[1124px]:ml-0">
+        <div className="flex mt-10 ml-20 max-[1124px]:ml-20">
           <img
             src={image[0]}
             alt="pic1"

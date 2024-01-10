@@ -5,8 +5,8 @@ const SecondDisplay = () => {
   ];
 
   return (
-    <div className="mx-auto bg-white w-full h-[100vh] flex flex-col justify-center items-center max-[1124px]:h-full p-20">
-      <div className="container mx-auto w-full flex max-w-6xl max-[1124px]:w-[350px] max-[1124px]:flex-col relative">
+    <div className="mx-auto bg-white w-full h-[100vh] flex flex-col justify-center items-center max-[1124px]:h-full py-20">
+      <div className="container mx-auto w-full flex max-w-6xl max-[1124px]:w-[350px] max-[1124px]:flex-col relative ">
         <h1 className="text-8xl text-black absolute z-[1] mt-10 ml-10 max-[1124px]:order-0 max-[1124px]:relative max-[1124px]:ml-0 mb-5 max-[1124px]:text-7xl font-semibold max-[1124px]:mt-0 ">
           01
         </h1>

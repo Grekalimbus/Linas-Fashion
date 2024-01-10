@@ -5,7 +5,7 @@ const FourthDisplay = () => {
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=800,h=744,fit=crop/linasyfhpf/project3_3-m2Wk5vEOzjUO3MX5.png",
   ];
   return (
-    <div className="w-full mx-auto h-[100vh] max-[1124px]:h-full p-16 flex flex-col justify-center items-center bg-white">
+    <div className="w-full mx-auto h-[100vh] max-[1124px]:h-full p-16 flex flex-col justify-center items-center bg-white my-20">
       <div className="conteiner mx-auto flex  justify-between w-full max-w-6xl max-[1124px]:flex-col  max-[1124px]:w-[340px] relative">
         <h1 className="text-8xl text-black absolute z-[1] mt-10 ml-10 font-semibold max-[1124px]:relative max-[1124px]:ml-0 max-[1124px]:mt-10">
           03

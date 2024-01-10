@@ -8,12 +8,12 @@ const Content = () => {
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1053,fit=crop/linasyfhpf/project2_2-AQE9v5D67auLDGv6.png",
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1627,fit=crop/linasyfhpf/contact_3-YX49w6eMMkSbk1Gr.png",
   ];
-  const [state, setState] = useState({name: "", email: "", message: ""});
+  const [formData, setFormData] = useState({name: "", email: "", message: ""});
   const [errors, setErrors] = useState(false);
   const [errorMessage, setErrorsMessage] = useState(false);
 
   const onChange = (e) => {
-    setState({...state, [e.target.name]: e.target.value});
+    setFormData({...formData, [e.target.name]: e.target.value});
     if (e.target.name === "email") {
       setErrors(e.target.value.length >= 7 ? true : false);
     }
