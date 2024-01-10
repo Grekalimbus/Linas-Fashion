@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const mx = "max-[1124px]:";
-const min = "mix-[1124px]:";
+const min = "min-[1124px]:";
 
 export const Navbar = () => {
   const pathname = usePathname();
