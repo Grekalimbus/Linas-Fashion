@@ -1,82 +1,41 @@
-import { useRef } from "react";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
-
-const ThirdDisplay = ({ screen, screenWidth }) => {
-  const targetMedium = useRef(null);
-
-  const animationsAndRefs = {
-    refsArray: [targetMedium],
-    animationNamesArray: ["animate-slideUp-medium"],
-  };
-
-  useIntersectionObserver(animationsAndRefs);
-
-  return screen <= 1152 ? (
-    <div className="flex justify-center items-center w-full bg-[#04111b]">
-      <div ref={targetMedium} className="mt-20 mb-20 items-left p-8 opacity-0">
-        <h1 className="text-white font-bold text-6xl ">02</h1>
-        <h4 className="text-white font-medium pt-5 ">FLOWER GARDEN</h4>
-        <a className="text-white font-medium underline cursor-pointer pt-3">
-          Learn more about the project →
-        </a>
-        <img
-          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1006,h=1582,fit=crop/linasyfhpf/Home_8-m5KgxNx9kwhwwqNW.png"
-          alt="ManModel2"
-          className="w-[327px] h-[625px] pt-10"
-        />
-        <img
-          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1034,fit=crop/linasyfhpf/Home_6-YyvLQNQb5bHZrQ2V.png"
-          alt="flower"
-          className="w-[235px] h-[245px] ml-[92px] pt-5"
-        />
-        <img
-          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1410,fit=crop/linasyfhpf/Home_7-AE0xXDXkxGuLqpgk.png"
-          alt="ModelMan"
-          className="w-[263px] h-[371px] pt-5"
-        />
-        <div className="flex p-5">
-          <p className="text-white text-sm ml-10">
-            MUA: Jessie <br /> Gein
+const ThirdDisplay = () => {
+  const images = [
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1006,h=1582,fit=crop/linasyfhpf/Home_8-m5KgxNx9kwhwwqNW.png",
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1034,fit=crop/linasyfhpf/Home_6-YyvLQNQb5bHZrQ2V.png",
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1410,fit=crop/linasyfhpf/Home_7-AE0xXDXkxGuLqpgk.png",
+  ];
+  return (
+    <div className="mx-auto  w-full h-[100vh] flex flex-col justify-center items-center max-[1124px]:h-full bg-black p-20">
+      <div className="container mx-auto w-full flex max-w-6xl max-[1124px]:w-[350px] max-[1124px]:flex-col relative max-[1124px]:justify-between">
+        <div className="flex flex-col ">
+          <h1 className="text-white font-bold text-8xl w-[100px] max-[1124px]:text-7xl ">
+            02
+          </h1>
+          <img
+            src={images[2]}
+            alt="model"
+            className="relative w-[75%]  z-[0] object-cover mt-[10px] ml-[160px] max-[1124px]:order-2 max-[1152px]:ml-0 max-[1124px]:mt-10"
+          />
+          <img
+            src={images[1]}
+            alt="flower"
+            className=" flex z-[1] w-[25%] object-cover absolute top-[260px] max-[1124px]:order-2 max-[1124px]:z-[0] max-[1124px]:top-0 max-[1124px]:relative max-[1124px]:mt-10 max-[1124px]:w-[60%]"
+          />
+          <h1 className="font-semibold mt-20 max-[1152px]:mt-10">
+            FLOWER GARDEN
+          </h1>
+          <p className="font-light mt-1 underline  ">
+            Learn more about the project →
           </p>
-          <p className="text-white text-sm ml-[92px] ">Model: Jake James</p>
+          <p className=" font-light w-[140px] absolute z-[1] right-10 bottom-10 max-[1124px]:right-20 max-[1124px]:bottom-4">
+            Model: Jake James
+          </p>
         </div>
-      </div>
-    </div>
-  ) : (
-    <div className="mx-auto justify-center bg-[#04111b] pt-5 relative flex">
-      <div
-        ref={targetMedium}
-        className="w-full container static mt-10 flex justify-center max-w-6xl opacity-0"
-      >
-        <div className="mt-20 mb-20">
-          <h1 className="color-white font-bold text-8xl w-[10%] ml-5">02</h1>
-          <div className="flex relative max-w-6xl">
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1410,fit=crop/linasyfhpf/Home_7-AE0xXDXkxGuLqpgk.png"
-              alt="ManModel"
-              className="w-[35%] h-[10%] mt-20 ml-[190px] z-[0] static "
-            />
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1034,fit=crop/linasyfhpf/Home_6-YyvLQNQb5bHZrQ2V.png"
-              alt="Flower"
-              className="absolute  w-[25%]  z-[1] flex  mt-[265px]  "
-            />
-            <div className="z-[1] absolute bottom-0">
-              <h4 className="color-white text-semibold">FLOWER GARDEN</h4>
-              <a className="underline color-white font-medium">
-                Learn more about the project →
-              </a>
-            </div>
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1006,h=1582,fit=crop/linasyfhpf/Home_8-m5KgxNx9kwhwwqNW.png"
-              alt="ModelMan2"
-              className="w-[45%] mt-5  ml-[50px] static z-[0] object-contain"
-            />
-            <p className="font-sans color-white mr-5  mb-5 flex absolute right-0 bottom-0 shadow-sm">
-              MUA: Jessie Gein
-            </p>
-          </div>
-        </div>
+        <img
+          src={images[0]}
+          alt="model1"
+          className="w-[47%] ml-20 static max-[1124px]:order-0 max-[1124px]:mt-10 max-[1124px]:w-[80%] max-[1124px]:ml-0"
+        />
       </div>
     </div>
   );

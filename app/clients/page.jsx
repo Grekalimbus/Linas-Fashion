@@ -1,11 +1,11 @@
 "use client";
-import { Navbar } from "../components/Navbar";
-import Footer from "../components/Footer";
+import {Navbar} from "../common/Navbar";
+import Footer from "../common/Footer";
 import ContentBlock from "./ContentBlock";
 import useScreenHandling from "../hooks/useScreenHandling";
 
 const page = () => {
-  const { screen } = useScreenHandling();
+  const {screen} = useScreenHandling();
 
   if (screen === 0) {
     return <div></div>;

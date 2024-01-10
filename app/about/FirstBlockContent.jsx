@@ -1,4 +1,6 @@
 import AnimateWrap from "../components/AnimateWrap";
+
+const mx = "max-[1124px]:";
 const FirstBlockContent = () => {
   const images = [
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1213,fit=crop/linasyfhpf/about_1-AoP1yOwKMzh26ZLV.png",
@@ -10,21 +12,23 @@ const FirstBlockContent = () => {
       <div className="container max-w-6xl flex justify-around mt-12 max-[1124px]:flex-col max-[1124px]:items-center">
         <AnimateWrap
           tag="img"
-          className="w-[48%] h-[76vh] object-cover max-[1124px]:hidden"
+          className={`w-[48%] h-[76vh] object-cover ${mx}hidden`}
           src={images[0]}
           alt="image1"
         />
 
-        <div className="ml-20 max-[1124px]:ml-0 flex flex-col max-[1124px]:max-w-[340px] items-center">
+        <div
+          className={`ml-20 ${mx}ml-0 flex flex-col ${mx}max-w-[340px] items-center`}
+        >
           <AnimateWrap
             tag="img"
-            className="hidden h-[47vh] object-cover max-[1124px]:order-2 max-[1124px]:block my-8"
+            className={`hidden h-[47vh] object-cover ${mx}order-2 ${mx}block my-8`}
             src={images[0]}
             alt="image1"
           />
           <AnimateWrap
             tag="div"
-            className="h-[28%] flex justify-center max-[1124px]:order-3"
+            className={`h-[28%] flex justify-center ${mx}order-3`}
           >
             <img
               className="max-w-[42%] object-cover"
@@ -38,15 +42,19 @@ const FirstBlockContent = () => {
               alt="image3"
             />
           </AnimateWrap>
-          <AnimateWrap tag="div" className="max-[1124px]:order-1">
-            <h3 className="text-8xl font-semibold mt-20  max-[1124px]:text-[50px] max-[1124px]:mt-6 max-[1124px]:font-bold">
+          <AnimateWrap tag="div" className={`${mx}order-1`}>
+            <h3
+              className={`text-8xl font-semibold mt-20  ${mx}text-[50px] ${mx}mt-6 ${mx}font-bold`}
+            >
               Capturing
             </h3>
 
-            <h3 className="text-8xl font-semibold mt-2 ml-10  max-[1124px]:text-[50px] max-[1124px]:ml-0 max-[1124px]:font-bold">
+            <h3
+              className={`text-8xl font-semibold mt-2 ml-10  ${mx}text-[50px] ${mx}ml-0 ${mx}font-bold`}
+            >
               magic
             </h3>
-            <p className="text-1xl mt-44 ml-6 max-[1124px]:mt-12">
+            <p className={`text-1xl mt-44 ml-6 ${mx}mt-12`}>
               LINAS THOEMKE | FASHION PHOTOGRAPHY
             </p>
           </AnimateWrap>

@@ -27,7 +27,7 @@ const FirstDisplay = () => {
             />
           </AnimateWrap>
           <AnimateWrap tag="div" className="flex max-[1124px]:order-1 flex-col">
-            <h3 className="font-bold word-wrap block text-[200px] max-[1124px]:text-[150px] max-[1124px]:text-[100px] ">
+            <h3 className="font-bold word-wrap block text-[200px] max-[1124px]:text-[100px] ">
               Linas
             </h3>
             <div className="flex justify-between max-[1124px]:text-[14px] max-[1124px]:flex-col">

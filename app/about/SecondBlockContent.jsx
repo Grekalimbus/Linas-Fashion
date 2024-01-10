@@ -1,11 +1,15 @@
 import Link from "next/link";
 import AnimateWrap from "../components/AnimateWrap";
 
+const mx = "max-[1124px]";
 const SecondBlockContent = () => {
+  const image = "https://linasyfhpf.zyrosite.com/clients";
   return (
     <div className="mx-auto w-full flex justify-center items-center text-black pt-10 pb-32">
-      <div className="container max-w-6xl flex justify-between  relative mt-12 max-[1124px]:flex-col items-center max-[1124px]:max-w-[340px]">
-        <AnimateWrap tag="div" className="w-[37%] max-[1124px]:w-full">
+      <div
+        className={`container max-w-6xl flex justify-between  relative mt-12 ${mx}flex-col items-center ${mx}max-w-[340px]`}
+      >
+        <AnimateWrap tag="div" className={`w-[37%] ${mx}w-full`}>
           <AnimateWrap tag="div" className="block mt-4 text-2xl">
             Linas Thoemke is a fashion photographer based in Amsterdam. He
             started working for small indie publications back in the mid-00s,
@@ -18,13 +22,15 @@ const SecondBlockContent = () => {
             work worldwide.
           </AnimateWrap>
           <Link
-            href="https://linasyfhpf.zyrosite.com/clients"
+            href={image}
             className="font-medium border-b-2 border-black text-2xl "
           >
             CLIENT LIST →
           </Link>
         </AnimateWrap>
-        <div className="w-[30%] mr-36 mt-2 max-[1124px]:mr-0 flex flex-col items-start max-[1124px]:w-full max-[1124px]:mt-6">
+        <div
+          className={`w-[30%] mr-36 mt-2 ${mx}mr-0 flex flex-col items-start ${mx}w-full ${mx}mt-6`}
+        >
           <AnimateWrap tag="p" className="font-medium text-2xl">
             EXHIBITIONS
           </AnimateWrap>
