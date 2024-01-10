@@ -29,8 +29,8 @@ const ContextBlock = () => {
   return (
     <div className="mx-auto h-[100vh] max-[1124px]:h-full flex  justify-center items-centre flex-col bg-[#04111b]">
       <div className="container mx-auto flex justify-center max-w-6xl max-[1124px]:flex-col max-[1124px]:w-[340px] w-full ">
-        <div className="">
-          <div className="flex  items-start">
+        <div>
+          <div className="flex  items-start ml-5">
             <img
               src={image[0]}
               alt="pic1"
@@ -110,7 +110,7 @@ const ContextBlock = () => {
         <img
           src={image[2]}
           alt="pic3"
-          className="w-[30%] object-contain mt-[120px] ml-10 max-[1123px]:w-[328px] max-[1124px]:h-[494px] max-[1124px]:ml-0 max-[1124px]:mt-10"
+          className="w-[30%] object-contain mt-[120px] ml-10 max-[1123px]:w-[334px] max-[1124px]:h-[494px] max-[1124px]:ml-3 max-[1124px]:mt-3  max-[1124px]:object-fill"
         />
       </div>
     </div>
