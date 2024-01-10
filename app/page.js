@@ -26,8 +26,8 @@ const page = () => {
         <SecondDisplay />
         <ThirdDisplay />
         <FourthDisplay />
-        <FifthDisplay screen={screen} />
-        <SixthDisplay screen={screen} />
+        <FifthDisplay />
+        <SixthDisplay />
         <Footer />
       </div>
     </main>
