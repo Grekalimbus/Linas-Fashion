@@ -1,5 +1,5 @@
 "use client";
-import ContextBlock from "./ContextBlock";
+import Content from "./ContextBlock";
 import {Navbar} from "../common/Navbar";
 import Footer from "../common/Footer";
 import useScreenHandling from "../hooks/useScreenHandling";
@@ -12,9 +12,9 @@ const page = () => {
       <div
         className={`w-full overflow-auto max-h-screen transition-all duration-500`}
       >
-        <Navbar screen={screen} />
-        <ContextBlock screen={screen} />
-        <Footer screen={screen} />
+        <Navbar />
+        <Content />
+        <Footer />
       </div>
     </div>
   );

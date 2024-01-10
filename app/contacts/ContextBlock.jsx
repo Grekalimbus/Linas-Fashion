@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Form from "../common/Form";
 import Button from "../common/Button";
 
-const ContextBlock = () => {
+const Content = () => {
   const image = [
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1053,fit=crop/linasyfhpf/contact_1-dOq06LnW9aIQP3pv.png",
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1053,fit=crop/linasyfhpf/project2_2-AQE9v5D67auLDGv6.png",
@@ -27,10 +27,10 @@ const ContextBlock = () => {
   };
 
   return (
-    <div className="mx-auto h-[100vh] max-[1124px]:h-full flex  justify-center items-centre flex-col bg-[#04111b]">
+    <div className="mx-auto h-[100vh] max-[1124px]:h-full flex  justify-center items-centre flex-col bg-[#04111b] ">
       <div className="container mx-auto flex justify-center max-w-6xl max-[1124px]:flex-col max-[1124px]:w-[340px] w-full ">
-        <div>
-          <div className="flex  items-start ml-5">
+        <div className="py-20">
+          <div className="flex  items-start ml-5 ">
             <img
               src={image[0]}
               alt="pic1"
@@ -117,4 +117,4 @@ const ContextBlock = () => {
   );
 };
 
-export default ContextBlock;
+export default Content;
