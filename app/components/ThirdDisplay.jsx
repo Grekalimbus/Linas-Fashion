@@ -5,7 +5,7 @@ const ThirdDisplay = () => {
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=1410,fit=crop/linasyfhpf/Home_7-AE0xXDXkxGuLqpgk.png",
   ];
   return (
-    <div className="mx-auto  w-full h-[100vh] flex flex-col justify-center items-center max-[1124px]:h-full bg-black p-20">
+    <div className="mx-auto  w-full h-[110vh] flex flex-col justify-center items-center max-[1124px]:h-full bg-[#04111b]  py-20">
       <div className="container mx-auto w-full flex max-w-6xl max-[1124px]:w-[350px] max-[1124px]:flex-col relative max-[1124px]:justify-between">
         <div className="flex flex-col ">
           <h1 className="text-white font-bold text-8xl w-[100px] max-[1124px]:text-7xl ">
@@ -14,7 +14,7 @@ const ThirdDisplay = () => {
           <img
             src={images[2]}
             alt="model"
-            className="relative w-[75%]  z-[0] object-cover mt-[10px] ml-[160px] max-[1124px]:order-2 max-[1152px]:ml-0 max-[1124px]:mt-10"
+            className="relative w-[75%]  z-[0] object-cover mt-[10px] ml-[160px] max-[1124px]:order-2 max-[1124px]:ml-0 max-[1124px]:mt-10"
           />
           <img
             src={images[1]}
