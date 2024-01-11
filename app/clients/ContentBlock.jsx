@@ -1,67 +1,34 @@
-import { useRef } from "react";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
-
-const ContentBlock = ({ screen }) => {
-  const targetMedium = useRef(null);
-
-  const animationsAndRefs = {
-    refsArray: [targetMedium],
-    animationNamesArray: ["animate-slideUp-medium"],
-  };
-
-  useIntersectionObserver(animationsAndRefs);
-
-  return screen <= 1152 ? (
-    <div className="w-full flex justify-center mx-auto min-h-min bg-[#04111b]">
-      <div className="container max-w-[420px] mt-20 mb-20 flex justify-center">
-        <div ref={targetMedium} className="ml-20 opacity-0">
-          <h2 className="font-light text-[17px]">I'VE WORKED WITH:</h2>
-          <h1 className="font-semibold text-7xl mt-4">
+const ContentBlock = () => {
+  const image = [
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=943,fit=crop/linasyfhpf/clients_1-A0xbgEz0nys4Zrxb.png",
+    "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=938,fit=crop/linasyfhpf/clients_2-YX49w6eMrvc9Wneq.png",
+  ];
+  return (
+    <div className="mx-auto h-[110vh] max-[1124px]:h-full flex flex-col bg-[#04111b] justify-center items-center py-20">
+      <div className="container max-w-6xl w-full max-[1124px]:flex-col max-[1124px]:w-[350px] flex ">
+        <div>
+          <img
+            src={image[0]}
+            alt="pic1"
+            className="w-[194px] h-[186px] max-[1124px]:hidden"
+          />
+          <p className="font-light text-[17px] mt-20">I'VE WORKED WITH:</p>
+          <h1 className="font-semibold text-7xl mt-20">
             Frontera, Gucci, Versace, innocent smoothies, Presson, Kris.T,
             Fashiona, Grotesk, StyleX, Rubik, Spectral, Juno.
           </h1>
-          <div className="flex">
+          <div className="flex justify-end mr-5">
             <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1040,fit=crop/linasyfhpf/clients_1-A0xbgEz0nys4Zrxb.png"
-              alt="pic1"
-              className="w-[45%] object-contain mt-20"
+              src={image[0]}
+              alt="pic0"
+              className="w-[194px] h-[186px]  mt-[120px] max-[1124px]:w-[161px] max-[1124px]:h-[155px] hidden max-[1124px]:block max-[1124px]:mr-2"
             />
             <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=938,fit=crop/linasyfhpf/clients_2-YX49w6eMrvc9Wneq.png"
+              src={image[1]}
               alt="pic2"
-              className=" ml-3 w-[45%] object-contain mt-20"
+              className="w-[194px] h-[186px]  mt-[120px] max-[1152px]:ml-0 max-[1124px]:w-[161px] max-[1124px]:h-[155px]"
             />
           </div>
-        </div>
-      </div>
-    </div>
-  ) : (
-    <div className="mx-auto w-full flex justify-center items-centre bg-[#04111b]">
-      <div
-        ref={targetMedium}
-        className="container max-w-6xl mt-20 mb-20 opacity-0"
-      >
-        <img
-          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=388,h=372,fit=crop/linasyfhpf/clients_1-A0xbgEz0nys4Zrxb.png"
-          alt="pic1"
-          className="w-[15%] object-contain"
-        />
-        <h1 className="text-[17px] mt-20 font-light color-white">
-          I'VE WORKED WITH:
-        </h1>
-        <h2 className="text-8xl font-semibold mt-20">
-          Frontera, Gucci, Versace
-          <br />
-          innocent smoothies, Presson, Kris.T, Fashiona
-          <br />
-          Grotesk, StyleX, Rubik, Spectral, Juno.
-        </h2>
-        <div className="flex justify-end">
-          <img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=938,fit=crop/linasyfhpf/clients_2-YX49w6eMrvc9Wneq.png"
-            alt="pic2"
-            className="flex  w-[15%] object-contain mt-20"
-          />
         </div>
       </div>
     </div>
