@@ -1,7 +1,9 @@
 import Form from "../common/Form";
 import Button from "../common/Button";
 import inputs from "../api/Inputs";
+import AnimateWrap from "./AnimateWrap";
 import {useState} from "react";
+
 const SixthDisplay = () => {
   const [values, setValue] = useState({
     name: "",
@@ -33,22 +35,33 @@ const SixthDisplay = () => {
 
   return (
     <div className="mx-auto h-[110vh] w-full flex justify-center  items-centre max-[1124px]:h-full bg-white py-20">
-      <div className="container w-full flex justify-center items-center max-w-6xl max-[1124px]:flex-col max-[1124px]:mr-20 ">
+      <AnimateWrap
+        tag="div"
+        className="container w-full flex justify-center items-center max-w-6xl max-[1124px]:flex-col max-[1124px]:mr-20 "
+      >
         <div className="max-[1152px]:ml-20 ">
-          <h1 className="font-semibold text-black text-8xl max-[1124px]:font-semibold max-[1124px]:text-6xl">
+          <AnimateWrap
+            tag="h1"
+            className="font-semibold text-black text-8xl max-[1124px]:font-semibold max-[1124px]:text-6xl"
+          >
             Impressed?
-          </h1>
-          <p className="text-black font-medium text-[17px] mt-20">
+          </AnimateWrap>
+          <AnimateWrap
+            tag="p"
+            className="text-black font-medium text-[17px] mt-20"
+          >
             Let us cross paths - reach out and we'll work <br />
             on your next project together.
-          </p>
+          </AnimateWrap>
           <div className="mt-20 flex ">
-            <img
+            <AnimateWrap
+              tag="img"
               src={image[0]}
               alt="pic1"
               className="w-[297px] h-[202px] object-cover max-[1124px]:hidden"
             />
-            <img
+            <AnimateWrap
+              tag="img"
               src={image[1]}
               alt="pic2"
               className="w-[194px] h-[202px] pl-3 object-cover max-[1124px]:hidden"
@@ -82,18 +95,20 @@ const SixthDisplay = () => {
           />
         </div>
         <div className="flex mt-10 ml-20 max-[1124px]:ml-20">
-          <img
+          <AnimateWrap
+            tag="img"
             src={image[0]}
             alt="pic1"
             className="w-[161px] h-[173px] object-cover hidden max-[1124px]:block max-[1124px]:mr-2"
           />
-          <img
+          <AnimateWrap
+            tag="img"
             src={image[1]}
             alt="pic2"
             className="w-[161px] h-[173px] object-cover hidden max-[1124px]:block "
           />
         </div>
-      </div>
+      </AnimateWrap>
     </div>
   );
 };
