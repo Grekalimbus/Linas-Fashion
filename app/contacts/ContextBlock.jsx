@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Form from "../common/Form";
 import Button from "../common/Button";
+import AnimateWrap from "../components/AnimateWrap";
 
 const ContextBlock = () => {
   const image = [
@@ -8,12 +9,12 @@ const ContextBlock = () => {
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1053,fit=crop/linasyfhpf/project2_2-AQE9v5D67auLDGv6.png",
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1627,fit=crop/linasyfhpf/contact_3-YX49w6eMMkSbk1Gr.png",
   ];
-  const [state, setState] = useState({ name: "", email: "", message: "" });
+  const [state, setState] = useState({name: "", email: "", message: ""});
   const [errors, setErrors] = useState(false);
   const [errorMessage, setErrorsMessage] = useState(false);
 
   const onChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value });
+    setState({...state, [e.target.name]: e.target.value});
     if (e.target.name === "email") {
       setErrors(e.target.value.length >= 7 ? true : false);
     }
@@ -29,25 +30,33 @@ const ContextBlock = () => {
   return (
     <div className="mx-auto h-[100vh] max-[1124px]:h-full flex  justify-center items-centre flex-col bg-[#04111b]">
       <div className="container mx-auto flex justify-center max-w-6xl max-[1124px]:flex-col max-[1124px]:w-[340px] w-full ">
-        <div>
+        <AnimateWrap tag="div">
           <div className="flex  items-start ml-5">
-            <img
+            <AnimateWrap
+              tag="img"
               src={image[0]}
               alt="pic1"
               className="w-[187px] h-[178px] max-[1124px]:hidden"
             />
-            <img
+            <AnimateWrap
+              tag="img"
               src={image[1]}
               alt="pic2"
               className="w-[187px] h-[178px] ml-4 max-[1124px]:hidden"
             />
           </div>
-          <h2 className="font-semibold text-7xl underline mt-20 max-[1124px]:text-5xl ml-4">
+          <AnimateWrap
+            tag="p"
+            className="font-semibold text-7xl underline mt-20 max-[1124px]:text-5xl ml-4"
+          >
             +3145683245
-          </h2>
-          <h2 className="font-semibold text-7xl underline mt-5 max-[1124px]:text-3xl ml-4">
+          </AnimateWrap>
+          <AnimateWrap
+            tag="h2"
+            className="font-semibold text-7xl underline mt-5 max-[1124px]:text-3xl ml-4"
+          >
             thoemke@linas.com
-          </h2>
+          </AnimateWrap>
           <Form
             name={"name"}
             placeholder={"Your name"}
@@ -95,19 +104,22 @@ const ContextBlock = () => {
             colorText={"text-black"}
           />
           <div className="flex mt-10 ml-3">
-            <img
+            <AnimateWrap
+              tag="img"
               src={image[0]}
               alt="pic1"
               className="w-[161px] h-[157px] object-cover mr-3 hidden max-[1124px]:block"
             />
-            <img
+            <AnimateWrap
+              tag="img"
               src={image[1]}
               alt="pic2"
               className="w-[161px] h-[157px] object-cover hidden max-[1124px]:block"
             />
           </div>
-        </div>
-        <img
+        </AnimateWrap>
+        <AnimateWrap
+          tag="img"
           src={image[2]}
           alt="pic3"
           className="w-[30%] object-contain mt-[120px] ml-10 max-[1123px]:w-[334px] max-[1124px]:h-[494px] max-[1124px]:ml-3 max-[1124px]:mt-3  max-[1124px]:object-fill"
