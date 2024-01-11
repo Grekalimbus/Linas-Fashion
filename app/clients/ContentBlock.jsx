@@ -1,3 +1,4 @@
+import AnimateWrap from "../components/AnimateWrap";
 const ContentBlock = () => {
   const image = [
     "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=984,h=943,fit=crop/linasyfhpf/clients_1-A0xbgEz0nys4Zrxb.png",
@@ -7,23 +8,28 @@ const ContentBlock = () => {
     <div className="mx-auto h-[110vh] max-[1124px]:h-full flex flex-col bg-[#04111b] justify-center items-center py-20">
       <div className="container max-w-6xl w-full max-[1124px]:flex-col max-[1124px]:w-[350px] flex ">
         <div>
-          <img
+          <AnimateWrap
+            tag="img"
             src={image[0]}
             alt="pic1"
             className="w-[194px] h-[186px] max-[1124px]:hidden"
           />
-          <p className="font-light text-[17px] mt-20">I'VE WORKED WITH:</p>
-          <h1 className="font-semibold text-7xl mt-20">
+          <AnimateWrap tag="p" className="font-light text-[17px] mt-20">
+            I'VE WORKED WITH:
+          </AnimateWrap>
+          <AnimateWrap tag="h1" className="font-semibold text-7xl mt-20">
             Frontera, Gucci, Versace, innocent smoothies, Presson, Kris.T,
             Fashiona, Grotesk, StyleX, Rubik, Spectral, Juno.
-          </h1>
+          </AnimateWrap>
           <div className="flex justify-end mr-5">
-            <img
+            <AnimateWrap
+              tag="img"
               src={image[0]}
               alt="pic0"
               className="w-[194px] h-[186px]  mt-[120px] max-[1124px]:w-[161px] max-[1124px]:h-[155px] hidden max-[1124px]:block max-[1124px]:mr-2"
             />
-            <img
+            <AnimateWrap
+              tag="img"
               src={image[1]}
               alt="pic2"
               className="w-[194px] h-[186px]  mt-[120px] max-[1152px]:ml-0 max-[1124px]:w-[161px] max-[1124px]:h-[155px]"
