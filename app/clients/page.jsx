@@ -2,23 +2,16 @@
 import {Navbar} from "../common/Navbar";
 import Footer from "../common/Footer";
 import ContentBlock from "./ContentBlock";
-import useScreenHandling from "../hooks/useScreenHandling";
 
 const page = () => {
-  const {screen} = useScreenHandling();
-
-  if (screen === 0) {
-    return <div></div>;
-  }
-
   return (
     <div className="flex overflow-hidden max-h-screen flex-col w-full items-center">
       <div
         className={`w-full overflow-auto max-h-screen transition-all duration-500`}
       >
-        <Navbar screen={screen} />
-        <ContentBlock screen={screen} />
-        <Footer screen={screen} />
+        <Navbar />
+        <ContentBlock />
+        <Footer />
       </div>
     </div>
   );
